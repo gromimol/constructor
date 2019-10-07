@@ -1,0 +1,145 @@
+
+
+@media(min-width: 2400px){
+	.gallery li{
+		width: 20%;
+	}
+	.models-slider__nav__item{
+		height: 20em;
+	}
+}
+@media(min-width: 3000px){
+	.gallery li{
+		width: 16.666%;
+	}
+}
+
+@media(min-height: 1401px) {
+	.tab-list{
+		top: 33%;
+	}
+}
+
+@media(min-height: 1100px) and (max-height: 1400px){
+	.tab-list{
+		top: 23%;
+	}
+}
+@media(max-width: 1800px){
+	.slide-description__title{
+		font-size: 6rem;
+	}
+	.slide-description__content{
+		padding: 20px 20px 40px 40px;
+	}
+	.slide-description__content .tab-list{
+		left: -1.5rem;
+	}
+	.slide-description__content::before{
+		width: 10em;
+		height: 9.5em;
+	}
+	.slide-description__text::after{
+		display: none;
+	}
+}
+/*1800*/ 
+@media(max-width: 1600px){
+	html{
+		font-size: .7vw;
+	}
+	
+	.select-wrapper span{
+		font-size: 11px;
+		margin-right: 10px;
+	}
+	.select{
+		width: 150px;
+		height: 30px;
+		font-size: 11px;
+	}
+	.filter-toggle{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.filter__search__btn label{
+		height: 30px;
+		width: 70px;
+		font-size: 11px;
+	}
+	.filter__search{
+		width: 220px;
+	}
+	.input{
+		height: 30px;
+		font-size: 12px;
+		padding-right: 40px;
+		padding-left: 10px;
+	}
+	.search-submit{
+		height: 30px;
+		width: 40px;
+	}
+	.search-submit .search-ico{
+		width: 15px;
+		height: 15px;
+	}
+	.filter-open .gallery-block__line{
+		bottom: 80px;
+	}
+	.filter-line.active{
+		padding: 20px 0 0 20px;
+	}
+
+	.nav{
+		padding-left: 10px;
+	}
+	.menu li{
+		padding: 0;
+	}
+
+	.theme-page{
+		padding-left: 5rem;
+		padding-right: 5rem;
+		padding-bottom: 8rem;
+	}
+	.theme-slider .slick-list{
+		padding-top: 3rem;
+	}
+
+	.theme__bottom{
+		height: 5rem;
+	}
+	.tab-list{
+		top: 20%;
+	}
+	.tab-list::after{
+		width: 18rem;
+	}
+	.theme__title{
+		font-size: 6rem;
+	}
+	.theme__subtitle{
+		font-size: 1.4rem;
+		letter-spacing: 2px;
+	}
+	.total-counter{
+		margin-bottom: 1.5rem;
+	}
+
+	
+	::-webkit-input-placeholder {font-size: 11px;  }
+::-moz-placeholder          {font-size: 11px;  } /* Firefox 19+ */
+:-moz-placeholder           {font-size: 11px;  } /* Firefox 18- */
+:-ms-input-placeholder      {font-size: 11px;  }
+
+
+}
+
+/*1600*/ 
+
+@media(max-width: 1400px){
+	html{
+		font-size: 8px;
+	}
+}
