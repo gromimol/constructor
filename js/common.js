@@ -11,8 +11,17 @@ $(document).ready(function () {
 		e.preventDefault();
 
 		$(this).toggleClass('active');
+		$('body').toggleClass('show-right-sidebar');
 		$('body').toggleClass('min-header');
 	});
+
+	// Toggle right sidebar
+	$('.js-sidebar').on('click',function (e) {
+		e.preventDefault();
+
+		$(this).toggleClass('active');
+		$('.edit-page__aside__right').toggleClass('active');
+	})
 
 	// NiceScroll
 	$(".gallery-block").niceScroll();
