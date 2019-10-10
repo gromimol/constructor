@@ -3,7 +3,20 @@ $(document).ready(function () {
 	$('.js-dropdown-link').on('click',function (e) {
 		e.preventDefault();
 
-		$(this).toggleClass('active').parent().find('.dropdown').toggleClass('active');
+		// $('.js-dropdown-link').not(this).removeClass('active');
+		// $('.js-dropdown').not(this).parent().find('.js-dropdown').removeClass('active');
+		if($(this).hasClass('active')){
+			$(this).removeClass('active');
+		}
+		else{
+			$(this).addClass('active');
+		}
+
+		if($(this).parent().find('.js-dropdown').hasClass('active')){
+			$(this).parent().find('.js-dropdown').removeClass('active');
+		}else{
+			$(this).parent().find('.js-dropdown').addClass('active');
+		}
 	});
 
 	// Toggle height for header
@@ -21,12 +34,6 @@ $(document).ready(function () {
 
 		$(this).toggleClass('active');
 		$('.edit-page__aside__right').toggleClass('active');
-	})
-
-	// Toggle user dropdown
-	$('.user').on('click',function () {
-		$(this).toggleClass('active');
-		$('.user-dropdown').toggle();
 	})
 
 	// NiceScroll

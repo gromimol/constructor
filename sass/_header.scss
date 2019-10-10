@@ -349,6 +349,12 @@
 }
 
 
+.js-dropdown{
+	display: none;
+	&.active{
+		display: block;
+	}
+}
 .user-dropdown{
 	position: absolute;
 	width: 390px;
@@ -358,7 +364,6 @@
 	border-radius: 10px;
 	box-shadow: 0 0 13px rgba(98, 93, 93, 0.54);
 	background: #fff url('../img/user-dropdown-bg.png') 100% 100% no-repeat;
-	display: none;
 	z-index: 2;
 	&::before{
 		content: '';
@@ -439,5 +444,101 @@
 			width: 100%;
 			height: 100%;
 		}
+	}
+}
+
+.settings-dropdown{
+	position: absolute;
+	width: 390px;
+	background: #fff url('../img/settings_bg.png') 100% 0 no-repeat;
+	right: 0;
+	top: calc(100% + 10px);
+	border-radius: 10px;
+	box-shadow: 0 0 13px rgba(98, 93, 93, 0.54);
+	padding: 10px 0 20px;
+	z-index: 2;
+	&::before{
+		content: '';
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-bottom: 10px solid #fff;
+		position: absolute;
+		bottom: 100%;
+		right: 2.2em;
+	}
+	.user-dropdown__item{
+		border-bottom: none;
+		padding: 20px;
+		margin-bottom: 10px;
+	}
+}
+
+.settings-dropdown__left{
+	width: calc(100% - 210px);
+	padding-right: 4em;
+}
+.settings-dropdown__item{
+	position: relative;
+	padding-bottom: 16px;
+	margin-bottom: 16px;
+	&::after{
+		content: '';
+		width: calc(100% - 20px);
+		height: 1px;
+		background-color: #cfcdcd;
+		position: absolute;
+		bottom: 0;
+		left: 20px;
+	}
+}
+.settings-dropdown__menu{
+	li{
+		a{
+			display: block;
+			font-size: 11px;
+			font-family: 'Futura', sans-serif;
+			text-transform: uppercase;
+			color: #000;
+			font-weight: 600;
+			padding: 8px 8px 8px 20px;
+			letter-spacing: 0.55px;
+			&:hover{
+				color: #fff;
+				background-color: var(--blue);
+			}
+		}
+	}
+}
+.social-block {
+	padding-left: 20px;
+	.social{
+		margin-left: 10px;
+		.ico{
+			display: block;
+			width: 12px;
+			height: 12px;
+			svg{
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+.social-block__title{
+	font-family: 'Futura', sans-serif;
+	text-transform: uppercase;
+	font-size: 9px;
+	color: #8f8f8f;
+	letter-spacing: 0.45px;
+	white-space: nowrap;
+}
+.settings-dropdown__right{
+	flex: none;
+	width: 210px;
+	img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 }
