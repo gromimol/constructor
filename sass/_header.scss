@@ -4,7 +4,6 @@
 	transition: all .5s;
 	.burger{
 		padding: 3.5em 0;
-		margin-right: 6em;
 		&.active{
 			width: 20px;
 			padding: 17px 0;
@@ -30,16 +29,16 @@
 	}
 }
 .min-header{
-	.menu a:not(.burger){
-		padding-top: 20px;
-		padding-bottom: 20px;
-	}
+	
 	.header__options{
 		padding-top: 0;
 		padding-bottom: 0;
 	}
-	.menu a:not(.burger){
-		font-size: 1.1rem;
+	.menu a {
+		.text{
+			font-size: 0;
+			margin-top: 0;
+		}
 	}
 }
 .nav{
@@ -58,26 +57,10 @@
 }
 .menu{
 	li{
-		padding: 0;
+		padding: 0 20px;
 		margin-right: 1px;
-		height: 100%;
-	}
-	a:not(.burger){
-		display: block;
-		padding: 4.2rem 1.5rem 4rem;
-		font-size: 1.4rem;
-		text-transform: uppercase;
-		font-family: 'FuturaCn',sans-serif;
-		font-weight: 600;
-		display: block;
-		position: relative;
-		transition: all .5s;
-		&:hover,
-		&.active{
-			background-color: #000;
-			color: #fff;
-		}
-		
+		display: flex;
+		align-items: center;
 	}
 	a.add-theme{
 		color: var(--blue);
@@ -90,6 +73,32 @@
 		}
 	}
 }
+.menu-item{
+	text-align: center;
+	font-family: 'Futura', sans-serif;
+	font-size: 9px;
+	text-transform: uppercase;
+	color: #767877;
+	letter-spacing: 1.8px;
+	&:hover,
+	&.active{
+		color: var(--blue);
+	}
+	span{
+		display: block;
+	}
+	.ico{
+		height: 24px;
+		img{
+			height: 100%;
+		}
+	}
+	.text{
+		margin-top: 11px;
+		transition: all .3s;
+	}
+}
+
 
 .burger{
 	display: block;

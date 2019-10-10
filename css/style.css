@@ -361,8 +361,7 @@ p {
   -webkit-transition: all .5s;
   transition: all .5s; }
   .header .burger {
-    padding: 3.5em 0;
-    margin-right: 6em; }
+    padding: 3.5em 0; }
     .header .burger.active {
       width: 20px;
       padding: 17px 0; }
@@ -380,14 +379,12 @@ p {
           -webkit-transform: rotate(-45deg) translate(5.5px, -6.5px);
                   transform: rotate(-45deg) translate(5.5px, -6.5px); }
 
-.min-header .menu a:not(.burger) {
-  padding-top: 20px;
-  padding-bottom: 20px; }
 .min-header .header__options {
   padding-top: 0;
   padding-bottom: 0; }
-.min-header .menu a:not(.burger) {
-  font-size: 1.1rem; }
+.min-header .menu a .text {
+  font-size: 0;
+  margin-top: 0; }
 
 .nav {
   padding-left: 7.8rem; }
@@ -410,23 +407,14 @@ p {
        object-fit: contain; }
 
 .menu li {
-  padding: 0;
+  padding: 0 20px;
   margin-right: 1px;
-  height: 100%; }
-.menu a:not(.burger) {
-  display: block;
-  padding: 4.2rem 1.5rem 4rem;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  font-family: 'FuturaCn',sans-serif;
-  font-weight: 600;
-  display: block;
-  position: relative;
-  -webkit-transition: all .5s;
-  transition: all .5s; }
-  .menu a:not(.burger):hover, .menu a:not(.burger).active {
-    background-color: #000;
-    color: #fff; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 .menu a.add-theme {
   color: var(--blue); }
   .menu a.add-theme:hover {
@@ -434,6 +422,26 @@ p {
   .menu a.add-theme svg {
     width: 12px;
     height: 12px; }
+
+.menu-item {
+  text-align: center;
+  font-family: 'Futura', sans-serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  color: #767877;
+  letter-spacing: 1.8px; }
+  .menu-item:hover, .menu-item.active {
+    color: var(--blue); }
+  .menu-item span {
+    display: block; }
+  .menu-item .ico {
+    height: 24px; }
+    .menu-item .ico img {
+      height: 100%; }
+  .menu-item .text {
+    margin-top: 11px;
+    -webkit-transition: all .3s;
+    transition: all .3s; }
 
 .burger {
   display: block;
@@ -3725,9 +3733,6 @@ button {
 
   .nav {
     padding-left: 10px; }
-
-  .menu li {
-    padding: 0; }
 
   .theme-page {
     padding-left: 5rem;

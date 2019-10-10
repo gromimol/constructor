@@ -1,0 +1,20 @@
+
+<svg version="1.1" id="Ellipse_560__x2B__Ellipse_560_copy__x2B__Vector_Smart_Object_2_"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="101px" height="101px"
+	 viewBox="0 0 101 101" enable-background="new 0 0 101 101" xml:space="preserve">
+<defs>
+	<ellipse id="SVGID_1_" enable-background="new    " cx="50.328" cy="50.344" rx="50.328" ry="50.344"/>
+</defs>
+<clipPath id="SVGID_2_">
+	<use xlink:href="#SVGID_1_"  overflow="visible"/>
+</clipPath>
+<circle clip-path="url(#SVGID_2_)" fill="#CEDDED" cx="50.328" cy="50.328" r="50.328"/>
+<circle clip-path="url(#SVGID_2_)" fill="#5287FF" cx="66" cy="71.5" r="49.125"/>
+<path clip-path="url(#SVGID_2_)" fill="#FFFFFF" d="M79.532,60.449c0,10.737-8.708,19.446-19.448,19.446
+	c-10.741,0-19.45-8.709-19.45-19.446c0-10.745,8.709-19.45,19.45-19.45C70.824,40.999,79.532,49.705,79.532,60.449z"/>
+<g clip-path="url(#SVGID_2_)">
+	<path fill="#FFFFFF" d="M54.189,55.143c0-1.18,0.59-2.359,1.18-2.947c1.769-1.766,4.125-1.176,5.894,0.588l35.36,41.257
+		c1.769,1.768,1.179,4.125-0.59,5.893c-1.768,1.768-4.125,1.178-5.893-0.59L54.779,58.09C54.779,57.5,54.189,56.322,54.189,55.143z"
+		/>
+</g>
+</svg>
