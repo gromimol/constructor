@@ -23,6 +23,12 @@ $(document).ready(function () {
 		$('.edit-page__aside__right').toggleClass('active');
 	})
 
+	// Toggle user dropdown
+	$('.user').on('click',function () {
+		$(this).toggleClass('active');
+		$('.user-dropdown').toggle();
+	})
+
 	// NiceScroll
 	$(".gallery-block").niceScroll();
 	$(".project-slider__nav.slick-slider").niceScroll();

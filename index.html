@@ -83,6 +83,75 @@
 			<div class="header-btns">
 				<ul class="header__options flex">
 					<li>
+						<div class="user">
+							<div class="user__text">
+								Welcome <span class="user-nick">Razersection</span>
+							</div>
+							<div class="user-avatar">
+								<img src="img/avatar.png" alt="">
+								<!-- Class status--offline for offline users -->
+								<span class="status status--online"></span>
+							</div>
+						</div>
+
+						<div class="user-dropdown">
+							<div class="user-dropdown-row">
+								<a href="#" class="user-dropdown__item">
+									<span class="user-logo">
+										<img src="img/user-logo.png" alt="">
+									</span>
+									<div class="user-title">
+										<span class="blue">Featured</span>
+										<span class="lg">Lisann personal</span>
+										<span class="grey">www.lissannpersonal.com</span>
+									</div>
+									<div class="user-ico">
+										<svg>
+											<use xlink:href="#svg-redirect"></use>
+										</svg>
+									</div>
+								</a>
+							</div>
+
+							<div class="user-dropdown-row">
+								<a href="#" class="user-dropdown__item">
+									<span class="user-logo">
+										<img src="img/user-logo.png" alt="">
+									</span>
+									<div class="user-title">
+										<span class="lg">Razersection</span>
+										<span class="grey">www.lissannpersonal.com</span>
+									</div>
+									<div class="user-ico">
+										<svg>
+											<use xlink:href="#svg-redirect"></use>
+										</svg>
+									</div>
+								</a>
+							</div>
+
+							<a href="#" class="user-dropdown__add">
+								<span class="ico">
+									<svg>
+										<use xlink:href="#plus"></use>
+									</svg>
+								</span>
+								 Add product
+							</a>
+						</div>
+
+					</li>
+					<li>
+						<a href="#" class="bell">
+							<span class="ico">
+								<svg>
+									<use xlink:href="#svg-bell"></use>
+								</svg>
+							</span>
+							<span class="count">23</span>
+						</a>
+					</li>
+					<li>
 						<a href="#">
 							<svg>
 								<use xlink:href="#help"></use>
@@ -96,23 +165,12 @@
 							</svg>
 						</a>
 					</li>
-					<li>
-						<a href="#" class="js-dropdown-link">
-							<svg class="dots-svg">
-								<use xlink:href="#dots"></use>
+					<li class="logout-container">
+						<a href="#" class="logout">
+							<svg>
+								<use xlink:href="#svg-stand-by"></use>
 							</svg>
 						</a>
-						<ul class="dropdown">
-							<li>
-								<a href="#">Menu Item 1</a>
-							</li>
-							<li>
-								<a href="#">Menu Item 2</a>
-							</li>
-							<li>
-								<a href="#">Save & Exit </a>
-							</li>
-						</ul>
 					</li>
 				</ul>
 			</div>
@@ -194,7 +252,7 @@
 
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-			
+			<symbol id="svg-redirect" viewBox="0 0 20 20"><g><g><path d="M12,18.66674v0h-10.66685v0v-10.66688v0h2.66695v0l-0.66698,-1.33319v0h-3.33309v0v13.33341v0h13.33308v0v-4.33355v0l-1.33312,0.33352v0z" fill="currentColor" fill-opacity="1"></path></g><g><path d="M20.00002,-0.00004v5.93338h-1.33348v-3.66665l-8.19969,8.19995l-0.93329,-0.93323l8.19969,-8.19995h-3.73316v-1.33349zM16.00007,7.99986l1.33336,-1.33319v9.33339h-13.33332v-13.33341h9.33301l-1.33312,1.33349h-6.6669v10.66643h10.66697z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
 
 			<symbol viewBox="0 0 18 24" id="svg-bell"><g><g><path d="M17.99993,17.29702v2.81245c0,0.38811 -0.30994,0.70304 -0.69213,0.70304h-4.56345c-0.32508,1.81068 -1.87993,3.18751 -3.74436,3.18751c-1.86479,0 -3.41916,-1.37683 -3.74436,-3.18751h-4.56345c-0.38242,0 -0.69213,-0.31493 -0.69213,-0.70304v-2.81245c0,-0.2353 0.11575,-0.45469 0.30828,-0.58501l1.07634,-0.72898v-6.32659c0,-4.02792 3.04723,-7.34575 6.92284,-7.70222v-1.25101c0,-0.38841 0.31006,-0.70334 0.69249,-0.70334c0.38254,0 0.69249,0.31493 0.69249,0.70334v1.25101c3.87561,0.35647 6.92284,3.6743 6.92284,7.70222v6.32659l1.07646,0.72898c0.19252,0.13032 0.30816,0.34972 0.30816,0.58501zM11.32409,20.8125h-4.64821c0.29635,1.02846 1.22607,1.78129 2.3241,1.78129c1.09804,0 2.02775,-0.75283 2.3241,-1.78129zM16.61531,17.67313l-1.07598,-0.72868c-0.19288,-0.13062 -0.30863,-0.34987 -0.30863,-0.58501v-6.703c0,-3.48954 -2.79522,-6.32839 -6.23071,-6.32839c-3.43549,0 -6.23107,2.83884 -6.23107,6.32839v6.703c0,0.23515 -0.11528,0.45439 -0.30816,0.58501l-1.0761,0.72868v1.73315c0.75638,0 14.58824,0 15.23066,0z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
 
