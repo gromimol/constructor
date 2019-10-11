@@ -1,23 +1,33 @@
 $(document).ready(function () {
 	// Dropdown menu in header
-	$('.js-dropdown-link').on('click',function (e) {
-		e.preventDefault();
+	$(function() {
+		var touch = $('.js-dropdown-link');
+		var menuWrapper = $('.header__options');
+		var w = $(window).width();
 
-		// $('.js-dropdown-link').not(this).removeClass('active');
-		// $('.js-dropdown').not(this).parent().find('.js-dropdown').removeClass('active');
-		if($(this).hasClass('active')){
-			$(this).removeClass('active');
-		}
-		else{
-			$(this).addClass('active');
-		}
+		$('html').click(function() {
+			menuWrapper.find('.js-dropdown').slideUp(0);
+		});
 
-		if($(this).parent().find('.js-dropdown').hasClass('active')){
-			$(this).parent().find('.js-dropdown').removeClass('active');
-		}else{
-			$(this).parent().find('.js-dropdown').addClass('active');
-		}
-	});
+		menuWrapper.click(function(e) {
+			e.stopPropagation();
+		});
+
+		$(touch).on('click', function(e) {
+			e.preventDefault();
+			var menu = $(this).closest('li').find('.js-dropdown');
+    		var isClosed = menu.is(':hidden'); // закрыто ли подменю, по которому кликнули
+
+    		menuWrapper.find('.js-dropdown').slideUp(0); // закрываем все подменю
+
+    // если меню было закрыто, то открываем его
+    if (isClosed) {
+    	menu.slideDown(0);
+    }
+});
+
+  // ...
+});
 
 	// Toggle height for header
 	$('.js-toggle-header').on('click',function (e) {
