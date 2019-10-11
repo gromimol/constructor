@@ -16,18 +16,16 @@ $(document).ready(function () {
 		$(touch).on('click', function(e) {
 			e.preventDefault();
 			var menu = $(this).closest('li').find('.js-dropdown');
-    		var isClosed = menu.is(':hidden'); // закрыто ли подменю, по которому кликнули
+    		var isClosed = menu.is(':hidden'); 
 
-    		menuWrapper.find('.js-dropdown').slideUp(0); // закрываем все подменю
+    		menuWrapper.find('.js-dropdown').slideUp(0); 
 
-    // если меню было закрыто, то открываем его
-    if (isClosed) {
+    		if (isClosed) {
     	menu.slideDown(0);
-    }
-});
+		    }
+		});
 
-  // ...
-});
+	});
 
 	// Toggle height for header
 	$('.js-toggle-header').on('click',function (e) {
