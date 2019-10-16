@@ -360,7 +360,7 @@
 	border-radius: 10px;
 	box-shadow: 0 0 13px rgba(98, 93, 93, 0.54);
 	background: #fff url('../img/user-dropdown-bg.png') 100% 100% no-repeat;
-	z-index: 2;
+	z-index: 5;
 	&::before{
 		content: '';
 		width: 0;
@@ -452,7 +452,7 @@
 	border-radius: 10px;
 	box-shadow: 0 0 13px rgba(98, 93, 93, 0.54);
 	padding: 0px 10px 30px 0;
-	z-index: 2;
+	z-index: 5;
 	&::before{
 		content: '';
 		width: 0;
