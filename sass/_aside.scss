@@ -75,6 +75,7 @@
 			color: #767877;
 			display: block;
 			position: relative;
+			white-space: nowrap;
 			&::after{
 				content: '';
 				width: 90%;
@@ -85,7 +86,7 @@
 				transform: translateX(-50%);
 				top: calc(100% + 5px);
 				opacity: 0;
-				transition: all .3s;
+				transition: background-color .3s;
 			}
 			&:hover{
 				color: var(--black);
