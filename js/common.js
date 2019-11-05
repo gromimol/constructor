@@ -180,7 +180,7 @@ $(document).ready(function () {
 			fade: true
 		}
 	}
-	slider.slick({
+	$(".theme-slider").slick({
 		infinite: false,
 		arrows: false,
 		slidesToShow: 1,
@@ -193,7 +193,7 @@ $(document).ready(function () {
 	$('.current-slide').text(currentSlide);
 
 
-	slider.on('init, reInit, afterChange', function(event, slick, currentSlide, nextSlide){
+	$(".theme-slider").on('init, reInit, afterChange', function(event, slick, currentSlide, nextSlide){
 		var i = (currentSlide ? currentSlide : 0) + 1;
 		$('.total-slide').text(slick.slideCount);
 		$('.current-slide').text(i);
@@ -206,7 +206,7 @@ $(document).ready(function () {
 
 	})	
 
-	slider.on('wheel', (function(e) {
+	$(".theme-slider").on('wheel', (function(e) {
 
 		clearTimeout(scroll);
 		scroll = setTimeout(function(){scrollCount=0;}, 200);
