@@ -179,7 +179,7 @@ $(document).ready(function () {
 			slidesToShow: 1,
 			fade: true
 		}
-	}
+	} 
 	$(".theme-slider").slick({
 		infinite: false,
 		arrows: false,
