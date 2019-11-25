@@ -42,6 +42,9 @@
 	.slide-description__text::after{
 		display: none;
 	}
+	.page-data{
+		font-size: 5rem;
+	}
 }
 /*1800*/ 
 @media(max-width: 1600px){
@@ -133,7 +136,9 @@
 		padding-left: 35px;
 		width: 290px;
 	}
-
+	.management__content{
+		width: calc(100% - 370px)
+	}
 	.add-new{
 		margin-bottom: 50px;
 		padding: 0 25px;

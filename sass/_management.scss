@@ -18,10 +18,21 @@
 	background-repeat: no-repeat;
 	background-position: 0 100%;
 } 
-
-.management__content,
 .management-page__body{
 	flex-grow: 1;
+}
+.management__content{
+	width: calc(100% - 410px);
+	.mouse{
+		bottom: 6em;
+		right: 3em;
+		width: 7rem;
+		height: 7rem;
+		svg{
+			width: 16px;
+			height: 29px;
+		}
+	}
 }
 .management__content{
 	border-radius: 25px;
@@ -32,14 +43,13 @@
 	background-position: -300px 100%;
 	z-index: 2;
 	.theme-page{
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		background-color: transparent;
 		padding-bottom: 0;
+		display: flex;
+		align-items: center;
 	}
 }
-.theme-slider--not-slider{
+.theme-slider--type2{
 	position: relative;
 	&::after{
 		content: '';
@@ -48,19 +58,20 @@
 		background:transparent url('../img/floor-shadow.png') center no-repeat;
 		background-size: contain;
 		position: absolute;
-		top: calc(100% + 3em);
+		top: calc(100% + 2em);
 		left: 0;
 	}
-	.mouse{
-		bottom: 0;
-		right: 0;
-		transform: translate(50%, 50%);
-		width: 7rem;
-		height: 7rem;
-		svg{
-			width: 16px;
-			height: 29px;
-		}
+	&.theme-slider, 
+	.theme__item, 
+	.theme__content{
+		height: auto;
+	}
+	&.theme-slider .slick-list, 
+	&.theme-slider .slick-track{
+		height: auto !important;
+	}
+	&.theme-slider .slick-list{
+		padding-top: 0;
 	}
 	
 	.theme__img .group,
@@ -114,14 +125,20 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	& > li{
-		position: relative;
+	& > li,
+	.aside__menu__content{
 		display: flex;
 		align-items: center;
+	}
+	& > li,
+	.aside__menu__item{
+		position: relative;
 		margin-bottom: 18px;
 		&:hover,
-		&.active{
-			& > a{
+		&.active,
+		&.slick-current{
+			& > a,
+			.aside__menu__content a{
 				&::after{
 					opacity: 1;
 				}
@@ -137,7 +154,8 @@
 				}
 			}
 		}
-		& > a{
+		& > a,
+		.aside__menu__content > a{
 			display: flex;
 			align-items: center;
 			width: 177px;
@@ -199,6 +217,14 @@
 				}
 			}
 		}
+	}
+	.slick-list{
+		height: auto !important;
+		overflow: visible;
+		transform: translate3d(0, 0, 0) !important;
+	}
+	.slick-track{
+		transform: translate3d(0, 0, 0) !important;
 	}
 }
 

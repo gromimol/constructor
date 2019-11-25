@@ -20,9 +20,9 @@
 	right: 8rem;
 	transition: all .5s;
 	&.hidden{
-		transform: translateY(100%);
-		opacity: 0;
-		visibility: hidden;
+		// transform: translateY(100%);
+		// opacity: 0;
+		// visibility: hidden;
 	}
 	svg{
 		width: 26px;
