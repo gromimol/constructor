@@ -21,7 +21,7 @@ $(document).ready(function () {
     		menuWrapper.find('.js-dropdown').slideUp(0); 
 
     		if (isClosed) {
-    	menu.slideDown(0);
+    			menu.slideDown(0);
 		    }
 		});
 
@@ -158,7 +158,10 @@ $(document).ready(function () {
 	});
 
 	
-
+	// Dropdown in sidebar
+	// $('.submenu-dots').on('click','.ico', function () {
+	// 	$(this).closest('.submenu-block').toggleClass('active');
+	// })
 
 
 	// toggle slider's preview
@@ -219,6 +222,7 @@ $(document).ready(function () {
 			$(this).slick('slickPrev');
 		}
 	}));
+
 
 	// projects slider
 

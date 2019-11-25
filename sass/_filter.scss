@@ -50,6 +50,19 @@
 	.input{
 		padding-right: 60px;
 	}
+	&--rounded{
+		width: 300px;
+		.input{
+			height: 42px;
+			border-radius: 20px;
+			border: 1px solid #b8d7ef;
+			font-size: 11px;
+			font-family: 'Futura', sans-serif;
+		}
+		.search-submit{
+			height: 100%;
+		}
+	}
 }
 .search-submit{
 	width: 60px;
@@ -139,6 +152,20 @@
 		text-transform: uppercase;
 		color: #000;
 		letter-spacing: 1.3px;
+	}
+	&--rounded{
+		.select{
+			height: 42px;
+			border-radius: 22px;
+			border: 1px solid #0e9ffc;
+			box-shadow: 0 0 10px #b5d4fd;
+			color: #a7a6a6;
+			letter-spacing: 1px;
+		}
+		span{
+			font-size: 11px;
+			color: #000;
+		}
 	}
 }
 .select{

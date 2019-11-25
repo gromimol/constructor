@@ -128,13 +128,33 @@
 ::-moz-placeholder          {font-size: 11px;  } /* Firefox 19+ */
 :-moz-placeholder           {font-size: 11px;  } /* Firefox 18- */
 :-ms-input-placeholder      {font-size: 11px;  }
+	
+	.aside__left{
+		padding-left: 35px;
+		width: 290px;
+	}
 
+	.add-new{
+		margin-bottom: 50px;
+		padding: 0 25px;
+	}
+
+	.management-page__bottom .filter-line.active, 
+	.management-page__bottom .filter-line{
+		padding: 20px 0 20px 25px;
+	}
+	.aside__menu{
+		margin-bottom: 20px;
+	}
+	.aside__menu > li{
+		margin-bottom: 10px;
+	}
 
 }
 
 /*1600*/ 
 
-@media(max-width: 1400px){
+@media(max-width: 1440px){
 	html{
 		font-size: 8px;
 	}
