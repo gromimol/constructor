@@ -185,57 +185,12 @@ $(document).ready(function () {
 		if(scrollCount) return 0;
 		scrollCount=1;
 
-		if (e.originalEvent.deltaY < 0) {
+		if (e.originalEvent.deltaY > 0) {
 			$(this).slick('slickNext');
 		} else {
 			$(this).slick('slickPrev');
 		}
 	}));
-
-
-	// projects slider
-
-	// $('.project-slider').slick({
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	arrows: false,
-	// 	fade: true,
-	// 	infinite: false,
-	// 	// initialSlide: 1,
-	// 	asNavFor: '.project-slider__nav'
-	// });
-
-	// $('.project-slider__nav').slick({
-	// 	slidesToShow: 3,
-	// 	initialSlide: 1,
-	// 	vertical: true,
-	// 	verticalSwiping: true,
-	// 	asNavFor: '.project-slider',
-	// 	arrows: false,
-	// 	centerMode: true,
-	// 	focusOnSelect: true,
-	// 	infinite: false
-	// });
-
-	// $('.project-slider__nav').on('wheel', (function(e) {
-
-	// 	clearTimeout(scroll);
-	// 	scroll = setTimeout(function(){scrollCount=0;}, 200);
-	// 	if(scrollCount) return 0;
-	// 	scrollCount=1;
-
-	// 	if (e.originalEvent.deltaY < 0) {
-	// 		$(this).slick('slickNext');
-	// 	} else {
-	// 		$(this).slick('slickPrev');
-	// 	}
-	// }));
-
-	// $('.project-slider__nav__item').on('click',function () {
-	// 	$('.project-slider__nav__item').removeClass('active');
-	// 	$(this).addClass('active');
-	// })
-
 
 
 	// models slider
@@ -340,8 +295,22 @@ $(document).ready(function () {
 		asNavFor: '.slider-menu'
 	});
 
-	
+	// submenu in left aside
 
+	$('.aside__menu__content > a').on('click',function (e) {
+		e.preventDefault();
+		var submenuContainer = $('.aside__left');
+		var menu = $(this).parent().next('.aside__submenu');
+    	var isClosed = menu.is(':hidden'); 
+
+    		submenuContainer.find('.aside__submenu').slideUp(); 
+
+    		if (isClosed) {
+    			menu.slideDown();
+		    }
+
+
+	})
 
 })
 

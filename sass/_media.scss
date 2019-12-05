@@ -51,7 +51,7 @@
 	html{
 		font-size: .7vw;
 	}
-	
+
 	.select-wrapper span{
 		font-size: 11px;
 		margin-right: 10px;
@@ -162,5 +162,8 @@
 @media(max-width: 1440px){
 	html{
 		font-size: 8px;
+	}
+	.management-page{
+		height: calc(100vh - 7.5em);
 	}
 }
