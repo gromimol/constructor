@@ -46,6 +46,7 @@ $(document).ready(function () {
 
 	// NiceScroll
 	$(".gallery-block").niceScroll();
+	$(".edit-page__content").niceScroll();
 	$(".project-slider__nav.slick-slider").niceScroll();
 	$(".project-slider__nav .slick-list").niceScroll();
 	$(".part-list").niceScroll();

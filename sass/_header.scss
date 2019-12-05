@@ -192,6 +192,10 @@
 			width: 18px;
 			height: 18px;
 		}
+		.header-dots{
+			width: 15px;
+			height: 24px;
+		}
 	}
 }
 .logout{
@@ -228,30 +232,7 @@
 		transform: translate(25%, -25%);
 	}
 }
-.view-type{
-	display: flex;
-	overflow: hidden;
-	a{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 47px;
-		height: 40px;
-		border: 1px solid #cfcdcd;
-		&.active{
-			background-color: var(--blue);
-			color: #fff !important;
-			border-color: var(--blue);
-		}
-		&:first-child{
-			border-right: none;
-			border-radius: 10px 0 0 10px;
-		}
-		&:last-child{
-			border-radius: 0 10px 10px 0;
-		}
-	}
-}
+
 .dropdown{
 	position: absolute;
 	top: calc(100% + 17px);

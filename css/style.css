@@ -256,7 +256,7 @@ a {
   padding-left: 0; }
 
 .main--editor .aside {
-  padding-bottom: 50px; }
+  padding-bottom: 42px; }
 
 .aside {
   display: -webkit-box;
@@ -327,8 +327,13 @@ a {
 
 .nicescroll-cursors {
   border: none !important;
-  background-color: rgba(0, 0, 0, 0.4) !important;
+  background-color: #dadada !important;
   border-radius: 4px !important; }
+
+.nicescroll-rails {
+  z-index: 4 !important;
+  -webkit-transform: translateX(-4px);
+          transform: translateX(-4px); }
 
 p {
   font-size: 1.5rem;
@@ -551,6 +556,9 @@ p {
     .header__options .header-close svg {
       width: 18px;
       height: 18px; }
+    .header__options .header-close .header-dots {
+      width: 15px;
+      height: 24px; }
 
 .logout {
   display: -webkit-box;
@@ -591,34 +599,6 @@ p {
   right: 2rem;
   -webkit-transform: translate(25%, -25%);
           transform: translate(25%, -25%); }
-
-.view-type {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden; }
-  .view-type a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 47px;
-    height: 40px;
-    border: 1px solid #cfcdcd; }
-    .view-type a.active {
-      background-color: var(--blue);
-      color: #fff !important;
-      border-color: var(--blue); }
-    .view-type a:first-child {
-      border-right: none;
-      border-radius: 10px 0 0 10px; }
-    .view-type a:last-child {
-      border-radius: 0 10px 10px 0; }
 
 .dropdown {
   position: absolute;
@@ -3402,17 +3382,15 @@ button.swiper-pagination-bullet {
         color: #fff; }
 
 /*edit-page*/
-.main--editor .content.flex {
-  height: calc(100vh - 90px);
-  padding-bottom: 0;
-  z-index: 4; }
+.main--editor {
+  background: linear-gradient(-225deg, #f4f4f4 0%, #ffffff 100%); }
+  .main--editor .content.flex {
+    height: calc(100vh - 100px);
+    padding-bottom: 0;
+    z-index: 4; }
 
 .min-header .main--editor .content.flex {
   height: calc(100vh - 55px); }
-.min-header .edit-page__body {
-  padding-bottom: 75px; }
-.min-header .edit-page__options {
-  padding-bottom: 15px; }
 
 .edit-page__title {
   font-family: "Futura", sans-serif;
@@ -3433,11 +3411,22 @@ button.swiper-pagination-bullet {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
-  width: 260px;
-  padding-bottom: 90px;
+  width: 230px;
+  padding-bottom: 0;
   position: relative;
+  -webkit-box-shadow: 15px 0 60px rgba(16, 48, 70, 0.06);
+          box-shadow: 15px 0 60px rgba(16, 48, 70, 0.06);
   -webkit-transition: all .4s;
   transition: all .4s; }
+  .edit-page__aside__left::before {
+    content: '';
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: transparent url(../img/white_angle.png) left top no-repeat;
+    background-size: contain; }
 
 .edit-page__aside__slider-wrapper {
   position: absolute;
@@ -3446,7 +3435,7 @@ button.swiper-pagination-bullet {
   bottom: 0;
   width: 320px;
   height: calc(100% - 90px);
-  padding: 10px 10px 20px 20px;
+  padding: 10px 10px 20px 10px;
   background-color: #fff;
   -webkit-transform: translateX(-120%);
           transform: translateX(-120%);
@@ -3558,24 +3547,24 @@ button.swiper-pagination-bullet {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  border-bottom: 1px solid var(--border-color); }
+  padding: 20px; }
 
 .part-list-wrapper {
   position: relative;
   height: 100%;
   background-color: #fff;
+  border-radius: 0 0 25px 0;
   z-index: 5; }
 
 .part-list {
   width: 100%;
-  margin: 0 -5px;
   padding-bottom: 20px;
   height: 100%;
   overflow-y: auto; }
   .part-list li {
-    width: 125px;
-    padding: 0 5px;
-    margin-bottom: 10px; }
+    width: 100px;
+    margin-right: 10px;
+    margin-bottom: 14px; }
     .part-list li a {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -3590,32 +3579,37 @@ button.swiper-pagination-bullet {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      height: 100px;
+      height: 80px;
       border: 1px solid #dadada;
       background-color: #fff;
       border-radius: 15px;
-      color: #353434;
+      color: #767877;
+      font-family: 'Futura',sans-serif;
       font-weight: 400;
-      font-size: 12px; }
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.9px; }
       .part-list li a:hover, .part-list li a.active {
         border: 2px solid #4978fa;
         background-color: #eef8fa;
         color: #4978fa; }
         .part-list li a:hover .part-title, .part-list li a.active .part-title {
-          color: #353434; }
+          color: #000;
+          -webkit-transition: all .3s;
+          transition: all .3s; }
       .part-list li a .svg {
         width: 25px;
         height: 25px;
-        margin-bottom: 12px; }
+        margin-bottom: 8px; }
 
 .edit-page__body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   position: relative;
-  padding-bottom: 90px;
-  padding-left: 20px;
-  padding-right: 20px;
+  background: linear-gradient(-225deg, #f4f4f4 0%, #ffffff 100%);
+  border-radius: 25px;
+  z-index: 2;
   -webkit-transition: all .3s;
   transition: all .3s; }
 
@@ -3657,7 +3651,7 @@ button.swiper-pagination-bullet {
     height: 20px; }
 
 .drop-content {
-  height: 250px;
+  min-height: 200px;
   margin-bottom: 20px; }
   .drop-content--empty {
     border: 1px dashed #cdcdcd;
@@ -3681,6 +3675,7 @@ button.swiper-pagination-bullet {
 .editor-img {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover; }
 
@@ -3933,6 +3928,24 @@ button {
       color: #fff; }
     .save-btn.active .ico {
       display: block; }
+
+.edit-btn--save .ico {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #fff;
+  border-radius: 50%; }
+  .edit-btn--save .ico svg {
+    width: 14px;
+    height: 10px; }
 
 /*category-slider*/
 .models-page .main {

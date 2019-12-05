@@ -103,7 +103,7 @@ a{
 }
 .main--editor{
 	.aside{
-		padding-bottom: 50px;
+		padding-bottom: 42px;
 	}
 }
 .aside{
@@ -175,8 +175,12 @@ a{
 
 .nicescroll-cursors{
 	border: none !important;
-	background-color: rgba(#000, .4) !important;
+	background-color: #dadada !important;
 	border-radius: 4px !important;
+}
+.nicescroll-rails {
+	z-index: 4 !important;
+	transform: translateX(-4px);
 }
 
 p{
