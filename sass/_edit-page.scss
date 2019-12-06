@@ -703,7 +703,7 @@ button{
 	position: absolute;
 	top: 50%;
 	right: calc(100% + 20px);
-	transform: translate(0, -80%) rotateY(-90deg);
+	transform: translate(0, -75%) rotateY(-90deg);
 	transform-origin: 100% 0;
 	visibility: hidden;
 	background: linear-gradient(to right, #f2f3f3 0%, #f8f9f9 99%, #f8f9f9 100%);
@@ -751,7 +751,7 @@ button{
 	left: 27px;
 	top: 0;
 	padding-top: 30px;
-	padding-bottom: 10px;
+	padding-bottom: 17px;
 	width: 20px;
 	height: 100%;	
 }
@@ -860,6 +860,12 @@ button{
 	justify-content: center;
 	.ico{
 		color: #70706d;
+		width: 10px;
+		height: 10px;
+		svg{
+			width: 100%;
+			height: 100%;
+		}
 	}
 	&:hover{
 		background-color: var(--blue);
@@ -909,10 +915,48 @@ button{
 		border-radius: 3px;
 	}
 }
-
-
-
-
+.color-picker-wrapper{
+	padding-left: 30px;
+	border-left: 1px solid #cfcdcd;
+	margin-left: 10px;
+	display: none;
+}
+.color-picker-row{
+	margin-top: 45px;
+}
+#color-picker-value__circle{
+	flex: none;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: currentColor;
+	position: relative;
+	&::before{
+		content: '';
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		position: absolute;
+		top: 4px;
+		left: 0;
+		background-color: currentColor;
+		-webkit-filter: blur(5px);
+		filter: blur(5px);
+		opacity: .5;
+	}
+}
+#color-picker-value{
+	display: flex;
+	align-items: center;
+}
+#color-picker-value__hex{
+	font-family: "Futura",sans-serif;
+	font-size: 15px;
+	color: #000;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-left: 10px;
+}
 
 
 

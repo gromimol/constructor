@@ -319,6 +319,8 @@ $(document).ready(function () {
 		var hiddenPopup = $('#' + featuresId).hasClass('active');
 
 		$('.aside-features').removeClass('active');
+		$('.pallete-open').show();
+		$('.color-picker-wrapper').hide();	
 		
 		$('#' + featuresId).addClass('active');
 
@@ -333,11 +335,16 @@ $(document).ready(function () {
 		$(this).closest('.pallete__item').hide();
 	});
 
-	
+	// Open color Pallete
+	$('.pallete-open').on('click',function (e) {
+		e.preventDefault();
 
-})
+		$(this).hide();
+		$('.color-picker-wrapper').show();	
+	});
 
-// Range slider
+
+	// Range slider
 	$( function() {
 
 		$( "#slider-vertical" ).slider({
@@ -352,12 +359,36 @@ $(document).ready(function () {
 			}
 		});
 
-		$('#slider-vertical .ui-slider-handle').attr('data-val', '16');
+		$('#slider-vertical .ui-slider-handle').attr('data-val', $( "#slider-vertical" ).slider( "value" ));
 		
 		$('#slider-vertical').attr('data-range', $( "#slider-vertical" ).slider( "value" ));
 
 
 	} );
+
+	// https://iro.js.org/guide.html#color-picker-options
+	iro.use(iroTransparencyPlugin);
+	var colorPicker = new iro.ColorPicker('#color-picker-container', {
+		width: 145,
+		color: {r: 255, g: 100, b: 100, a: .6},
+		transparency: true
+	});
+
+	var value = document.getElementById("color-picker-value__hex");
+	var valueColor = document.getElementById("color-picker-value__circle");
+
+	// https://iro.js.org/guide.html#color-picker-events
+	colorPicker.on(["color:init", "color:change"], function(color){
+	  // Show the current color in different formats
+	  // Using the selected color: https://iro.js.org/guide.html#selected-color-api
+	  value.innerHTML =  color.hexString;
+	  valueColor.style.color = color.rgbaString;
+	});
+
+
+})
+
+
 
 
 
