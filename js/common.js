@@ -309,11 +309,55 @@ $(document).ready(function () {
     		if (isClosed) {
     			menu.slideDown();
 		    }
+	});
 
+	// popup in sidebar
+	$('.js-popup-features').on('click',function (e) {
+		e.preventDefault();
 
-	})
+		var featuresId = $(this).attr('data-features');
+		var hiddenPopup = $('#' + featuresId).hasClass('active');
+
+		$('.aside-features').removeClass('active');
+		
+		$('#' + featuresId).addClass('active');
+
+		if(hiddenPopup){
+			$('#' + featuresId).removeClass('active');
+		}
+	});
+
+	$('.pallete__item .remove').on('click',function (e) {
+		e.preventDefault();
+
+		$(this).closest('.pallete__item').hide();
+	});
+
+	
 
 })
+
+// Range slider
+	$( function() {
+
+		$( "#slider-vertical" ).slider({
+			orientation: "vertical",
+			range: "min",
+			min: 0,
+			max: 50,
+			value: 16,
+			slide: function( event, ui ) {
+				$('#slider-vertical').attr('data-range', ui.value);
+				$('#slider-vertical .ui-slider-handle').attr('data-val', ui.value);
+			}
+		});
+
+		$('#slider-vertical .ui-slider-handle').attr('data-val', '16');
+		
+		$('#slider-vertical').attr('data-range', $( "#slider-vertical" ).slider( "value" ));
+
+
+	} );
 
 
 
