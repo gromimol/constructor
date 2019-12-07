@@ -4598,7 +4598,7 @@ button {
         -ms-flex-positive: auto;
             flex-grow: auto; }
   .aside__left .aside__menu .slick-list {
-    height: calc(100vh - 7em) !important; }
+    height: calc(100vh - 15em) !important; }
   .aside__left .slick-track {
     display: -webkit-box;
     display: -ms-flexbox;
