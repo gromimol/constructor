@@ -107,11 +107,20 @@ $(document).ready(function () {
 		$('.edit-page__aside__slider-wrapper').addClass('active');
 	});
 
+
+	$('html').on('click', function () {
+		$('.edit-page__aside__slider-wrapper').removeClass('active');
+	});
 	$('.close-slider').on('click', function (e) {
 		e.preventDefault();
 
 		$('.edit-page__aside__slider-wrapper').removeClass('active');
 	});
+
+	$('.edit-page__aside__left').on('click',function (e) {
+		e.stopPropagation();
+	});
+
 
 	// Accordeon
 	$('.js-accordeon-title').on('click',function () {
