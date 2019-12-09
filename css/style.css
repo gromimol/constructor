@@ -5005,6 +5005,9 @@ button {
   line-height: 1.7; }
 
 .management-page__bottom {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   /* Firefox 19+ */
   /* Firefox 18- */ }
   .management-page__bottom .filter-line.active,
@@ -5026,6 +5029,9 @@ button {
   .management-page__bottom .search-submit .search-ico {
     width: 16px;
     height: 16px; }
+  .management-page__bottom .burger {
+    top: -22px;
+    left: 5px; }
   .management-page__bottom ::-webkit-input-placeholder {
     font-size: 11px;
     text-transform: uppercase;

@@ -5,7 +5,6 @@
 	}
 	.header{
 		min-height: 8em;
-
 	}
 }
 .management-page{
@@ -489,6 +488,7 @@
 	line-height: 1.7;
 }
 .management-page__bottom{
+	flex: 1 0 auto;
 	.filter-line.active,
 	.filter-line{
 		position: relative;
@@ -516,6 +516,10 @@
 	.search-submit .search-ico{
 		width: 16px;
 		height: 16px;
+	}
+	.burger{
+		top: -22px;
+		left: 5px;
 	}
 
 
