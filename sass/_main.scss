@@ -81,6 +81,9 @@ a{
 	&--right{
 		justify-content: flex-end;
 	}
+	&--column{
+		flex-direction: column;
+	}
 
 }
 .hide-aside{
@@ -145,6 +148,7 @@ a{
 		transform: rotate(0deg);
 	}
 }
+
 .index-page{
 	.aside{
 		padding-bottom: 5px;

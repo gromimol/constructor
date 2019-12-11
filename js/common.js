@@ -1,4 +1,13 @@
 $(document).ready(function () {
+
+	// height for main
+	function pageHeight() {
+		var wrapperHeight = $('.wrapper').outerHeight();
+		var headerHeight = $('.header').outerHeight();
+		var footerHeight = $('.footer').outerHeight();
+		$('.main').height(wrapperHeight - headerHeight - footerHeight);
+	};
+	pageHeight();
 	// Dropdown menu in header
 	$(function() {
 		var touch = $('.js-dropdown-link');
@@ -42,14 +51,14 @@ $(document).ready(function () {
 
 		$(this).toggleClass('active');
 		$('.edit-page__aside__right').toggleClass('active');
-	})
+	});
 
 	// NiceScroll
+	$(".part-list").niceScroll();
 	$(".gallery-block").niceScroll();
 	$(".edit-page__content").niceScroll();
 	$(".project-slider__nav.slick-slider").niceScroll();
 	$(".project-slider__nav .slick-list").niceScroll();
-	$(".part-list").niceScroll();
 	$(".edit-page__aside__right .tab-content").niceScroll();
 	$(".edit-page__aside__slider").niceScroll();
 

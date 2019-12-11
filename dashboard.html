@@ -3,25 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=1366">
-	
 	<link rel="stylesheet" href="css/style.css">
-	<title>Editor</title>
+	<title>Dashboard</title>
 </head>
-<body class="editor-page">
+<!-- class management-body needed for this page -->
+<body class="management-body">
 	<!-- svg icons -->
 	<div class="svg-sprite">
-		
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-			<symbol viewBox="0 0 20 20" id="svg-move"><g><g><path d="M19.76814,9.56813l-2.82085,-2.06592c-0.16857,-0.1263 -0.40031,-0.14729 -0.56831,-0.04191c-0.18997,0.10538 -0.29491,0.29528 -0.29491,0.5061v1.49642v0h-5.53722v0v-5.52237v0h1.49529c0.21034,0 0.39974,-0.1263 0.50468,-0.29528c0.1054,-0.18971 0.08446,-0.40021 -0.04177,-0.56899l-2.06303,-2.84529c-0.1054,-0.14748 -0.27397,-0.23187 -0.44209,-0.23187c-0.16857,0 -0.33714,0.08439 -0.44254,0.23187l-2.06303,2.8243c-0.12623,0.16846 -0.14717,0.40027 -0.04223,0.56906c0.10586,0.1899 0.2948,0.29521 0.50571,0.29521h1.4946v0v5.52217v0h-5.51582v0v-1.49667c0,-0.21037 -0.12623,-0.40027 -0.2948,-0.50565c-0.16811,-0.10551 -0.39974,-0.08439 -0.56831,0.04197l-2.84168,2.08684c-0.14774,0.10538 -0.23174,0.27378 -0.23174,0.44276c0,0.1684 0.084,0.33719 0.23174,0.4425l2.82028,2.0656c0.10586,0.06341 0.2108,0.10531 0.33714,0.10531c0.08446,0 0.16857,-0.02092 0.25257,-0.06302c0.1894,-0.10538 0.2948,-0.29509 0.2948,-0.50597v-1.49642v0h5.51582v0v5.52217v0h-1.4946c-0.21091,0 -0.39986,0.12649 -0.50571,0.29528c-0.10494,0.18939 -0.084,0.40027 0.04223,0.56867l2.0422,2.82469c0.1054,0.14748 0.2734,0.23187 0.44197,0.23187c0.16857,0 0.33714,-0.08439 0.44209,-0.23187l2.08443,-2.80319c0.12623,-0.16891 0.14717,-0.40079 0.04177,-0.56919c-0.10494,-0.18977 -0.29434,-0.29528 -0.50468,-0.29528h-1.49529v0v-5.54316v0h5.51582v0v1.49642c0,0.21089 0.12634,0.40059 0.29491,0.50597c0.084,0.0421 0.16857,0.06302 0.25257,0.06302c0.1054,0 0.23174,-0.04191 0.33714,-0.10531l2.82085,-2.04442c0.14717,-0.10557 0.23163,-0.27397 0.23163,-0.44276c0,-0.1684 -0.08446,-0.3583 -0.23163,-0.46368z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
-
-			<symbol viewBox="0 0 16 20" id="svg-copy"><g><g><path d="M6,8.99997h0.99998l0,2.00001h1.99997v1.00003h-1.99997v2.00001h-0.99998l0,-2.00001h-1.99997v-1.00003h1.99997zM12.44806,5.07901v13.34021c0,0.87232 -0.70793,1.58081 -1.57974,1.58081h-9.28894c-0.87193,0 -1.57974,-0.70849 -1.57974,-1.58081v-13.34021c0,-0.87232 0.70782,-1.58113 1.57974,-1.58113h9.28894c0.86769,0 1.57562,0.70881 1.57974,1.58113zM11.33878,5.07901c0,-0.26219 -0.21286,-0.47546 -0.47459,-0.47546h-9.28894c-0.2623,0 -0.47459,0.21327 -0.47459,0.47546v13.33584c0,0.262 0.21229,0.47527 0.47459,0.47527h9.28894c0.26173,0 0.47459,-0.21327 0.47459,-0.47527zM15.99962,1.58098v13.34021c0,0.87232 -0.70736,1.58081 -1.57928,1.58081c-0.30647,0 -0.55252,-0.24552 -0.55252,-0.55284c0,-0.30699 0.24605,-0.55303 0.55252,-0.55303c0.26184,0 0.4747,-0.21288 0.4747,-0.47494v-13.34021c0,-0.262 -0.21286,-0.47494 -0.4747,-0.47494h-9.28894c-0.26218,0 -0.47459,0.21295 -0.47459,0.47494c0,0.30738 -0.24593,0.55303 -0.55309,0.55303c-0.30659,0 -0.55195,-0.24565 -0.55195,-0.55303c0,-0.87232 0.70782,-1.58074 1.57963,-1.58074h9.28894c0.87193,0 1.57928,0.70843 1.57928,1.58074z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
-
-			<symbol viewBox="0 0 20 20" id="svg-picker"><g><g><path d="M19.17992,0.87963c1.10687,1.12904 1.09028,2.94288 -0.03696,4.05144l-1.16203,1.16386l0.83427,0.83556c1.04176,1.04793 1.04176,2.7421 0,3.79003h-0.02975c-1.04633,1.04336 -2.73788,1.04336 -3.78422,0l-0.149,-0.14922l-6.64467,6.62508c-0.73082,0.74042 -1.73172,1.15002 -2.77107,1.134l-0.8939,0.89524c-1.04496,1.0384 -2.73251,1.03171 -3.76934,-0.01487c-1.03672,-1.04658 -1.03008,-2.73675 0.01488,-3.77509l0.8939,-0.8953c-0.01591,-1.04098 0.39299,-2.04346 1.13228,-2.77531l6.61491,-6.65495l-0.149,-0.14922c-1.04176,-1.04793 -1.04176,-2.7421 0,-3.79003h0.02987c1.04633,-1.04329 2.73788,-1.04329 3.7841,0l0.83439,0.83563l1.16203,-1.16386c0.00229,-0.00232 0.00469,-0.0047 0.00698,-0.00702c1.11912,-1.11687 2.93026,-1.11372 4.04537,0.00702c0.01247,0.01223 0.02483,0.02459 0.03696,0.03701zM13.98808,9.73569l-3.72448,-3.73029l-6.61491,6.62508c-0.56351,0.55348 -0.84812,1.33175 -0.77477,2.11877c0.01476,0.17799 -0.05081,0.35315 -0.17876,0.47752l-1.10252,1.10419c-0.57598,0.57685 -0.57598,1.51212 0,2.08897c0.57598,0.57685 1.50982,0.57685 2.0858,0l1.10252,-1.10419c0.12417,-0.1281 0.29903,-0.19376 0.47676,-0.17909c0.78575,0.07345 1.56292,-0.21153 2.11555,-0.77589zM17.9895,9.84641c0.57953,-0.58509 0.57552,-1.52982 -0.00858,-2.11015l-5.72102,-5.69997c-0.00286,-0.0029 -0.00572,-0.00573 -0.00858,-0.00863c-0.58422,-0.58032 -1.52756,-0.5764 -2.10697,0.00863h-0.02975c-0.00298,0.0029 -0.00584,0.00579 -0.0087,0.00869c-0.57941,0.58509 -0.57552,1.52982 0.0087,2.11015l5.7209,5.69997c0.00298,0.0029 0.00584,0.00579 0.0087,0.00863c0.58422,0.58032 1.52744,0.57646 2.10697,-0.00863h0.02975c0.00286,-0.0029 0.00572,-0.00573 0.00858,-0.00869zM18.30868,1.84439c-0.60425,-0.6969 -1.65813,-0.77132 -2.35394,-0.16621l-1.16203,1.16386l2.35382,2.3576l1.16215,-1.16386c0.54485,-0.62854 0.54485,-1.56285 0,-2.19139z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
-
-			<symbol viewBox="0 0 21 21" id="svg-text"><g><g><path d="M4.77604,4.77676h11.44707v2.86177h-0.95398c0,0 0,-1.90789 -0.95387,-1.90789c-0.95398,0 -2.86182,0 -2.86182,0v8.58543c0,0 0,0.95394 0.95398,0.95394c0.95387,0 0.95387,0 0.95387,0v0.95388h-5.72353v-0.95388c0,0 0,0 0.95398,0c0.95387,0 0.95387,-0.95394 0.95387,-0.95394v-8.58543c0,0 -1.90784,0 -2.86171,0c-0.95398,0 -0.95398,1.90789 -0.95398,1.90789h-0.95387zM0.96024,1.91493h-0.95387v-1.90782h1.90784v0.95394h-0.95398zM0.00637,19.08566h0.95387v0.95394h0.95398v0.95394h-1.90784zM0.00637,3.82282h0.95387v1.90782h-0.95387zM0.00637,7.63853h0.95387v1.90782h-0.95387zM0.00637,11.45431h0.95387v1.90782h-0.95387zM0.00637,15.27002h0.95387v1.90782h-0.95387zM19.08493,20.03961h0.95398v-0.95394h0.95387v1.90789h-1.90784zM20.99277,1.91493h-0.95387v-0.95388h-0.95398v-0.95394h1.90784zM20.03891,15.27002h0.95387v1.90782h-0.95387zM20.03891,11.45431h0.95387v1.90782h-0.95387zM20.03891,7.63853h0.95387v1.90782h-0.95387zM20.03891,3.82282h0.95387v1.90782h-0.95387zM3.82206,20.03961h1.90784v0.95394h-1.90784zM7.63775,20.03961h1.90784v0.95394h-1.90784zM11.45344,20.03961h1.90784v0.95394h-1.90784zM15.26913,20.03961h1.90796v0.95394h-1.90796zM3.82206,0.00711h1.90784v0.95394h-1.90784zM7.63775,0.00711h1.90784v0.95394h-1.90784zM11.45344,0.00711h1.90784v0.95394h-1.90784zM15.26913,0.00711h1.90796v0.95394h-1.90796z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
-
-			<symbol viewBox="0 0 18 18" id="svg-close"><g><g><path d="M-0.00124,16.87597l7.87615,-7.87583l-7.87615,-7.87632l1.12496,-1.12445l7.87616,7.87584l7.87616,-7.87584l1.12496,1.12445l-7.87615,7.87632l7.87615,7.87583l-1.12496,1.12549l-7.87616,-7.87633l-7.87616,7.87633z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
+			<symbol viewBox="0 0 21 20" id='svg-folder'>
+				<path fill-rule="evenodd"  fill="currentColor"
+				d="M2.767,19.121 L17.811,19.121 C19.196,19.121 20.319,17.999 20.319,16.615 L20.319,4.917 C20.319,3.533 19.196,2.411 17.811,2.411 L9.134,2.411 L8.530,1.202 C8.507,1.168 8.482,1.136 8.455,1.106 C8.423,1.056 8.386,1.009 8.346,0.966 C8.304,0.932 8.259,0.902 8.212,0.876 C8.169,0.847 8.124,0.821 8.076,0.798 C8.018,0.781 7.959,0.770 7.899,0.763 C7.860,0.752 7.821,0.744 7.782,0.740 L2.767,0.740 C1.383,0.740 0.260,1.862 0.260,3.246 L0.260,16.615 C0.260,17.999 1.383,19.121 2.767,19.121 ZM17.811,4.082 C18.273,4.082 18.647,4.456 18.647,4.917 L18.647,5.753 L10.805,5.753 L9.969,4.082 L17.811,4.082 ZM1.932,3.246 C1.932,2.785 2.305,2.411 2.767,2.411 L7.266,2.411 L9.541,6.962 C9.580,7.040 9.631,7.110 9.692,7.171 L9.729,7.203 C9.792,7.257 9.862,7.302 9.938,7.336 C9.962,7.348 9.986,7.359 10.011,7.368 C10.100,7.402 10.194,7.421 10.289,7.424 L18.647,7.424 L18.647,16.615 C18.647,17.076 18.273,17.450 17.811,17.450 L2.767,17.450 C2.305,17.450 1.932,17.076 1.932,16.615 L1.932,3.246 Z"/>
+			</symbol>
 
 			<symbol viewBox="0 0 31 31" id='svg-edit'>
 				<path fill-rule="evenodd"  fill="currentColor"
@@ -35,9 +29,9 @@
 				d="M19.654,7.145 C18.816,8.498 17.715,9.667 16.417,10.588 C15.162,11.482 13.702,12.114 12.189,12.411 C10.575,12.729 8.902,12.695 7.304,12.297 C5.756,11.911 4.325,11.178 3.072,10.200 C1.854,9.252 0.837,8.038 0.086,6.694 C0.068,6.662 0.066,6.628 0.054,6.596 C0.042,6.564 0.029,6.535 0.023,6.502 C0.013,6.453 0.013,6.405 0.015,6.357 C0.015,6.320 0.016,6.285 0.022,6.249 C0.029,6.219 0.040,6.191 0.051,6.161 C0.063,6.125 0.067,6.085 0.086,6.051 C0.259,5.739 0.449,5.436 0.652,5.141 C1.552,3.832 2.698,2.709 4.040,1.854 C5.346,1.021 6.840,0.457 8.374,0.242 C10.007,0.012 11.670,0.117 13.248,0.613 C14.778,1.093 16.183,1.900 17.392,2.952 C17.993,3.474 18.527,4.060 19.013,4.690 C19.245,4.991 19.464,5.305 19.667,5.628 C19.821,5.872 20.036,6.157 19.996,6.456 C19.964,6.696 19.781,6.938 19.654,7.145 ZM2.055,5.345 C2.029,5.378 1.997,5.423 2.055,5.345 ZM17.778,5.158 C17.707,5.071 17.633,4.985 17.559,4.901 C17.403,4.724 17.240,4.551 17.074,4.384 C16.740,4.049 16.386,3.737 16.014,3.447 C16.009,3.442 16.012,3.445 16.009,3.442 C15.997,3.433 15.985,3.425 15.972,3.415 C15.924,3.377 15.875,3.341 15.824,3.306 C15.734,3.240 15.641,3.175 15.548,3.112 C15.354,2.979 15.153,2.854 14.951,2.734 C14.566,2.509 14.164,2.311 13.754,2.135 C12.962,1.810 12.134,1.582 11.286,1.458 C10.422,1.350 9.547,1.352 8.683,1.461 C7.833,1.584 7.001,1.810 6.206,2.136 C5.742,2.336 5.290,2.562 4.859,2.825 C4.656,2.950 4.456,3.080 4.262,3.217 C4.156,3.291 4.055,3.367 3.954,3.443 C3.937,3.455 3.922,3.468 3.905,3.480 C4.067,3.358 3.973,3.430 3.937,3.457 C3.888,3.495 3.840,3.533 3.793,3.571 C3.430,3.866 3.086,4.184 2.763,4.524 C2.603,4.694 2.445,4.869 2.295,5.048 C2.217,5.143 2.139,5.238 2.063,5.335 C2.061,5.337 2.059,5.340 2.057,5.342 C2.049,5.354 2.040,5.365 2.031,5.377 C2.002,5.419 1.970,5.459 1.941,5.501 C1.738,5.777 1.563,6.071 1.387,6.364 C1.596,6.713 1.807,7.061 2.053,7.385 C2.062,7.398 2.060,7.396 2.065,7.402 C2.078,7.418 2.090,7.435 2.103,7.450 C2.135,7.490 2.169,7.531 2.200,7.571 C2.272,7.657 2.344,7.743 2.417,7.828 C2.572,8.005 2.730,8.177 2.895,8.344 C3.221,8.675 3.572,8.987 3.939,9.275 C3.940,9.276 3.939,9.275 3.940,9.276 C3.961,9.292 3.982,9.307 4.004,9.324 C4.044,9.356 4.087,9.385 4.127,9.414 C4.217,9.480 4.308,9.543 4.401,9.606 C4.597,9.739 4.800,9.868 5.004,9.988 C5.389,10.212 5.789,10.410 6.199,10.586 C6.996,10.911 7.828,11.138 8.680,11.261 C9.556,11.370 10.442,11.370 11.316,11.261 C12.166,11.140 12.997,10.912 13.791,10.588 C14.255,10.390 14.706,10.162 15.137,9.901 C15.335,9.779 15.531,9.653 15.721,9.518 C15.817,9.451 15.912,9.382 16.005,9.311 C15.991,9.322 16.033,9.291 16.057,9.273 C16.065,9.267 16.073,9.260 16.082,9.253 C16.084,9.251 16.086,9.250 16.088,9.248 C16.085,9.250 16.086,9.250 16.083,9.252 C16.113,9.228 16.144,9.203 16.175,9.178 C16.538,8.885 16.884,8.569 17.207,8.232 C17.369,8.064 17.525,7.889 17.677,7.710 C17.755,7.617 17.833,7.522 17.909,7.425 C17.928,7.402 17.947,7.377 17.966,7.353 C17.842,7.514 17.915,7.421 17.943,7.385 C17.977,7.341 18.010,7.297 18.044,7.250 C18.251,6.968 18.430,6.668 18.610,6.368 C18.395,6.021 18.178,5.675 17.932,5.349 C17.917,5.330 17.903,5.312 17.894,5.301 C17.857,5.253 17.818,5.206 17.778,5.158 ZM13.575,7.012 C13.354,8.437 12.162,9.650 10.750,9.927 C9.963,10.080 9.184,9.986 8.456,9.659 C7.806,9.368 7.252,8.847 6.884,8.241 C6.509,7.619 6.321,6.865 6.378,6.142 C6.441,5.352 6.735,4.637 7.239,4.026 C8.172,2.895 9.838,2.448 11.214,2.958 C11.936,3.225 12.533,3.683 12.982,4.307 C13.413,4.901 13.630,5.647 13.634,6.376 C13.634,6.376 13.634,6.377 13.634,6.377 C13.634,6.377 13.634,6.378 13.634,6.378 C13.632,6.591 13.609,6.801 13.575,7.012 ZM12.348,6.080 C12.313,5.861 12.254,5.650 12.173,5.445 C12.105,5.300 12.033,5.158 11.944,5.025 C11.923,4.994 11.900,4.963 11.878,4.932 C11.869,4.923 11.862,4.915 11.860,4.911 C11.801,4.840 11.740,4.772 11.674,4.707 C11.617,4.652 11.558,4.600 11.498,4.549 C11.518,4.563 11.483,4.530 11.457,4.511 C11.456,4.510 11.454,4.509 11.453,4.508 C11.442,4.499 11.429,4.490 11.417,4.479 C11.428,4.489 11.430,4.491 11.439,4.499 C11.407,4.475 11.375,4.452 11.343,4.431 C11.212,4.345 11.074,4.276 10.934,4.211 C10.738,4.134 10.534,4.079 10.326,4.043 C10.109,4.021 9.892,4.021 9.676,4.043 C9.468,4.079 9.265,4.134 9.070,4.210 C8.924,4.278 8.782,4.350 8.648,4.439 C8.617,4.460 8.587,4.482 8.557,4.505 C8.547,4.514 8.538,4.521 8.534,4.524 C8.463,4.583 8.395,4.644 8.330,4.709 C8.275,4.766 8.222,4.825 8.171,4.885 C8.187,4.864 8.153,4.899 8.134,4.926 C8.133,4.927 8.132,4.929 8.131,4.930 C8.122,4.941 8.113,4.953 8.102,4.966 C8.112,4.955 8.113,4.953 8.121,4.944 C8.098,4.976 8.075,5.008 8.053,5.040 C7.967,5.170 7.899,5.307 7.833,5.448 C7.756,5.644 7.701,5.847 7.665,6.056 C7.642,6.271 7.643,6.488 7.665,6.704 C7.701,6.912 7.756,7.115 7.833,7.311 C7.901,7.456 7.973,7.598 8.062,7.731 C8.083,7.762 8.105,7.791 8.127,7.822 C8.136,7.831 8.144,7.841 8.146,7.845 C8.205,7.916 8.266,7.983 8.332,8.049 C8.389,8.104 8.448,8.156 8.508,8.207 C8.488,8.192 8.523,8.225 8.549,8.245 C8.551,8.246 8.553,8.247 8.554,8.249 C8.565,8.257 8.577,8.266 8.589,8.276 C8.579,8.267 8.577,8.266 8.568,8.258 C8.600,8.281 8.631,8.304 8.663,8.325 C8.793,8.411 8.931,8.480 9.071,8.545 C9.268,8.622 9.471,8.677 9.680,8.713 C9.897,8.735 10.114,8.735 10.330,8.713 C10.538,8.677 10.741,8.622 10.937,8.545 C11.082,8.477 11.225,8.405 11.358,8.316 C11.389,8.296 11.419,8.273 11.449,8.251 C11.459,8.242 11.468,8.235 11.472,8.232 C11.543,8.173 11.611,8.112 11.676,8.047 C11.732,7.990 11.784,7.930 11.835,7.871 C11.818,7.893 11.853,7.857 11.873,7.830 C11.873,7.828 11.874,7.827 11.875,7.826 C11.884,7.814 11.893,7.802 11.904,7.790 C11.894,7.801 11.893,7.803 11.885,7.812 C11.908,7.780 11.931,7.748 11.953,7.716 C12.039,7.586 12.107,7.448 12.173,7.308 C12.254,7.103 12.313,6.891 12.348,6.672 C12.358,6.574 12.368,6.475 12.368,6.376 C12.368,6.277 12.358,6.178 12.348,6.080 ZM11.875,7.826 C11.874,7.828 11.872,7.830 11.870,7.832 C11.859,7.845 11.847,7.858 11.835,7.871 C11.842,7.862 11.858,7.843 11.885,7.812 C11.882,7.817 11.879,7.821 11.875,7.826 ZM8.554,8.249 C8.552,8.247 8.549,8.245 8.547,8.243 C8.534,8.232 8.521,8.219 8.508,8.207 C8.516,8.213 8.536,8.230 8.568,8.258 C8.564,8.255 8.559,8.252 8.554,8.249 ZM8.131,4.930 C8.132,4.928 8.134,4.926 8.136,4.924 C8.147,4.911 8.160,4.898 8.171,4.885 C8.165,4.893 8.148,4.912 8.121,4.944 C8.124,4.940 8.127,4.935 8.131,4.930 ZM11.453,4.508 C11.455,4.510 11.457,4.512 11.459,4.513 C11.472,4.524 11.485,4.537 11.498,4.549 C11.491,4.543 11.471,4.526 11.439,4.499 C11.444,4.502 11.449,4.505 11.453,4.508 ZM16.082,9.253 C16.059,9.270 16.037,9.287 16.017,9.303 C16.013,9.306 16.009,9.308 16.005,9.311 C16.012,9.305 16.032,9.290 16.083,9.252 C16.082,9.252 16.082,9.253 16.082,9.253 Z"/>
 			</symbol>
 
-			<symbol viewBox="0 0 17 10" id="svg-arrow-right"><g><g><path d="M10.99808,1.02323l0.96867,-0.96938l4.44407,4.44392l-0.31839,0.3183l0.31839,0.31825l-4.44407,4.44377l-0.96867,-0.96893l3.10756,-3.10783h-14.10556v-1.37041l14.10551,0z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
+			<symbol viewBox="0 0 17 10" id="arrow-right"><g><g><path d="M10.91359,1.45669l0.96096,-0.96193l4.40975,4.40968l-0.31583,0.31581l0.31583,0.31581l-4.40975,4.40968l-0.96096,-0.96148l3.07765,-3.078h-13.99119v-1.37501l13.98809,0z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
 
-			<symbol viewBox="0 0 17 10" id="svg-arrow-left"><g><g><path d="M0.58944,4.49777l4.44366,-4.44392l0.96881,0.96938l-3.10145,3.10171h14.09972v1.37519l-14.10693,0l3.10866,3.10903l-0.96881,0.96893l-4.44366,-4.44377l0.31835,-0.31825z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
+			<symbol viewBox="0 0 17 10" id="arrow-left"><g><g><path d="M0.71543,4.90448l4.40975,-4.40968l0.96142,0.96199l-3.07478,3.07446h13.98821v1.37501l-13.99148,0l3.07805,3.07812l-0.96142,0.96141l-4.40975,-4.40968l0.31583,-0.31581z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
 
 			<symbol viewBox="0 0 20 21" id="svg-comment"><g><g><path d="M20.13423,10.21569c0,2.68993 -1.04764,5.21375 -2.95076,7.11609c-1.94185,1.94085 -4.52221,2.94963 -7.12807,2.94963c-1.62246,0 -3.25733,-0.39163 -4.75187,-1.19609c-1.34125,0.9661 -2.65277,1.17475 -3.54276,1.17475c-0.33235,0 -0.60455,-0.02985 -0.79616,-0.05955c-0.40899,-0.06388 -0.72415,-0.38312 -0.78784,-0.79162c-0.06382,-0.40865 0.14469,-0.80431 0.51523,-0.98744c0.77079,-0.3788 1.29011,-1.13639 1.61387,-1.78757c-3.30029,-3.97095 -3.04458,-9.85722 0.63428,-13.53444c1.90353,-1.90249 4.42838,-2.94933 7.11948,-2.94933c2.6911,0 5.21609,1.04684 7.11948,2.94933c1.90326,1.90264 2.95512,4.42646 2.95512,7.11624zM16.36154,3.91241c-3.47444,-3.47723 -9.13334,-3.47723 -12.61241,0c-3.32961,3.32813 -3.49148,8.69083 -0.37462,12.21074c0.08101,0.09358 0.12792,0.2085 0.14047,0.32357c0.02973,0.11895 0.02141,0.24671 -0.02973,0.37029c-0.31939,0.72759 -0.86448,1.66399 -1.72883,2.29382h0.00436c0.74925,0 1.88198,-0.18716 3.03599,-1.08102c0.01282,-0.01269 0.02973,-0.02552 0.04691,-0.03403c0.18302,-0.18313 0.46845,-0.22567 0.69838,-0.0894c3.50008,2.05562 7.9496,1.48549 10.82371,-1.38758c3.47894,-3.47708 3.47894,-9.12918 -0.00423,-12.6064zM10.05963,9.50914c0.39044,0 0.70697,0.31641 0.70697,0.70655c0,0.39014 -0.31653,0.70655 -0.70697,0.70655c-0.39044,0 -0.70697,-0.31641 -0.70697,-0.70655c0,-0.39014 0.31653,-0.70655 0.70697,-0.70655zM13.70454,9.50914c0.39044,0 0.70683,0.31641 0.70683,0.70655c0,0.39014 -0.31639,0.70655 -0.70683,0.70655c-0.39031,0 -0.7067,-0.31641 -0.7067,-0.70655c0,-0.39014 0.31639,-0.70655 0.7067,-0.70655zM6.41486,9.50914c0.39044,0 0.70656,0.31641 0.70656,0.70655c0,0.39014 -0.31612,0.70655 -0.70656,0.70655c-0.39044,0 -0.70697,-0.31641 -0.70697,-0.70655c0,-0.39014 0.31653,-0.70655 0.70697,-0.70655z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
 
@@ -81,9 +75,9 @@
 
 				<symbol viewBox="0 0 26 46" id="mouse"><g><g><path fill="currentColor" d="M13 34.709c-7.18 0-13-5.827-13-13.016v-8.677C0 5.828 5.82 0 13 0c7.179 0 12.999 5.828 12.999 13.016v8.677c0 7.189-5.82 13.016-13 13.016zm0-32.54c-5.984 0-10.834 4.856-10.834 10.847v8.677c0 5.99 4.85 10.846 10.833 10.846 5.983 0 10.834-4.856 10.834-10.846v-8.677c0-5.99-4.851-10.847-10.834-10.847zM13 46l-6.132-6.128a1.086 1.086 0 0 1 .118-1.53 1.082 1.082 0 0 1 1.41 0l4.603 4.6 4.593-4.6a1.082 1.082 0 0 1 1.528.119 1.085 1.085 0 0 1 0 1.41zm0-31.9a1.084 1.084 0 0 1-1.084-1.084V6.508a1.084 1.084 0 1 1 2.166 0v6.508c0 .599-.484 1.084-1.083 1.084z"/></g></g></symbol>
 
-				<symbol viewBox="0 0 17 10" id="arrow-right"><g><g><path d="M10.91359,1.45669l0.96096,-0.96193l4.40975,4.40968l-0.31583,0.31581l0.31583,0.31581l-4.40975,4.40968l-0.96096,-0.96148l3.07765,-3.078h-13.99119v-1.37501l13.98809,0z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
+				<symbol viewBox="0 0 46 16" id="arrow-right"><g><g><path fill="currentColor" d="M45.7 7.348L38.512.269a.938.938 0 0 0-1.317 0 .905.905 0 0 0 0 1.297l5.6 5.519H.934A.928.928 0 0 0 0 8.007c0 .51.418.922.935.922h41.86l-5.6 5.503a.905.905 0 0 0 0 1.297c.183.18.419.27.662.27.243 0 .48-.09.662-.27l7.188-7.085a.91.91 0 0 0-.007-1.296z"/></g></g></symbol>
 
-				<symbol viewBox="0 0 17 10" id="arrow-left"><g><g><path d="M0.71543,4.90448l4.40975,-4.40968l0.96142,0.96199l-3.07478,3.07446h13.98821v1.37501l-13.99148,0l3.07805,3.07812l-0.96142,0.96141l-4.40975,-4.40968l0.31583,-0.31581z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
+				<symbol viewBox="0 0 20 10" id="arrow-left"><g><g><path fill="currentColor" d="M.175 4.592L4.867.169a.63.63 0 0 1 .859 0 .549.549 0 0 1 0 .81L2.072 4.428H19.39c.338 0 .61.258.61.576 0 .318-.272.577-.61.577H2.072L5.726 9.02a.55.55 0 0 1 0 .81.623.623 0 0 1-.432.17.622.622 0 0 1-.432-.17L.17 5.403a.554.554 0 0 1 .005-.81z"/></g></g></symbol>
 
 				<symbol viewBox="0 0 13 10" id="check"><g><g><path fill="currentColor" d="M11.453.281L4.398 7.714 1.545 4.709a.867.867 0 0 0-1.27.001.983.983 0 0 0 0 1.337l3.488 3.671a.868.868 0 0 0 1.27 0v-.002l7.69-8.099a.98.98 0 0 0 0-1.336.866.866 0 0 0-1.27 0z"/></g></g></symbol>
 
@@ -143,703 +137,557 @@
 				<symbol viewBox="0 0 14 14" id="align_center"><g><g><path fill="currentColor" d="M-.001 12h13.993v1.999H0zm1.999-4h10.013v2H1.998zm-2-4h13.994v2H0zm3-4h7.97v2h-7.97z"/></g></g></symbol>
 
 				<symbol viewBox="0 0 14 14" id="align_justify"><g><g><path fill="currentColor" d="M-.002 12h13.994v1.999H-.002zm0-4H14.01v2H-.002zm0-4h13.994v2H-.002zm0-4h13.97v2H-.002z"/></g></g></symbol>
-
-			</svg>
+		</svg>
 	</div>
-	<!-- /.svg-sprite -->
+		<!-- /.svg-sprite -->
 
-	<div class="wrapper no-after">
-		<header class="header header--editor flex flex--center flex--between">
+		<div class="wrapper no-after">
+			<header class="header flex flex--center flex--between">
 
-			<div class="header__left flex flex--center">
-				<span class="logo">
-					<img src="img/logo.svg" alt="">
-				</span>
-
-			</div>
-			
-
-			<div class="header-btns">
-				<ul class="header__options header__options--none-border flex flex--center">
-					<li>
-						<div class="switcher-block">
-							<input type="checkbox" id="switch">
-							<label for="switch" class="ios">iOS</label>
-							<label for="switch" class="switch-button"></label>
-							<label for="switch" class="android">Android</label>
-						</div>
-					</li>
-					
-					<li>
-						<a href="#" class="header-close">
-							<svg class="header-dots">
-								<use xlink:href="#dots"></use>
-							</svg>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</header>
-		<!-- Class main--editor should be on this page -->
-		<main class="main flex main--editor">
-			<aside class="aside">
-				<div class="aside__nav">
-				</div>
-				<div class="aside__options">
-					<span class="burger js-toggle-aside">
-						<span></span>
-						<span></span>
-						<span></span>
+				<div class="header__left flex flex--center">
+					<span class="logo">
+						<img src="img/logo.svg" alt="">
 					</span>
-				</div>
-			</aside>
-			<div class="content flex">
-				<div class="edit-page flex">
-					<div class="edit-page__aside__left">
-						<div class="part-list-wrapper">
-							<ul class="part-list flex flex--wrap">
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-1"></use>
-										</svg>
-										<span class="part-title">
-											Main Menu
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-2"></use>
-										</svg>
-										<span class="part-title">
-											Header
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-3"></use>
-										</svg>
-										<span class="part-title">
-											Slider
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-4"></use>
-										</svg>
-										<span class="part-title">
-											Trailer
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-5"></use>
-										</svg>
-										<span class="part-title">
-											Features
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-6"></use>
-										</svg>
-										<span class="part-title">
-											Photos
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-7"></use>
-										</svg>
-										<span class="part-title">
-											Videos
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-8"></use>
-										</svg>
-										<span class="part-title">
-											Models
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-9"></use>
-										</svg>
-										<span class="part-title">
-											Social Media
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-10"></use>
-										</svg>
-										<span class="part-title">
-											About Me
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-11"></use>
-										</svg>
-										<span class="part-title">
-											Webcam
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-12"></use>
-										</svg>
-										<span class="part-title">
-											Blog
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-13"></use>
-										</svg>
-										<span class="part-title">
-											Contact
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-14"></use>
-										</svg>
-										<span class="part-title">
-											Footer
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-15"></use>
-										</svg>
-										<span class="part-title">
-											Call-To-Action
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-16"></use>
-										</svg>
-										<span class="part-title">
-											Newsletter
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-1"></use>
-										</svg>
-										<span class="part-title">
-											Main Menu
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-2"></use>
-										</svg>
-										<span class="part-title">
-											Header
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-3"></use>
-										</svg>
-										<span class="part-title">
-											Slider
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-4"></use>
-										</svg>
-										<span class="part-title">
-											Trailer
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-5"></use>
-										</svg>
-										<span class="part-title">
-											Features
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-6"></use>
-										</svg>
-										<span class="part-title">
-											Photos
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-7"></use>
-										</svg>
-										<span class="part-title">
-											Videos
-										</span>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<svg class="svg">
-											<use xlink:href="#edit-8"></use>
-										</svg>
-										<span class="part-title">
-											Models
-										</span>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<!-- /.part-list-wrapper -->
 
-						<!-- Class right-border for adding right border -->
-						<div class="edit-page__aside__slider-wrapper right-border">
-							<div class="edit-page__aside__slider__top flex flex--between flex--center">
-								<div class="titles-slider">
-									<div class="edit-page__aside__slider__title">
-										Full Page
-									</div>
-									<div class="edit-page__aside__slider__title">
-										Half Page
-									</div>
-									<div class="edit-page__aside__slider__title">
-										4k Page
-									</div>
-								</div>
-								<!-- /.titles-slider -->
-								<div class="edit-page__aside__slider__arrows"></div>
+					<nav class="nav">
+						<ul class="menu flex">
 
-								<a href="#" class="close-slider">
-									<svg>
-										<use xlink:href="#svg-close"></use>
-									</svg>
-								</a>
-							</div>
-							<div class="edit-page__aside__slider">
-								<div class="edit-page__aside__slider__item">
-									<div class="slider__item__list">
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-2.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-2.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-2.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-2.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-									</div>
-
-
-								</div>
-								<div class="edit-page__aside__slider__item">
-									<div class="slider__item__list">
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-2.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-2.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-2.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-2.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-									</div>
-								</div>
-
-								<div class="edit-page__aside__slider__item">
-									<div class="slider__item__list">
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-2.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-2.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-2.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-2.jpg" alt="">
-										</div>
-										<div class="slider__item__list__item">
-											<img src="img/slides/sidebar-slide-1.jpg" alt="">
-										</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-					</div>
-					<!-- /.edit-page__aside__left -->
-					<div class="edit-page__body flex">
-
-						<div class="edit-options">
-							<a href="#" class="edit-options__item">
-								<span class="ico">
-									<svg>
-										<use xlink:href="#svg-move"></use>
-									</svg>
-								</span>
-							</a>
-							<a href="#" class="edit-options__item">
-								<span class="ico">
-									<svg>
-										<use xlink:href="#svg-copy"></use>
-									</svg>
-								</span>
-							</a>
-							<a href="#" class="edit-options__item">
-								<span class="ico">
-									<svg>
-										<use xlink:href="#trash"></use>
-									</svg>
-								</span>
-							</a>
-							<a href="#" class="edit-options__item">
-								<span class="ico">
-									<svg>
-										<use xlink:href="#svg-edit"></use>
-									</svg>
-								</span>
-							</a>
-							<a href="#" class="edit-options__item">
-								<span class="ico">
-									<svg>
-										<use xlink:href="#earth"></use>
-									</svg>
-								</span>
-							</a>
-						</div>
-
-						<div class="edit-page__content">
-							<div class="drop-content">
-								<img src="img/project-3.jpg" alt="" class="editor-img">
-							</div>
-							<div class="drop-content">
-								<img src="img/project-2.jpg" alt="" class="editor-img">
-							</div>
-							<div class="drop-content drop-content--empty">
-							</div>
-							<div class="drop-content drop-content--empty">
-							</div>
-							<div class="drop-content drop-content--empty">
-							</div>
-						</div>
-						<!-- /.edit-page__content -->
-					</div>
-					<!-- /.edit-page__content -->
-
-					<aside class="aside__right">
-						<ul class="aside__menu aside__menu--ico">
 							<li>
-								<a href="#" class="js-popup-features" data-features='text-range'>
+								<a href="#" class="menu-item active">
 									<span class="ico">
-										<svg>
-											<use xlink:href="#svg-text"></use>
-										</svg>
+										<img src="img/dashboard.svg" alt="">
+									</span>
+									<span class="text">
+										Dashboard
 									</span>
 								</a>
 							</li>
 							<li>
-								<a href="#" class="js-popup-features" data-features='color-picker'>
+								<a href="#" class="menu-item">
 									<span class="ico">
-										<svg>
-											<use xlink:href="#svg-picker"></use>
-										</svg>
+										<img src="img/my-site.svg" alt="">
+									</span>
+									<span class="text">
+										my site
 									</span>
 								</a>
-							</li>								
+							</li>
+							<li>
+								<a href="#" class="menu-item">
+									<span class="ico">
+										<img src="img/statistics.svg" alt="">
+									</span>
+									<span class="text">
+										statistics
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="menu-item">
+									<span class="ico">
+										<img src="img/media.svg" alt="">
+									</span>
+									<span class="text">
+										media
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="menu-item">
+									<span class="ico">
+										<img src="img/marketing.svg" alt="">
+									</span>
+									<span class="text">
+										Marketing
+									</span>
+								</a>
+							</li>
 						</ul>
+					</nav>
+				</div>
 
-						<div class="aside__bottom">
-							<div class="aside-arrows">
-								<a href="#" class="aside-arrow aside-arrow--left">
+				<div class="header-btns">
+					<ul class="header__options flex flex--center">
+						<li>
+							<div class="user js-dropdown-link">
+								<div class="user__text">
+									Welcome <span class="user-nick">Razersection</span>
+								</div>
+								<div class="user-avatar">
+									<img src="img/avatar.png" alt="">
+									<!-- Class status--offline for offline users -->
+									<span class="status status--online"></span>
+								</div>
+							</div>
+
+							<div class="user-dropdown  js-dropdown">
+								<div class="user-dropdown-row">
+									<a href="#" class="user-dropdown__item">
+										<span class="user-logo">
+											<img src="img/user-logo.png" alt="">
+										</span>
+										<div class="user-title">
+											<span class="blue">Featured</span>
+											<span class="lg">Lisann personal</span>
+											<span class="grey">www.lissannpersonal.com</span>
+										</div>
+										<div class="user-ico">
+											<svg>
+												<use xlink:href="#svg-redirect"></use>
+											</svg>
+										</div>
+									</a>
+								</div>
+
+								<div class="user-dropdown-row">
+									<a href="#" class="user-dropdown__item">
+										<span class="user-logo">
+											<img src="img/user-logo.png" alt="">
+										</span>
+										<div class="user-title">
+											<span class="lg">Razersection</span>
+											<span class="grey">www.lissannpersonal.com</span>
+										</div>
+										<div class="user-ico">
+											<svg>
+												<use xlink:href="#svg-redirect"></use>
+											</svg>
+										</div>
+									</a>
+								</div>
+
+								<a href="#" class="user-dropdown__add">
 									<span class="ico">
 										<svg>
-											<use xlink:href="#arrow-left"></use>
+											<use xlink:href="#plus"></use>
 										</svg>
 									</span>
-								</a>
-								<a href="#" class="aside-arrow aside-arrow--right">
-									<span class="ico">
-										<svg>
-											<use xlink:href="#arrow-right"></use>
-										</svg>
-									</span>
+									Add product
 								</a>
 							</div>
-							<a href="#" class="edit-btn edit-btn--save">
+
+						</li>
+						<li>
+							<a href="#" class="bell">
 								<span class="ico">
 									<svg>
-										<use xlink:href="#check"></use>
+										<use xlink:href="#svg-bell"></use>
 									</svg>
 								</span>
+								<span class="count">23</span>
 							</a>
-						</div>
-
-						<div class="aside-features" id="color-picker">
-							<div class="aside-features__title">
-								<div class="aside-features__title__text">
-									Color Scheme  
-								</div>
-							</div>
-
-							<div class="aside-features-container flex">
-
-								<div class="color-pallete">
-									<div class="pallete__item">
-										<a href="#" class="color red"></a>
-										<a href="#" class="remove" title="remove color">
-											<span class="ico">
-												<svg>
-													<use xlink:href="#svg-close"></use>
-												</svg>
-											</span>
-										</a>
-									</div>
-									<div class="pallete__item">
-										<a href="#" class="color yellow"></a>
-										<a href="#" class="remove" title="remove color">
-											<span class="ico">
-												<svg>
-													<use xlink:href="#svg-close"></use>
-												</svg>
-											</span>
-										</a>
-									</div>
-									<div class="pallete__item">
-										<a href="#" class="color blue"></a>
-										<a href="#" class="remove" title="remove color">
-											<span class="ico">
-												<svg>
-													<use xlink:href="#svg-close"></use>
-												</svg>
-											</span>
-										</a>
-									</div>
-									<div class="pallete__item">
-										<a href="#" class="color violet"></a>
-										<a href="#" class="remove" title="remove color">
-											<span class="ico">
-												<svg>
-													<use xlink:href="#svg-close"></use>
-												</svg>
-											</span>
-										</a>
-									</div>
-									<div class="pallete__item">
-										<a href="#" class="color green"></a>
-										<a href="#" class="remove" title="remove color">
-											<span class="ico">
-												<svg>
-													<use xlink:href="#svg-close"></use>
-												</svg>
-											</span>
-										</a>
-									</div>
-									<div class="pallete__item">
-										<a href="#" class="add-new-item pallete-open">
-											<span class="ico">
-												<svg>
-													<use xlink:href="#plus"></use>
-												</svg>
-											</span>
-										</a>
-									</div>
-								</div>
-
-								<div class="color-picker-wrapper">
-									<div id="color-picker-container"></div>
-
-									<div class="color-picker-row flex flex--center flex--between">
-										<div id="color-picker-value">
-											<div id="color-picker-value__circle"></div>
-											<div id="color-picker-value__hex"></div>
+						</li>
+						<li>
+							<a href="#">
+								<svg>
+									<use xlink:href="#help"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="js-dropdown-link">
+								<svg>
+									<use xlink:href="#settings"></use>
+								</svg>
+							</a>
+							<div class="settings-dropdown js-dropdown">
+								<div class="user-dropdown-row">
+									<a href="#" class="user-dropdown__item">
+										<span class="user-logo">
+											<img src="img/user-logo.png" alt="">
+										</span>
+										<div class="user-title">
+											<span class="blue">Featured</span>
+											<span class="lg">Lisann personal</span>
+											<span class="grey">www.lissannpersonal.com</span>
 										</div>
-										<a href="#" class="add-new-item js-add-new">
-											<span class="ico">
-												<svg>
-													<use xlink:href="#plus"></use>
-												</svg>
-											</span>
-										</a>
+									</a>
+								</div>
+
+								<div class="settings-dropdown__content flex flex--between">
+									<div class="settings-dropdown__left">
+										<div class="settings-dropdown__item">
+											<ul class="settings-dropdown__menu">
+												<li><a href="#">Site settings</a></li>
+												<li><a href="#">My profile</a></li>
+												<li><a href="#">Mailbox</a></li>
+											</ul>
+										</div>
+										<div class="settings-dropdown__item">
+											<ul class="settings-dropdown__menu">
+												<li><a href="#">Domains</a></li>
+												<li><a href="#">Apps</a></li>
+												<li><a href="#">Lorem Ipsum</a></li>
+											</ul>
+										</div>
+										<div class="settings-dropdown__item">
+											<ul class="settings-dropdown__menu">
+												<li><a href="#">KnowlegeBase</a></li>
+												<li><a href="#">Live Chat</a></li>
+												<li><a href="#">Email Us</a></li>
+											</ul>
+										</div>
+
+										<div class="social-block flex flex--center">
+											<span class="social-block__title">Follow us</span>
+											<ul class="social flex flex--center">
+												<li>
+													<a href="#" class="fb">
+														<span class="ico">
+															<svg>
+																<use xlink:href="#fb"></use>
+															</svg>			
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="tw">
+														<span class="ico">
+															<svg>
+																<use xlink:href="#tw"></use>
+															</svg>			
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="#" class="inst">
+														<span class="ico">
+															<svg>
+																<use xlink:href="#inst"></use>
+															</svg>			
+														</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="settings-dropdown__right">
+										<img src="img/setting-preview.jpg" alt="">
 									</div>
 								</div>
-
 							</div>
-						</div>
+						</li>
+						<li class="logout-container">
+							<a href="#" class="logout">
+								<svg>
+									<use xlink:href="#dots"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</header>
+			<main class="main flex flex--column">
+				<div class="management-page">
+					<div class="management-page__body flex">
 
-						<div class="aside-features" id="text-range">
-							<div class="aside-features__title">
-								<div class="aside-features__title__text">
-									Text Size 
+						<aside class="aside__left">
+							<div class="aside__menu nav-for-theme-slider">
+								<div class="aside__menu__item">
+									<div class="aside__menu__content">
+										<a href="#">
+											<span class="ico">
+												<svg>
+													<use xlink:href="#svg-dashboard"></use>
+												</svg>
+											</span>
+											<span class="text">Home</span>
+										</a>
+
+										<div class="submenu-block">
+											<div class="submenu-dots">
+												<span class="ico">
+													<svg>
+														<use xlink:href="#dots"></use>
+													</svg>
+												</span>
+											</div>
+											<ul class="submenu">
+												<li><a href="#">Rename</a></li>
+												<li><a href="#">Duplicate</a></li>
+												<li><a href="#">Remove</a></li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="aside__submenu">
+										<div class="aside__submenu__item">
+											<a href="#" class="aside__submenu__link">
+												<span class="ico">
+
+												</span>
+												<span class="text">Home 1</span>
+											</a>
+											<div class="submenu-block">
+												<div class="submenu-dots">
+													<span class="ico">
+														<svg>
+															<use xlink:href="#dots"></use>
+														</svg>
+													</span>
+												</div>
+												<ul class="submenu">
+													<li><a href="#">Rename</a></li>
+													<li><a href="#">Duplicate</a></li>
+													<li><a href="#">Remove</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="aside__submenu__item">
+											<a href="#" class="aside__submenu__link">
+												<span class="ico">
+
+												</span>
+												<span class="text">Home 2</span>
+											</a>
+											<div class="submenu-block">
+												<div class="submenu-dots">
+													<span class="ico">
+														<svg>
+															<use xlink:href="#dots"></use>
+														</svg>
+													</span>
+												</div>
+												<ul class="submenu">
+													<li><a href="#">Rename</a></li>
+													<li><a href="#">Duplicate</a></li>
+													<li><a href="#">Remove</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="aside__menu__item">
+									<div class="aside__menu__content">
+										<a href="#">
+											<span class="ico">
+												<svg>
+													<use xlink:href="#svg-photos"></use>
+												</svg>
+											</span>
+											<span class="text">Photos</span>
+										</a>
+										<div class="submenu-block">
+											<div class="submenu-dots">
+												<span class="ico">
+													<svg>
+														<use xlink:href="#dots"></use>
+													</svg>
+												</span>
+											</div>
+											<ul class="submenu">
+												<li><a href="#">Rename</a></li>
+												<li><a href="#">Duplicate</a></li>
+												<li><a href="#">Remove</a></li>
+											</ul>
+
+										</div>
+									</div>
+
+									<div class="aside__submenu">
+										<div class="aside__submenu__item">
+											<a href="#" class="aside__submenu__link">
+												<span class="ico">
+
+												</span>
+												<span class="text">Photos 1</span>
+											</a>
+											<div class="submenu-block">
+												<div class="submenu-dots">
+													<span class="ico">
+														<svg>
+															<use xlink:href="#dots"></use>
+														</svg>
+													</span>
+												</div>
+												<ul class="submenu">
+													<li><a href="#">Rename</a></li>
+													<li><a href="#">Duplicate</a></li>
+													<li><a href="#">Remove</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="aside__submenu__item">
+											<a href="#" class="aside__submenu__link">
+												<span class="ico">
+
+												</span>
+												<span class="text">Photos 2</span>
+											</a>
+											<div class="submenu-block">
+												<div class="submenu-dots">
+													<span class="ico">
+														<svg>
+															<use xlink:href="#dots"></use>
+														</svg>
+													</span>
+												</div>
+												<ul class="submenu">
+													<li><a href="#">Rename</a></li>
+													<li><a href="#">Duplicate</a></li>
+													<li><a href="#">Remove</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div  class="aside__menu__item">
+									<div class="aside__menu__content">
+										<a href="#">
+											<span class="ico">
+												<svg>
+													<use xlink:href="#svg-video"></use>
+												</svg>
+											</span>
+											<span class="text">Videos</span>
+										</a>
+										<div class="submenu-block">
+											<div class="submenu-dots">
+												<span class="ico">
+													<svg>
+														<use xlink:href="#dots"></use>
+													</svg>
+												</span>
+											</div>
+											<ul class="submenu">
+												<li><a href="#">Rename</a></li>
+												<li><a href="#">Duplicate</a></li>
+												<li><a href="#">Remove</a></li>
+											</ul>
+
+										</div>
+									</div>
+								</div>
+								<div  class="aside__menu__item">
+									<div class="aside__menu__content">
+										<a href="#">
+											<span class="ico">
+												<svg>
+													<use xlink:href="#svg-user"></use>
+												</svg>
+											</span>
+											<span class="text">About</span>
+										</a>
+										<div class="submenu-block">
+											<div class="submenu-dots">
+												<span class="ico">
+													<svg>
+														<use xlink:href="#dots"></use>
+													</svg>
+												</span>
+											</div>
+											<ul class="submenu">
+												<li><a href="#">Rename</a></li>
+												<li><a href="#">Duplicate</a></li>
+												<li><a href="#">Remove</a></li>
+											</ul>
+
+										</div>
+									</div>
+								</div>
+								<div  class="aside__menu__item">
+									<div class="aside__menu__content">
+										<a href="#">
+											<span class="ico">
+												<svg>
+													<use xlink:href="#svg-calendar"></use>
+												</svg>
+											</span>
+											<span class="text">Calendar</span>
+										</a>
+										<div class="submenu-block">
+											<div class="submenu-dots">
+												<span class="ico">
+													<svg>
+														<use xlink:href="#dots"></use>
+													</svg>
+												</span>
+											</div>
+											<ul class="submenu">
+												<li><a href="#">Rename</a></li>
+												<li><a href="#">Duplicate</a></li>
+												<li><a href="#">Remove</a></li>
+											</ul>
+
+										</div>
+									</div>
+								</div>
+								<div  class="aside__menu__item">
+									<div class="aside__menu__content">
+										<a href="#">
+											<span class="ico">
+												<svg>
+													<use xlink:href="#svg-comment"></use>
+												</svg>
+											</span>
+											<span class="text">Contact Me</span>
+										</a>
+										<div class="submenu-block">
+											<div class="submenu-dots">
+												<span class="ico">
+													<svg>
+														<use xlink:href="#dots"></use>
+													</svg>
+												</span>
+											</div>
+											<ul class="submenu">
+												<li><a href="#">Rename</a></li>
+												<li><a href="#">Duplicate</a></li>
+												<li><a href="#">Remove</a></li>
+											</ul>
+
+										</div>
+									</div>
 								</div>
 							</div>
 
-							<div id="slider-vertical" data-range="0"></div>
+							<span class="burger burger-rotate js-toggle-aside">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
 
+						</aside>
+						<!-- /.aside__left -->
+
+						<div class="dashboard__content">
+							
 						</div>
-					</aside>
+
+					</div>
 
 				</div>
-				<!-- /.edit-page flex -->
-			</div>
-			<!-- /.content -->
-		</main>
-		<footer class="footer"></footer>
-	</div><!-- end wrapper -->
-	<div class="popup popup--main" id="add-new">
-		<div class="popup__top">
-			<a href="#" class="close">
+				<!-- /.management-page flex -->
+			</main>
+			<footer class="footer"></footer>
 
-			</a>
-			<div class="popup__top__img">
-				<img src="img/add-new.svg" alt="">
-			</div>
-		</div>
+		</div><!-- end wrapper -->
 
-		<div class="popup__content">
-			<div class="popup__title">
-				Create a new page
-			</div>
-			<form action="#">
-				<div class="input-wrapper input-wrapper--title">
-					<span>Title</span>
-					<input type="text" class="js-main-input input input--border">
-				</div>
-				<div class="input-wrapper">
-					<span>
-						url
-					</span>
-					<input type="text" class="js-clone-input input" readonly placeholder="http://www.yoursite.com/...">
-				</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="js/jquery.nicescroll.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/swiper.js"></script>
+		<script src="js/common.js"></script>
 
+		<script>
+			$(".theme-slider").slick({
+				infinite: false,
+				arrows: false,
+				slidesToShow: 1,
+				fade: true,
+				asNavFor: '.nav-for-theme-slider'
+			});
 
-				<div class="btn-row flex flex--center">
-					<a href="#" class="btn btn--blue">
-						Save
-					</a>
-				</div>
-			</form>
-		</div>
-	</div>
+	// slider nav
+	$('.nav-for-theme-slider').slick({
+		vertical:true,
+		arrows: false,
+		infinite: false,
+		asNavFor: '.theme-slider',
+		focusOnSelect: true
+	});
+	
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="js/jquery.nicescroll.min.js"></script>
-<script src="js/slick.min.js"></script>
-<script src="js/swiper.js"></script>
-
-<script src="js/iro/iro.min.js"></script>
-<script src="js/iro/iro-transparency-plugin.js"></script>
-
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-<script src="js/common.js"></script>
+</script>
 </body>
 </html>

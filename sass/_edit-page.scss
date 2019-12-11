@@ -9,13 +9,12 @@
 .main--editor{
 	background: linear-gradient(-225deg, #f4f4f4 0%, #ffffff 100%);
 	.content.flex{
-		height: calc(100vh - 95px);
+		height: 100%;
 		padding-bottom: 0;
 		z-index: 4;
 	}
 	.aside{
 		padding-bottom: 30px;
-		height: calc(100vh - 95px);
 	}
 	.aside__menu{
 		padding-top: 20px;
@@ -650,7 +649,6 @@ button{
 	background-color: #f3f3f4;
 	color: #878586;
 	&--left{
-		border-radius: 25px 0 0 0;
 		margin-bottom: 1px;
 	}
 	&:hover{
