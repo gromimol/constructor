@@ -3461,7 +3461,7 @@ button.swiper-pagination-bullet {
     padding-bottom: 0;
     z-index: 4; }
   .main--editor .aside {
-    padding-bottom: 30px; }
+    padding-bottom: 8px; }
   .main--editor .aside__menu {
     padding-top: 20px; }
     .main--editor .aside__menu a {
@@ -3469,42 +3469,6 @@ button.swiper-pagination-bullet {
   .main--editor .aside__right {
     z-index: 1;
     position: relative; }
-  .main--editor .edit-btn::before {
-    width: 25px;
-    height: 25px;
-    background: transparent url("../img/blue_angle.png") left top no-repeat;
-    background-size: contain;
-    top: auto;
-    bottom: 0; }
-  .main--editor .edit-btn::after {
-    content: '';
-    width: 25px;
-    height: 25px;
-    background: transparent url("../img/blue_angle_dark.png") left top no-repeat;
-    background-size: contain;
-    position: absolute;
-    right: 100%;
-    bottom: 0;
-    opacity: 0;
-    z-index: 2;
-    -webkit-transition: opacity .3s;
-    transition: opacity .3s; }
-  .main--editor .edit-btn:hover::before {
-    background-color: transparent; }
-  .main--editor .edit-btn:hover::after {
-    opacity: 1; }
-
-.hide-aside .main--editor .aside {
-  border-radius: 0 0  25px 0; }
-  .hide-aside .main--editor .aside::before {
-    content: '';
-    width: 23px;
-    height: 23px;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    background: transparent url(../img/white_angle.png) left top no-repeat;
-    background-size: contain; }
 
 .min-header .main--editor .content.flex {
   height: calc(100vh - 55px); }
@@ -4606,7 +4570,9 @@ button {
             justify-content: center;
     height: 100% !important; }
   .aside__left .burger-rotate {
-    top: -5px; }
+    position: absolute;
+    bottom: 8px;
+    left: 30px; }
 
 .aside__menu {
   -webkit-box-flex: 1;
