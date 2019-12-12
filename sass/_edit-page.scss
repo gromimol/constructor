@@ -57,16 +57,6 @@
 	position: relative;
 	box-shadow: 15px 0 60px rgba(16, 48, 70, 0.06);
 	transition: all .4s;
-	&::before{
-		content: '';
-		width: 23px;
-		height: 23px;
-		position: absolute;
-		top: 0;
-		left: 100%;
-		background: transparent url(../img/white_angle.png) left top no-repeat;
-		background-size: contain;
-	}
 }
 .edit-page__aside__slider-wrapper{
 	position: absolute;
@@ -701,7 +691,6 @@ button{
 	color: #000;
 	position: absolute;
 	display: flex;
-	align-items: flex-end;
 	left: 27px;
 	top: 0;
 	padding-top: 30px;
@@ -711,12 +700,18 @@ button{
 }
 .aside-features__title__text{
 	display: flex;
-	align-items: center;	
-	white-space: nowrap;
+	align-items: center;
+	flex-direction: row-reverse;	
 	transform: rotate(-90deg);
 	transform-origin: 0 0;
-	&::before{
-		content: '';
+	height: 1px;
+	width: 1px;
+	.text{
+		white-space: nowrap;
+	}
+	.line{
+		display: inline-block;
+		flex: none;
 		width: 40px;
 		height: 1px;
 		background-color: #cfcdcd;

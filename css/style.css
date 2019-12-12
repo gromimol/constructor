@@ -3499,15 +3499,6 @@ button.swiper-pagination-bullet {
           box-shadow: 15px 0 60px rgba(16, 48, 70, 0.06);
   -webkit-transition: all .4s;
   transition: all .4s; }
-  .edit-page__aside__left::before {
-    content: '';
-    width: 23px;
-    height: 23px;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    background: transparent url(../img/white_angle.png) left top no-repeat;
-    background-size: contain; }
 
 .edit-page__aside__slider-wrapper {
   position: absolute;
@@ -4154,9 +4145,6 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   left: 27px;
   top: 0;
   padding-top: 30px;
@@ -4171,13 +4159,23 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  white-space: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   -webkit-transform-origin: 0 0;
-          transform-origin: 0 0; }
-  .aside-features__title__text::before {
-    content: '';
+          transform-origin: 0 0;
+  height: 1px;
+  width: 1px; }
+  .aside-features__title__text .text {
+    white-space: nowrap; }
+  .aside-features__title__text .line {
+    display: inline-block;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
     width: 40px;
     height: 1px;
     background-color: #cfcdcd;
