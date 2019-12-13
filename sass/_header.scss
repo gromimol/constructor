@@ -1,6 +1,7 @@
 /*Header*/ 
 .header{
 	padding: 0 35px 0 20px;
+	min-height: 9em;
 	transition: all .5s;
 	.burger{
 		padding: 3.5em 0;
@@ -33,7 +34,9 @@
 	}
 }
 .min-header{
-	
+	.header{
+		min-height: 2em;
+	}
 	.header__options{
 		padding-top: 0;
 		padding-bottom: 0;

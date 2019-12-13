@@ -398,6 +398,7 @@ p {
 /*Header*/
 .header {
   padding: 0 35px 0 20px;
+  min-height: 9em;
   -webkit-transition: all .5s;
   transition: all .5s; }
   .header .burger {
@@ -422,6 +423,8 @@ p {
     padding-top: 10px;
     padding-bottom: 10px; }
 
+.min-header .header {
+  min-height: 2em; }
 .min-header .header__options {
   padding-top: 0;
   padding-bottom: 0; }
@@ -3626,7 +3629,6 @@ button.swiper-pagination-bullet {
   position: relative;
   height: 100%;
   background-color: #fff;
-  border-radius: 0 0 25px 0;
   z-index: 5; }
 
 .part-list {
@@ -4425,8 +4427,6 @@ button {
 /*management*/
 .management-body .nav {
   margin-left: 160px; }
-.management-body .header {
-  min-height: 8em; }
 
 .management-page {
   height: 100%;
@@ -4467,7 +4467,7 @@ button {
   background-color: #f4f4f4;
   background-image: url("../img/welcome-pic-4k-bg.jpg");
   background-repeat: no-repeat;
-  background-position: 0 50%;
+  background-position: 50% 50%;
   background-size: cover;
   z-index: 2; }
   .management__content .theme-page {

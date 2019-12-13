@@ -3,9 +3,6 @@
 	.nav{
 		margin-left: 160px;
 	}
-	.header{
-		min-height: 8em;
-	}
 }
 .management-page{
 	height: 100%;
@@ -37,7 +34,7 @@
 	background-color: #f4f4f4;
 	background-image: url('../img/welcome-pic-4k-bg.jpg');
 	background-repeat: no-repeat;
-	background-position: 0 50%;
+	background-position: 50% 50%;
 	background-size: cover;
 	z-index: 2;
 	.theme-page{
