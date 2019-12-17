@@ -403,7 +403,7 @@ p {
     opacity: 0; } }
 /*Header*/
 .header {
-  padding: 0 20px 0 20px;
+  padding: 0 35px 0 20px;
   min-height: 9em;
   -webkit-transition: all .5s;
   transition: all .5s; }
@@ -5125,8 +5125,6 @@ button {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
-  .dashboard-table__paginator .btn {
-    font-weight: 500; }
 
 .dashboard-table__paginator__title {
   color: #8992ab; }
@@ -5509,5 +5507,4 @@ button {
 @media (max-width: 1440px) {
   html {
     font-size: 8px; } }
-
 /*# sourceMappingURL=style.css.map */
