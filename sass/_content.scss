@@ -540,6 +540,15 @@
 			color: #fff;
 		}
 	}
+	&--lt{
+		padding: 9px 20px 8px;
+		text-transform: capitalize;
+		line-height: 1;
+		font-family: "Aspira";
+	}
+	&--radius{
+		border-radius: 5px;
+	}
 	&--ico{
 		display: flex;
 		align-items: center;

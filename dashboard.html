@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,10 @@
 	<!-- svg icons -->
 	<div class="svg-sprite">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+			<symbol viewBox="0 0 12 12" id="svg-refresh"><g><g><path d="M11.50025,5.50062c-0.27649,0 -0.49942,0.22247 -0.49942,0.49986c0,2.75697 -2.24281,5.0005 -5.00118,5.0005c-2.757,0 -5.00072,-2.24353 -5.00072,-5.0005c0,-2.75819 2.24373,-5.00108 5.00072,-5.00108c1.50661,0 2.90234,0.6633 3.8475,1.80457h-1.72634c-0.2766,0 -0.50011,0.2228 -0.50011,0.49986c0,0.27661 0.2235,0.49908 0.50011,0.49908h2.80655c0.27706,0 0.49999,-0.22247 0.49999,-0.49908v-2.80428c0,-0.277 -0.22293,-0.4996 -0.49999,-0.4996c-0.27706,0 -0.49953,0.2226 -0.49953,0.4996v1.44479c-1.1285,-1.23184 -2.71843,-1.94439 -4.42818,-1.94439c-3.30791,0 -6.00014,2.6915 -6.00014,6.00053c0,3.30774 2.69222,5.99944 6.00014,5.99944c3.30826,0 6.00071,-2.69169 6.00071,-5.99944c0,-0.27738 -0.22293,-0.49986 -0.50011,-0.49986z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
+
+			<symbol viewBox="0 0 12 12" id="svg-full-screen"><g><g><path d="M0.99997,4.00002h-0.99998v-4.00001h4.00005v0.99997h-3.00007zM-0.00002,8.00003h0.99998v2.99998h3.00007v0.99997h-4.00005zM12.00003,4.00002h-0.99998l0,-3.00004h-3.00007v-0.99997h4.00005zM11.00005,8.00003h0.99998v3.99995h-4.00005v-0.99997h3.00007z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
 
 			<symbol viewBox="0 0 21 20" id='svg-folder'>
 				<path fill-rule="evenodd"  fill="currentColor"
@@ -651,7 +656,7 @@
 						<!-- /.aside__left -->
 
 						<div class="dashboard__content">
-							
+							<div class="white-box"></div>
 						</div>
 
 					</div>
@@ -667,6 +672,8 @@
 		<script src="js/jquery.nicescroll.min.js"></script>
 		<script src="js/slick.min.js"></script>
 		<script src="js/swiper.js"></script>
+		<script src="js/iro/iro.min.js"></script>
+		<script src="js/iro/iro-transparency-plugin.js"></script>
 		<script src="js/common.js"></script>
 
 		<script>
@@ -678,16 +685,15 @@
 				asNavFor: '.nav-for-theme-slider'
 			});
 
-	// slider nav
-	$('.nav-for-theme-slider').slick({
-		vertical:true,
-		arrows: false,
-		infinite: false,
-		asNavFor: '.theme-slider',
-		focusOnSelect: true
-	});
-	
-
-</script>
+			// slider nav
+			$('.nav-for-theme-slider').slick({
+				vertical:true,
+				arrows: false,
+				infinite: false,
+				asNavFor: '.theme-slider',
+				focusOnSelect: true
+			});
+		
+		</script>
 </body>
 </html>
