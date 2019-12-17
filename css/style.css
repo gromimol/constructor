@@ -5000,6 +5000,7 @@ button {
   border-radius: 3px; }
 
 .dashboard-table__item {
+  width: 16%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
@@ -5507,4 +5508,5 @@ button {
 @media (max-width: 1440px) {
   html {
     font-size: 8px; } }
+
 /*# sourceMappingURL=style.css.map */
