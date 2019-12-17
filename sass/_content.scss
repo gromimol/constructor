@@ -549,14 +549,6 @@
 	&--radius{
 		border-radius: 5px;
 	}
-	&--grey{
-		background-color: #e1e4eb;
-		color: #191f5d;
-		&:hover{
-			background-color: var(--blue);
-			color: #fff;
-		}
-	}
 	&--ico{
 		display: flex;
 		align-items: center;

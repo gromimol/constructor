@@ -163,7 +163,7 @@
       cursor: pointer;
 
       &:hover{
-        background: #f5f6fa;
+        background: var(--blue);
         color: #fff;
       }
     }
@@ -174,13 +174,6 @@
   &--grey{
   	.placeholder{
   		background-color: #e1e4eb;
-  	}
-  }
-  .status{
-  	&::before,
-  	&::after{
-  		width: 8px;
-  		height: 8px;
   	}
   }
 }

@@ -61,7 +61,6 @@ $(document).ready(function () {
 	$(".project-slider__nav .slick-list").niceScroll();
 	$(".edit-page__aside__right .tab-content").niceScroll();
 	$(".edit-page__aside__slider").niceScroll();
-	$(".dashboard__content").niceScroll();
 
 	// Decor
 	$('.decor-block').on('click', function () {
