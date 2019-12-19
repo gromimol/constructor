@@ -1,7 +1,10 @@
 :root{
 	--black: #353434;
 	--blue: #00a0ff;
+	--dark-violet: #173e55;
 	--border-color: #ededed;
+	--dark-grey-bg: #e1e4eb;
+	--light-grey-bg: ##f5f6fa;
 }
 html, body{
 	min-height: 100%;
@@ -16,10 +19,7 @@ body{
 	min-width: 1366px;
 	overflow: hidden;
 }
-a{
-	color: var(--black);
-	transition: all .2s;
-}
+
 .wrapper{
 	height: 100vh;
 	display: flex;
@@ -116,15 +116,12 @@ a{
 	}
 }
 .aside{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	padding-bottom: 40px;
 	width: 100px;
 	background-color: #fff;
 	position: relative;
 	transition: all .4s;
-	z-index: 2;
+	z-index: 5;
 	.burger{
 		transform: rotate(-90deg);
 		&:hover span{

@@ -12,6 +12,8 @@
 	<div class="svg-sprite">
 
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+			<symbol viewBox="0 0 18 18" id="svg-close"><g><g><path d="M-0.00124,16.87597l7.87615,-7.87583l-7.87615,-7.87632l1.12496,-1.12445l7.87616,7.87584l7.87616,-7.87584l1.12496,1.12445l-7.87615,7.87632l7.87615,7.87583l-1.12496,1.12549l-7.87616,-7.87633l-7.87616,7.87633z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
 			
 			<symbol viewBox="0 0 24 24" id="help"><g><g><path fill="currentColor" d="M24 12c0 6.617-5.384 12-12 12-6.617 0-12-5.383-12-12C0 5.384 5.383 0 12 0c6.616 0 12 5.384 12 12zm-1.574 0c0-5.75-4.677-10.426-10.426-10.426C6.251 1.574 1.574 6.251 1.574 12c0 5.749 4.677 10.427 10.426 10.427 5.749 0 10.426-4.678 10.426-10.427zm-6.598-2.69a3.834 3.834 0 0 1-3.04 3.746v2.036a.787.787 0 0 1-1.575 0v-2.74c0-.435.352-.788.787-.788a2.256 2.256 0 0 0 2.254-2.254A2.256 2.256 0 0 0 12 7.057 2.256 2.256 0 0 0 9.747 9.31a.787.787 0 0 1-1.575 0A3.832 3.832 0 0 1 12 5.483a3.832 3.832 0 0 1 3.828 3.827zm-2.84 8.102a.988.988 0 1 1-1.976 0 .988.988 0 0 1 1.976 0z"/></g></g></symbol>
 
@@ -105,496 +107,491 @@
 	<!-- /.svg-sprite -->
 
 	<div class="wrapper">
-		<header class="header flex flex--center flex--between">
+		<header class="header d-flex align-items-center">
+			<div class="container-fluid">
+				<div class="row justify-content-between align-items-center">
+					<div class="col-auto">
+						<div class="header__left d-flex align-items-center">
+							<a href="#" class="logo navbar-brand">
+								<img src="img/logo.svg" alt="">
+							</a>
 
-			<div class="header__left flex flex--center">
-				<span class="logo">
-					<img src="img/logo.svg" alt="">
-				</span>
+							<nav class="nav navbar navbar-expand">
+								<ul class="menu navbar-nav">
+									<li>
+										<span class="burger js-toggle-header">
+											<span></span>
+											<span></span>
+											<span></span>
+										</span>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="col-auto">
 
-				<nav class="nav">
-					<ul class="menu flex flex--center">
-						<li>
-							<span class="burger js-toggle-header">
-								<span></span>
-								<span></span>
-								<span></span>
-							</span>
-						</li>
-					</ul>
-				</nav>
-			</div>
+						<div class="header-btns">
+							<ul class="header__options d-flex">
+								<li>
+									<a href="#">
+										<svg>
+											<use xlink:href="#help"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="js-dropdown-link">
+										<svg>
+											<use xlink:href="#settings"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="js-dropdown-link">
+										<svg class="dots-svg">
+											<use xlink:href="#dots"></use>
+										</svg>
+									</a>
+									<ul class="dropdown">
+										<li>
+											<a href="#">Menu Item 1</a>
+										</li>
+										<li>
+											<a href="#">Menu Item 2</a>
+										</li>
+										<li>
+											<a href="#">Save & Exit </a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
 
-			<div class="header-btns">
-				<ul class="header__options flex">
-					<li>
-						<a href="#">
-							<svg>
-								<use xlink:href="#help"></use>
-							</svg>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="js-dropdown-link">
-							<svg>
-								<use xlink:href="#settings"></use>
-							</svg>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="js-dropdown-link">
-							<svg class="dots-svg">
-								<use xlink:href="#dots"></use>
-							</svg>
-						</a>
-						<ul class="dropdown">
-							<li>
-								<a href="#">Menu Item 1</a>
-							</li>
-							<li>
-								<a href="#">Menu Item 2</a>
-							</li>
-							<li>
-								<a href="#">Save & Exit </a>
-							</li>
-						</ul>
-					</li>
-				</ul>
+				</div>
 			</div>
 		</header>
 		<!-- Class main--editor should be on this page -->
-		<main class="main flex main--editor">
-			
-				<aside class="aside">
-					<div class="aside__nav">
-						<div class="edit-page__title">EDITOR</div>
-					</div>
-					<div class="aside__options">
-						<span class="burger js-toggle-aside">
-							<span></span>
-							<span></span>
-							<span></span>
-						</span>
-					</div>
-				</aside>
-				<div class="content flex">
-					<div class="edit-page flex">
-						<div class="edit-page__aside__left">
-							<div class="part-list-wrapper">
-								<ul class="part-list flex flex--wrap">
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-1"></use>
-											</svg>
-											<span class="part-title">
-												Main Menu
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-2"></use>
-											</svg>
-											<span class="part-title">
-												Header
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-3"></use>
-											</svg>
-											<span class="part-title">
-												Slider
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-4"></use>
-											</svg>
-											<span class="part-title">
-												Trailer
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-5"></use>
-											</svg>
-											<span class="part-title">
-												Features
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-6"></use>
-											</svg>
-											<span class="part-title">
-												Photos
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-7"></use>
-											</svg>
-											<span class="part-title">
-												Videos
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-8"></use>
-											</svg>
-											<span class="part-title">
-												Models
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-9"></use>
-											</svg>
-											<span class="part-title">
-												Social Media
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-10"></use>
-											</svg>
-											<span class="part-title">
-												About Me
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-11"></use>
-											</svg>
-											<span class="part-title">
-												Webcam
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-12"></use>
-											</svg>
-											<span class="part-title">
-												Blog
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-13"></use>
-											</svg>
-											<span class="part-title">
-												Contact
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-14"></use>
-											</svg>
-											<span class="part-title">
-												Footer
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-15"></use>
-											</svg>
-											<span class="part-title">
-												Call-To-Action
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-16"></use>
-											</svg>
-											<span class="part-title">
-												Newsletter
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-1"></use>
-											</svg>
-											<span class="part-title">
-												Main Menu
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-2"></use>
-											</svg>
-											<span class="part-title">
-												Header
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-3"></use>
-											</svg>
-											<span class="part-title">
-												Slider
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-4"></use>
-											</svg>
-											<span class="part-title">
-												Trailer
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-5"></use>
-											</svg>
-											<span class="part-title">
-												Features
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-6"></use>
-											</svg>
-											<span class="part-title">
-												Photos
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-7"></use>
-											</svg>
-											<span class="part-title">
-												Videos
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<svg class="svg">
-												<use xlink:href="#edit-8"></use>
-											</svg>
-											<span class="part-title">
-												Models
-											</span>
-										</a>
-									</li>
-								</ul>
+		<main class="main d-flex main--editor">
+			<div class="container-fluid h-100 p-0">
+				<div class="row flex-nowrap no-gutters h-100">
+					<div class="col-auto">
+						<aside class="aside d-flex flex-column align-items-center h-100">
+							<div class="aside__nav">
+								<div class="edit-page__title">EDITOR</div>
 							</div>
-							<!-- /.part-list-wrapper -->
-
-							<div class="edit-page__aside__slider-wrapper">
-								<div class="edit-page__aside__slider__top flex flex--between flex--center">
-									<div class="titles-slider">
-										<div class="edit-page__aside__slider__title">
-											Full Page
-										</div>
-										<div class="edit-page__aside__slider__title">
-											Half Page
-										</div>
-										<div class="edit-page__aside__slider__title">
-											4k Page
-										</div>
-									</div>
-									<!-- /.titles-slider -->
-									<div class="edit-page__aside__slider__arrows"></div>
-
-									<a href="#" class="close-slider"></a>
-								</div>
-								<div class="edit-page__aside__slider">
-									<div class="edit-page__aside__slider__item">
-										<div class="slider__item__list">
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-2.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-2.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-2.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-2.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-										</div>
-										
-										
-									</div>
-									<div class="edit-page__aside__slider__item">
-										<div class="slider__item__list">
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-2.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-2.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-2.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-2.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-										</div>
-									</div>
-									
-									<div class="edit-page__aside__slider__item">
-										<div class="slider__item__list">
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-2.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-2.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-2.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-2.jpg" alt="">
-											</div>
-											<div class="slider__item__list__item">
-												<img src="img/slides/sidebar-slide-1.jpg" alt="">
-											</div>
-										</div>
-									</div>
-				
-								</div>
+							<div class="aside__options">
+								<span class="burger js-toggle-aside">
+									<span></span>
+									<span></span>
+									<span></span>
+								</span>
 							</div>
+						</aside>
+					</div>
+					<div class="col-auto flex-fill">
+						<div class="content d-flex w-100 h-100">
+							<div class="edit-page d-flex">
+								<div class="edit-page__aside__left">
+									<div class="part-list-wrapper">
+										<ul class="part-list d-flex flex-wrap">
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-1"></use>
+													</svg>
+													<span class="part-title">
+														Main Menu
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-2"></use>
+													</svg>
+													<span class="part-title">
+														Header
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-3"></use>
+													</svg>
+													<span class="part-title">
+														Slider
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-4"></use>
+													</svg>
+													<span class="part-title">
+														Trailer
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-5"></use>
+													</svg>
+													<span class="part-title">
+														Features
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-6"></use>
+													</svg>
+													<span class="part-title">
+														Photos
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-7"></use>
+													</svg>
+													<span class="part-title">
+														Videos
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-8"></use>
+													</svg>
+													<span class="part-title">
+														Models
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-9"></use>
+													</svg>
+													<span class="part-title">
+														Social Media
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-10"></use>
+													</svg>
+													<span class="part-title">
+														About Me
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-11"></use>
+													</svg>
+													<span class="part-title">
+														Webcam
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-12"></use>
+													</svg>
+													<span class="part-title">
+														Blog
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-13"></use>
+													</svg>
+													<span class="part-title">
+														Contact
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-14"></use>
+													</svg>
+													<span class="part-title">
+														Footer
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-15"></use>
+													</svg>
+													<span class="part-title">
+														Call-To-Action
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-16"></use>
+													</svg>
+													<span class="part-title">
+														Newsletter
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-1"></use>
+													</svg>
+													<span class="part-title">
+														Main Menu
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-2"></use>
+													</svg>
+													<span class="part-title">
+														Header
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-3"></use>
+													</svg>
+													<span class="part-title">
+														Slider
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-4"></use>
+													</svg>
+													<span class="part-title">
+														Trailer
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-5"></use>
+													</svg>
+													<span class="part-title">
+														Features
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-6"></use>
+													</svg>
+													<span class="part-title">
+														Photos
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-7"></use>
+													</svg>
+													<span class="part-title">
+														Videos
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<svg class="svg">
+														<use xlink:href="#edit-8"></use>
+													</svg>
+													<span class="part-title">
+														Models
+													</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<!-- /.part-list-wrapper -->
+
+									<div class="edit-page__aside__slider-wrapper">
+										<div class="edit-page__aside__slider__top d-flex justify-content-between align-items-center">
+											<div class="titles-slider">
+												<div class="edit-page__aside__slider__title">
+													Full Page
+												</div>
+												<div class="edit-page__aside__slider__title">
+													Half Page
+												</div>
+												<div class="edit-page__aside__slider__title">
+													4k Page
+												</div>
+											</div>
+											<!-- /.titles-slider -->
+											<div class="edit-page__aside__slider__arrows"></div>
+
+											<a href="#" class="close-slider">
+												<svg>
+													<use xlink:href="#svg-close"></use>
+												</svg>
+											</a>
+										</div>
+										<div class="edit-page__aside__slider">
+											<div class="edit-page__aside__slider__item">
+												<div class="slider__item__list">
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-2.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-2.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-2.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-2.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+												</div>
+
+
+											</div>
+											<div class="edit-page__aside__slider__item">
+												<div class="slider__item__list">
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-2.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-2.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-2.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-2.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+												</div>
+											</div>
+
+											<div class="edit-page__aside__slider__item">
+												<div class="slider__item__list">
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-2.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-2.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-2.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-2.jpg" alt="">
+													</div>
+													<div class="slider__item__list__item">
+														<img src="img/slides/sidebar-slide-1.jpg" alt="">
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<!-- /.edit-page__aside__left -->
+								<div class="edit-page__body d-flex">
+									<div class="edit-page__content">
+										<img src="img/project-2.jpg" alt="" class="editor-img js-editor-img">
+									</div>
+									<!-- /.edit-page__content -->
+
+								</div>
+								<!-- /.edit-page__content -->
+
+							</div>
+							<!-- /.edit-page flex -->
 						</div>
-						<!-- /.edit-page__aside__left -->
-						<div class="edit-page__body flex">
-							<div class="edit-page__content">
-								 <img src="img/project-2.jpg" alt="" class="editor-img js-editor-img">
-							</div>
-							<!-- /.edit-page__content -->
-							
-
-							<div class="edit-page__options flex flex--center flex--between">
-								<ul class="edit-page-breadcrumbs flex flex--center">
-									<li>photos</li>
-									<li>productpage</li>
-								</ul>
-								<div class="edit-page__btns flex flex--center">
-									<div class="step-bnts flex flex--center">
-										<a href="#" class="step">
-											<svg>
-												<use xlink:href="#forward"></use>
-											</svg>
-										</a>
-										<a href="#" class="step">
-											<svg>
-												<use xlink:href="#back"></use>
-											</svg>
-										</a>
-									</div>
-									<a href="#" class="btn btn--blue">
-										Save Changes
-									</a>
-								</div>
-							</div>
-								<!-- /.edit-page__options -->	
-						</div>
-						<!-- /.edit-page__content -->
-						
+						<!-- /.content -->
 					</div>
-					<!-- /.edit-page flex -->
 				</div>
-				<!-- /.content -->
-			
+			</div>
 		</main>
+
+		<footer class="footer"></footer>
 		
 		<div class="popup popup--main" id="add-new">
 			<div class="popup__top">
@@ -621,7 +618,7 @@
 					</div>
 
 
-					<div class="btn-row flex flex--center">
+					<div class="btn-row d-flex align-items-center">
 						<a href="#" class="btn btn--blue">
 							Save
 						</a>
@@ -635,6 +632,8 @@
 <script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/swiper.js"></script>
+
+<script src="js/bootstrap/bootstrap.min.js"></script>
 
 <script src="js/common.js"></script>
 </body>

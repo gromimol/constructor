@@ -94,7 +94,6 @@
   user-select: none;
   -webkit-touch-callout: none;
 
-
   .placeholder{
     position: relative;
     display: block;
@@ -174,6 +173,12 @@
   &--grey{
   	.placeholder{
   		background-color: #e1e4eb;
+  	}
+  }
+  &--lt{
+  	.placeholder{
+  		padding-top: 7px;
+  		padding-bottom: 6px;
   	}
   }
 }

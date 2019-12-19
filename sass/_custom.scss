@@ -1,0 +1,14 @@
+/*custom*/
+svg{
+	vertical-align: top;
+} 
+a{
+	color: var(--black);
+	transition: all .3s;
+	&:hover{
+		text-decoration: none;
+	}
+}
+ul{
+	margin-bottom: 0;
+}

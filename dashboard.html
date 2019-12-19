@@ -4,9 +4,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=1366">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Dashboard</title>
 </head>
@@ -15,6 +12,8 @@
 	<!-- svg icons -->
 	<div class="svg-sprite">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+			<symbol viewBox="0 0 18 18" id="svg-close"><g><g><path d="M-0.00124,16.87597l7.87615,-7.87583l-7.87615,-7.87632l1.12496,-1.12445l7.87616,7.87584l7.87616,-7.87584l1.12496,1.12445l-7.87615,7.87632l7.87615,7.87583l-1.12496,1.12549l-7.87616,-7.87633l-7.87616,7.87633z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
 
 			<symbol viewBox="0 0 12 12" id="svg-refresh"><g><g><path d="M11.50025,5.50062c-0.27649,0 -0.49942,0.22247 -0.49942,0.49986c0,2.75697 -2.24281,5.0005 -5.00118,5.0005c-2.757,0 -5.00072,-2.24353 -5.00072,-5.0005c0,-2.75819 2.24373,-5.00108 5.00072,-5.00108c1.50661,0 2.90234,0.6633 3.8475,1.80457h-1.72634c-0.2766,0 -0.50011,0.2228 -0.50011,0.49986c0,0.27661 0.2235,0.49908 0.50011,0.49908h2.80655c0.27706,0 0.49999,-0.22247 0.49999,-0.49908v-2.80428c0,-0.277 -0.22293,-0.4996 -0.49999,-0.4996c-0.27706,0 -0.49953,0.2226 -0.49953,0.4996v1.44479c-1.1285,-1.23184 -2.71843,-1.94439 -4.42818,-1.94439c-3.30791,0 -6.00014,2.6915 -6.00014,6.00053c0,3.30774 2.69222,5.99944 6.00014,5.99944c3.30826,0 6.00071,-2.69169 6.00071,-5.99944c0,-0.27738 -0.22293,-0.49986 -0.50011,-0.49986z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
 
@@ -147,21 +146,21 @@
 				<symbol viewBox="0 0 14 14" id="align_justify"><g><g><path fill="currentColor" d="M-.002 12h13.994v1.999H-.002zm0-4H14.01v2H-.002zm0-4h13.994v2H-.002zm0-4h13.97v2H-.002z"/></g></g></symbol>
 		</svg>
 	</div>
-		<!-- /.svg-sprite -->
+	<!-- /.svg-sprite -->
 
 		<div class="wrapper no-after">
 			
-			<header class="header">
+			<header class="header d-flex  align-items-center">
 				<div class="container-fluid">
 					<div class="row justify-content-between align-items-center">
 						<div class="col-auto">
-							<div class="header__left flex flex--center">
-								<span class="logo">
+							<div class="header__left d-flex  align-items-center">
+								<a href="#" class="logo navbar-brand">
 									<img src="img/logo.svg" alt="">
-								</span>
+								</a>
 
-								<nav class="nav">
-									<ul class="menu flex">
+								<nav class="nav navbar navbar-expand">
+									<ul class="menu navbar-nav">
 
 										<li>
 											<a href="#" class="menu-item active">
@@ -219,7 +218,7 @@
 						</div>
 						<div class="col-auto">
 							<div class="header-btns">
-								<ul class="header__options flex flex--center">
+								<ul class="header__options d-flex  align-items-center">
 									<li>
 										<div class="user js-dropdown-link">
 											<div class="user__text">
@@ -316,7 +315,7 @@
 												</a>
 											</div>
 
-											<div class="settings-dropdown__content flex flex--between">
+											<div class="settings-dropdown__content d-flex justify-content-between">
 												<div class="settings-dropdown__left">
 													<div class="settings-dropdown__item">
 														<ul class="settings-dropdown__menu">
@@ -340,9 +339,9 @@
 														</ul>
 													</div>
 
-													<div class="social-block flex flex--center">
+													<div class="social-block d-flex  align-items-center">
 														<span class="social-block__title">Follow us</span>
-														<ul class="social flex flex--center">
+														<ul class="social d-flex  align-items-center">
 															<li>
 																<a href="#" class="fb">
 																	<span class="ico">
@@ -393,11 +392,11 @@
 				</div>
 			</header>
 
-			<main class="main flex flex--column">
+			<main class="main d-flex flex-column">
 				<div class="management-page container-fluid">
 					<div class="management-page__body row">
 
-						<aside class="aside__left col">
+						<aside class="aside__left d-flex flex-column justify-content-between col">
 							<div class="aside__menu nav-for-theme-slider">
 								<div class="aside__menu__item">
 									<div class="aside__menu__content">
@@ -673,9 +672,9 @@
 									<div class="h4">Your Payment Plans</div> 
 								</div>
 								<div class="col-auto">
-									<div class="dashboard__filter flex flex--center">
+									<div class="dashboard__filter d-flex  align-items-center">
 
-										<div class="select-block select-block--status">
+										<div class="select-block select-block--lt select-block--status">
 											<span class="placeholder"><span class="status status--all">All</span></span>
 											<ul>
 												<li data-value=""><span class="status status--all">All</span></li>
@@ -757,7 +756,7 @@
 													<div class="status status--green">Active</div>
 												</div>
 												<div class="dashboard-table__item dashboard-table__item--action">
-													<div class="btn-group flex">
+													<div class="btn-group align-items-center">
 														<a href="#" class="action">
 															<span class="ico">
 																<svg>
@@ -812,7 +811,7 @@
 													<div class="status status--red">Expired</div>
 												</div>
 												<div class="dashboard-table__item dashboard-table__item--action">
-													<div class="btn-group flex">
+													<div class="btn-group align-items-center">
 														<a href="#" class="action">
 															<span class="ico">
 																<svg>
@@ -867,7 +866,7 @@
 													<div class="status status--green">Active</div>
 												</div>
 												<div class="dashboard-table__item dashboard-table__item--action">
-													<div class="btn-group flex">
+													<div class="btn-group align-items-center">
 														<a href="#" class="action">
 															<span class="ico">
 																<svg>
@@ -922,7 +921,7 @@
 													<div class="status status--green">Active</div>
 												</div>
 												<div class="dashboard-table__item dashboard-table__item--action">
-													<div class="btn-group flex">
+													<div class="btn-group align-items-center">
 														<a href="#" class="action">
 															<span class="ico">
 																<svg>
@@ -977,7 +976,7 @@
 													<div class="status status--red">Expired</div>
 												</div>
 												<div class="dashboard-table__item dashboard-table__item--action">
-													<div class="btn-group flex">
+													<div class="btn-group align-items-center">
 														<a href="#" class="action">
 															<span class="ico">
 																<svg>
@@ -1032,7 +1031,7 @@
 					</div>
 
 				</div>
-				<!-- /.management-page flex -->
+				<!-- /.management-page d- d-flex  -->
 			</main>
 			<footer class="footer"></footer>
 
@@ -1040,8 +1039,9 @@
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery.nicescroll.min.js"></script>
-		<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="bootstrap/js/bootstrap.min.js"></script>
+
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+
 		<script src="js/slick.min.js"></script>
 		<script src="js/swiper.js"></script>
 		<script src="js/iro/iro.min.js"></script>
@@ -1065,6 +1065,8 @@
 				asNavFor: '.theme-slider',
 				focusOnSelect: true
 			});
+
+
 		
 		</script>
 </body>

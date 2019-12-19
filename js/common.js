@@ -54,13 +54,7 @@ $(document).ready(function () {
 	});
 
 	// NiceScroll
-	$(".part-list").niceScroll();
-	$(".gallery-block").niceScroll();
-	$(".edit-page__content").niceScroll();
-	$(".project-slider__nav.slick-slider").niceScroll();
-	$(".project-slider__nav .slick-list").niceScroll();
-	$(".edit-page__aside__right .tab-content").niceScroll();
-	$(".edit-page__aside__slider").niceScroll();
+	$(".gallery-block, .part-list, .edit-page__content, .project-slider__nav.slick-slider, .project-slider__nav .slick-list, .edit-page__aside__right .tab-content, .edit-page__aside__slider").niceScroll();
 
 	// Decor
 	$('.decor-block').on('click', function () {
@@ -400,24 +394,7 @@ $(document).ready(function () {
 
 	} );
 
-	// https://iro.js.org/guide.html#color-picker-options
-	iro.use(iroTransparencyPlugin);
-	var colorPicker = new iro.ColorPicker('#color-picker-container', {
-		width: 145,
-		color: {r: 255, g: 100, b: 100, a: .6},
-		transparency: true
-	});
-
-	var value = document.getElementById("color-picker-value__hex");
-	var valueColor = document.getElementById("color-picker-value__circle");
-
-	// https://iro.js.org/guide.html#color-picker-events
-	colorPicker.on(["color:init", "color:change"], function(color){
-	  // Show the current color in different formats
-	  // Using the selected color: https://iro.js.org/guide.html#selected-color-api
-	  value.innerHTML =  color.hexString;
-	  valueColor.style.color = color.rgbaString;
-	});
+	
 
 	
 
