@@ -42,13 +42,14 @@
 .dashboard-table__header{
 	.dashboard-table__row{
 		box-shadow: 0 0 5px rgba(206, 207, 211, 0.33);
-		padding: 20px;
 		background-color: #f9f9f9;
 		.h5{
 			font-weight: 900;
 			text-transform: uppercase;
+			margin-bottom: 0;
 			letter-spacing: 0.12px;
 			color: #173e55;
+			font-size: 13px;
 		}
 	}
 }
@@ -90,8 +91,6 @@
 .dashboard-table__body{
 	.dashboard-table__row{
 		background-color: #fff;
-		margin-bottom: 5px;
-		padding: 35px 20px;
 	}
 }
 

@@ -6,8 +6,8 @@
 	height: 100%;
 }
 .mouse{
-	width: 10rem;
-	height: 10rem;
+	width: 6.25rem;
+	height: 6.25rem;
 	box-shadow: 3px 13px 9px rgba(0, 0, 0, 0.05);
 	border-radius: 50px;
 	background-color: #ffffff;
@@ -16,8 +16,8 @@
 	justify-content: center;
 	color: #000;
 	position: absolute;
-	bottom: 10rem;
-	right: 8rem;
+	bottom: 6.25rem;
+	right: 5rem;
 	transition: all .5s;
 	&.hidden{
 		// transform: translateY(100%);
@@ -142,27 +142,27 @@
 }
 .tab-list{
 	position: absolute;
-	left: 1.8rem;
+	left: 1.125rem;
 	top: 2%;
 	display: flex;
 	align-items: center;
-	transform: rotate(-90deg) translate(calc(-100% + 4rem), 3rem);
+	transform: rotate(-90deg) translate(calc(-100% + 3rem), 2.2rem);
 	transform-origin: 0 0;
 	font-family: "Futura", sans-serif;
 	font-weight: 700;
-	font-size: 1.1rem;
+	font-size: .6875rem;
 	letter-spacing: 2.1px;
 	text-transform: uppercase;
 	&::after{
 		content: '';
 		height: 2px;
-		width: 28rem;
+		width: 10rem;
 		background-color: #00a0ff;
-		margin-left: .5rem;
+		margin-left: .2rem;
 	}
 	li{
-		padding-right: 1rem;
-		margin-right: 1rem;
+		padding-right: .6rem;
+		margin-right: .6rem;
 		border-right: 1px solid #a9a9a9;
 		cursor: pointer;
 		transition: color .3s;
@@ -187,7 +187,7 @@
 		height: 100% !important;
 	}
 	.slick-list{
-		padding-top: 5rem;
+		padding-top: 3rem;
 	}
 }
 .slick-slide{
@@ -196,11 +196,11 @@
 .total-counter{
 	display: flex;
 	align-items: flex-start;
-	margin-bottom: 3rem;
+	margin-bottom: 1.875rem;
 }
 .current-slide{
 	font-family: "Futura",sans-serif;
-	font-size: 4.5rem;
+	font-size: 3rem;
 	font-weight: 600;
 	color: #000;
 	text-shadow: 1px 1px 9px rgba(190, 190, 190, 0.43);
@@ -208,7 +208,7 @@
 .total-slide{
 	display: flex;
 	align-items: flex-start;
-	font-size: 2.4rem;
+	font-size: 1.5rem;
 	font-family: "Futura",sans-serif;
 	font-weight: 600;
 	color: #ababab;
@@ -216,14 +216,14 @@
 	&::before{
 		content: '/';
 		color: #00a0ff;
-		margin: 0 0.5rem;
+		margin: 0 0.2rem;
 		font-weight: 300;
 	}
 }
 .theme__title{
 	font-family: "Futura",sans-serif;
 	font-weight: 500;
-	font-size: 8rem;
+	font-size: 3.125rem;
 	text-transform: uppercase;
 	text-shadow: 1px 1px 9px rgba(190, 190, 190, 0.43);
 	margin-bottom: .1em;
@@ -231,7 +231,7 @@
 .theme__subtitle{
 	font-family: "Futura",sans-serif;
 	font-weight: 500;
-	font-size: 1.5rem;
+	font-size: .9375rem;
 	color: #6c6c6c;
 	text-transform: uppercase;
 	letter-spacing: 2.87px;
@@ -241,7 +241,7 @@
 .theme__text{
 	font-family: "Futura",sans-serif;
 	font-weight: 300;
-	font-size: 1.5rem;
+	font-size: .9375rem;
 	line-height: 1.6;
 	letter-spacing: 0.75px;
 	text-shadow: 1px 1px 9px rgba(190, 190, 190, 0.43);
@@ -274,7 +274,7 @@
 				color: var(--blue);
 				& > svg{
 					width: 1.3em;
-					margin-right: 1.3rem;
+					margin-right: .8rem;
 					visibility: visible;
 				}
 			}
@@ -285,10 +285,10 @@
 		align-items: center;
 		justify-content: center;
 		position: relative;
-		width: 17.5rem;
-		height: 5rem;
+		width: 10.9375rem;
+		height: 3.125rem;
 		border: 2px solid #000000;
-		font-size: 1.3rem;
+		font-size: .8rem;
 		line-height: 1;
 		text-transform: uppercase;
 		letter-spacing: 0.33px;
@@ -311,23 +311,24 @@
 				padding-left: 4px;
 			}
 			& > svg{
-				width: 1.3rem;
-				height: 1rem;
+				width: .8rem;
+				height: .625rem;
 				position: relative;
-				top: -.15rem;
+				top: -.08rem;
 				width: 0;
 				visibility: hidden;
 			}
 		}
 		& > svg{
-			width: 4.6rem;
-			height: 1.6rem;
+			width: 3rem;
+			height: 1rem;
 			background:transparent url('../img/arrow_right.svg') left top no-repeat;
 			background-size: contain;
 			position: absolute;
 			top: 50%;
 			left: 100%;
 			transform: translate(-1rem, -50%);
+			z-index: 1;
 		}
 	}
 }
@@ -337,10 +338,10 @@
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 7rem;
+	height: 4.375rem;
 	display: flex;
 	align-items: center;
-	padding-left: 5rem;
+	padding-left: 3.125rem;
 	background-color: #fff;
 	z-index: 3;
 }
@@ -348,7 +349,7 @@
 	display: flex;
 	align-items: center;
 	color: #000;
-	font-size: 1.3rem;
+	font-size: .8125rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	&:hover{
@@ -362,9 +363,9 @@
 		transition: color .3s;
 	}
 	svg{
-		width: 2rem;
-		height: 1rem;
-		margin-right: 3rem;
+		width: 1.25rem;
+		height: .625rem;
+		margin-right: 1.875rem;
 	}
 }
 

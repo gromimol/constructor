@@ -53,9 +53,6 @@ $(document).ready(function () {
 		$('.edit-page__aside__right').toggleClass('active');
 	});
 
-	// DataTable
-	$('.dashboard-table').DataTable();
-
 	// NiceScroll
 	$(".gallery-block, .part-list, .edit-page__content, .project-slider__nav.slick-slider, .project-slider__nav .slick-list, .edit-page__aside__right .tab-content, .edit-page__aside__slider").niceScroll();
 

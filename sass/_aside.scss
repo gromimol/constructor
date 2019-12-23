@@ -6,7 +6,6 @@
 
 }
 .follow{
-	margin-bottom: 43px;
 	transition: all .3s;
 	a{
 		display: flex;
@@ -67,7 +66,6 @@
 		letter-spacing: 1.8px;
 		text-transform: uppercase;
 		color: #767877;
-		padding: 6px 40px;		
 		&:not(:last-child){
 			border-right: 1px solid var(--border-color);
 		}

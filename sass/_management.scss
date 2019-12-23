@@ -79,7 +79,7 @@
 		border-radius: 0 5px 40px;
 	}
 	.theme__descr{
-		min-height: 57em;
+		min-height: 35.625em;
 		transform: translateY(1em);
 		border-radius: 0 10px 10px 0;
 		&::before{
@@ -401,7 +401,7 @@
 }
 .page-data{
 	font-family: 'Futura', sans-serif;
-	font-size: 6rem;
+	font-size: 3.75rem;
 	font-weight: 500;
 	text-transform: uppercase;
 	line-height: 1.1;
@@ -434,7 +434,7 @@
 }
 .page-data-descr__title{
 	color: #6c6c6c;
-	font-size: 1.5rem;
+	font-size: .9375rem;
 	text-transform: uppercase;
 	line-height: 1.5;
 	margin-bottom: 1em;
@@ -442,7 +442,7 @@
 .page-data-descr__text{
 	text-shadow: 1px 1px 9px rgba(190, 190, 190, 0.43);
 	color: #8f8f8f;
-	font-size: 1.4rem;
+	font-size: .75rem;
 	font-weight: 300;
 	letter-spacing: 0.7px;
 	line-height: 1.7;
