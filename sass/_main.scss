@@ -59,15 +59,6 @@ body{
 	font-weight: 900;
 }
 .hide-aside{
-	.aside__nav{
-		transform: translateY(-25px);
-		opacity: 0;
-		visibility: hidden;
-	}
-	.edit-page__aside__left{
-		width: 0;
-		overflow: hidden;
-	}
 	.part-list{
 		display: none;
 	}
@@ -76,32 +67,8 @@ body{
 	}
 
 }
-.main--editor{
-	.aside{
-		padding-bottom: 42px;
-	}
-}
-.aside{
-	width: 100px;
-	background-color: #fff;
-	position: relative;
-	transition: all .4s;
-	z-index: 5;
-	.burger{
-		transform: rotate(-90deg);
-		&:hover span{
-			&:nth-child(2){
-				transition-delay: .2s;
-			}
-			&:last-child{
-				transition-delay: .4s;
-			}
-		}
-		&.active{
-			transform: rotate(0deg);
-		}
-	}
-}
+
+
 .burger-rotate{
 	transform: rotate(-90deg);
 	&:hover span{
@@ -118,10 +85,7 @@ body{
 }
 
 
-.aside__nav{
-	flex-grow: 1;
 
-}
 .content{
 	width: calc(100% - 100px);
 	position: relative;
