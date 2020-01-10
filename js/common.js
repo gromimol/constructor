@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+	// toggle aside on mobile
+	$('.js--mobile-btn').on('click',function (e) {
+		e.preventDefault();
+
+		$('.js--aside').toggleClass('active');
+	})
+
 	// height for main
 	function pageHeight() {
 		var wrapperHeight = $('.wrapper').outerHeight();

@@ -4,6 +4,7 @@ ul, li{
 	padding: 0;
 	margin: 0;
 }
+
 *{
 	box-sizing: border-box;
 	padding: 0;
@@ -14,6 +15,7 @@ svg{
 } 
 a{
 	color: var(--black);
+	outline: none;
 	transition: all .3s;
 	&:hover{
 		text-decoration: none;
@@ -21,6 +23,34 @@ a{
 }
 ul{
 	margin-bottom: 0;
+}
+
+.navbar-toggle{
+	display: inline-flex;
+	flex-direction: column;
+	flex: 0 0 30px;
+	width: 30px;
+	border: none;
+	background-color: transparent;
+	outline: none !important;
+	box-shadow: none;
+	span{
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color: var(--blue);
+		&:not(:last-child){
+			margin-bottom: 5px;
+		}
+	}
+}
+.icon-bar{
+	display: block;
+	height: 2px;
+	background-color: var(--blue);
+	&:not(:last-child){
+		margin-bottom: 5px;
+	}
 }
 .page-item.disabled .page-link,
 .form-control{

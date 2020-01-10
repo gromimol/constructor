@@ -3,6 +3,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.dataTables.min.css">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Dashboard</title>
@@ -151,251 +154,313 @@
 		<div class="wrapper no-after">
 			
 			<header class="header d-flex align-items-center pr-3 pl-3">
-			<div class="container-fluid">
-				<div class="row justify-content-between align-items-center">
-					<div class="col-auto">
-						<div class="header__left d-flex align-items-center">
-							<a href="#" class="logo navbar-brand">
-								<img src="img/logo.svg" alt="">
-							</a>
+				<div class="container-fluid">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-auto">
+							<div class="header__left d-flex align-items-center">
 
-							<nav class="nav navbar navbar-expand pl-5 ml-5">
-								<ul class="menu navbar-nav ml-5 pl-5">
+								<a href="#" class="navbar-toggle d-xl-none mr-4 js--mobile-btn">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</a>
+
+								<a href="#" class="logo navbar-brand">
+									<img src="img/logo.svg" alt="">
+								</a>
+
+								<nav class="nav navbar navbar-expand pl-5 ml-5 d-none d-xl-flex">
+									<ul class="menu navbar-nav ml-5 pl-5">
+										<li class="pl-3 pr-3">
+											<a href="#" class="menu-item active">
+												<span class="ico">
+													<img src="img/dashboard.svg" alt="">
+												</span>
+												<span class="text">
+													Dashboard
+												</span>
+											</a>
+										</li>
+										<li class="pl-3 pr-3">
+											<a href="#" class="menu-item">
+												<span class="ico">
+													<img src="img/my-site.svg" alt="">
+												</span>
+												<span class="text">
+													my site
+												</span>
+											</a>
+										</li>
+										<li class="pl-3 pr-3">
+											<a href="#" class="menu-item">
+												<span class="ico">
+													<img src="img/statistics.svg" alt="">
+												</span>
+												<span class="text">
+													statistics
+												</span>
+											</a>
+										</li>
+										<li class="pl-3 pr-3">
+											<a href="#" class="menu-item">
+												<span class="ico">
+													<img src="img/media.svg" alt="">
+												</span>
+												<span class="text">
+													media
+												</span>
+											</a>
+										</li>
+										<li class="pl-3 pr-3">
+											<a href="#" class="menu-item">
+												<span class="ico">
+													<img src="img/marketing.svg" alt="">
+												</span>
+												<span class="text">
+													Marketing
+												</span>
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<div class="col-auto">
+							<div class="header-btns">
+								<ul class="header__options d-flex align-items-center pt-3 pb-3 pl-3">
 									<li class="pl-3 pr-3">
-										<a href="#" class="menu-item active">
+										<div class="user js-dropdown-link">
+											<div class="user__text">
+												Welcome <span class="user-nick">Razersection</span>
+											</div>
+											<div class="user-avatar">
+												<img src="img/avatar.png" alt="">
+												<!-- Class status--offline for offline users -->
+												<span class="status status--online"></span>
+											</div>
+										</div>
+
+										<div class="user-dropdown  js-dropdown">
+											<div class="user-dropdown-row">
+												<a href="#" class="user-dropdown__item">
+													<span class="user-logo">
+														<img src="img/user-logo.png" alt="">
+													</span>
+													<div class="user-title">
+														<span class="blue">Featured</span>
+														<span class="lg">Lisann personal</span>
+														<span class="grey">www.lissannpersonal.com</span>
+													</div>
+													<div class="user-ico">
+														<svg>
+															<use xlink:href="#svg-redirect"></use>
+														</svg>
+													</div>
+												</a>
+											</div>
+
+											<div class="user-dropdown-row">
+												<a href="#" class="user-dropdown__item">
+													<span class="user-logo">
+														<img src="img/user-logo.png" alt="">
+													</span>
+													<div class="user-title">
+														<span class="lg">Razersection</span>
+														<span class="grey">www.lissannpersonal.com</span>
+													</div>
+													<div class="user-ico">
+														<svg>
+															<use xlink:href="#svg-redirect"></use>
+														</svg>
+													</div>
+												</a>
+											</div>
+
+											<a href="#" class="user-dropdown__add">
+												<span class="ico">
+													<svg>
+														<use xlink:href="#plus"></use>
+													</svg>
+												</span>
+												Add product
+											</a>
+										</div>
+
+									</li>
+									<li class="pl-3 pr-3">
+										<a href="#" class="bell">
 											<span class="ico">
-												<img src="img/dashboard.svg" alt="">
+												<svg>
+													<use xlink:href="#svg-bell"></use>
+												</svg>
 											</span>
-											<span class="text">
-												Dashboard
-											</span>
+											<span class="count">23</span>
 										</a>
 									</li>
 									<li class="pl-3 pr-3">
-										<a href="#" class="menu-item">
-											<span class="ico">
-												<img src="img/my-site.svg" alt="">
-											</span>
-											<span class="text">
-												my site
-											</span>
+										<a href="#">
+											<svg>
+												<use xlink:href="#help"></use>
+											</svg>
 										</a>
 									</li>
 									<li class="pl-3 pr-3">
-										<a href="#" class="menu-item">
-											<span class="ico">
-												<img src="img/statistics.svg" alt="">
-											</span>
-											<span class="text">
-												statistics
-											</span>
+										<a href="#" class="js-dropdown-link">
+											<svg>
+												<use xlink:href="#settings"></use>
+											</svg>
 										</a>
+										<div class="settings-dropdown js-dropdown">
+											<div class="user-dropdown-row">
+												<a href="#" class="user-dropdown__item">
+													<span class="user-logo">
+														<img src="img/user-logo.png" alt="">
+													</span>
+													<div class="user-title">
+														<span class="blue">Featured</span>
+														<span class="lg">Lisann personal</span>
+														<span class="grey">www.lissannpersonal.com</span>
+													</div>
+												</a>
+											</div>
+
+											<div class="settings-dropdown__content d-flex justify-content-between">
+												<div class="settings-dropdown__left">
+													<div class="settings-dropdown__item">
+														<ul class="settings-dropdown__menu">
+															<li><a href="#">Site settings</a></li>
+															<li><a href="#">My profile</a></li>
+															<li><a href="#">Mailbox</a></li>
+														</ul>
+													</div>
+													<div class="settings-dropdown__item">
+														<ul class="settings-dropdown__menu">
+															<li><a href="#">Domains</a></li>
+															<li><a href="#">Apps</a></li>
+															<li><a href="#">Lorem Ipsum</a></li>
+														</ul>
+													</div>
+													<div class="settings-dropdown__item">
+														<ul class="settings-dropdown__menu">
+															<li><a href="#">KnowlegeBase</a></li>
+															<li><a href="#">Live Chat</a></li>
+															<li><a href="#">Email Us</a></li>
+														</ul>
+													</div>
+
+													<div class="social-block d-flex align-items-center">
+														<span class="social-block__title">Follow us</span>
+														<ul class="social d-flex align-items-center">
+															<li>
+																<a href="#" class="fb">
+																	<span class="ico">
+																		<svg>
+																			<use xlink:href="#fb"></use>
+																		</svg>			
+																	</span>
+																</a>
+															</li>
+															<li>
+																<a href="#" class="tw">
+																	<span class="ico">
+																		<svg>
+																			<use xlink:href="#tw"></use>
+																		</svg>			
+																	</span>
+																</a>
+															</li>
+															<li>
+																<a href="#" class="inst">
+																	<span class="ico">
+																		<svg>
+																			<use xlink:href="#inst"></use>
+																		</svg>			
+																	</span>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="settings-dropdown__right">
+													<img src="img/setting-preview.jpg" alt="">
+												</div>
+											</div>
+										</div>
 									</li>
-									<li class="pl-3 pr-3">
-										<a href="#" class="menu-item">
-											<span class="ico">
-												<img src="img/media.svg" alt="">
-											</span>
-											<span class="text">
-												media
-											</span>
-										</a>
-									</li>
-									<li class="pl-3 pr-3">
-										<a href="#" class="menu-item">
-											<span class="ico">
-												<img src="img/marketing.svg" alt="">
-											</span>
-											<span class="text">
-												Marketing
-											</span>
+									<li class="logout-container pl-3 ">
+										<a href="#" class="logout">
+											<svg>
+												<use xlink:href="#dots"></use>
+											</svg>
 										</a>
 									</li>
 								</ul>
-							</nav>
-						</div>
-					</div>
-					<div class="col-auto">
-						<div class="header-btns">
-							<ul class="header__options d-flex align-items-center pt-3 pb-3 pl-3">
-								<li class="pl-3 pr-3">
-									<div class="user js-dropdown-link">
-										<div class="user__text">
-											Welcome <span class="user-nick">Razersection</span>
-										</div>
-										<div class="user-avatar">
-											<img src="img/avatar.png" alt="">
-											<!-- Class status--offline for offline users -->
-											<span class="status status--online"></span>
-										</div>
-									</div>
-
-									<div class="user-dropdown  js-dropdown">
-										<div class="user-dropdown-row">
-											<a href="#" class="user-dropdown__item">
-												<span class="user-logo">
-													<img src="img/user-logo.png" alt="">
-												</span>
-												<div class="user-title">
-													<span class="blue">Featured</span>
-													<span class="lg">Lisann personal</span>
-													<span class="grey">www.lissannpersonal.com</span>
-												</div>
-												<div class="user-ico">
-													<svg>
-														<use xlink:href="#svg-redirect"></use>
-													</svg>
-												</div>
-											</a>
-										</div>
-
-										<div class="user-dropdown-row">
-											<a href="#" class="user-dropdown__item">
-												<span class="user-logo">
-													<img src="img/user-logo.png" alt="">
-												</span>
-												<div class="user-title">
-													<span class="lg">Razersection</span>
-													<span class="grey">www.lissannpersonal.com</span>
-												</div>
-												<div class="user-ico">
-													<svg>
-														<use xlink:href="#svg-redirect"></use>
-													</svg>
-												</div>
-											</a>
-										</div>
-
-										<a href="#" class="user-dropdown__add">
-											<span class="ico">
-												<svg>
-													<use xlink:href="#plus"></use>
-												</svg>
-											</span>
-											Add product
-										</a>
-									</div>
-
-								</li>
-								<li class="pl-3 pr-3">
-									<a href="#" class="bell">
-										<span class="ico">
-											<svg>
-												<use xlink:href="#svg-bell"></use>
-											</svg>
-										</span>
-										<span class="count">23</span>
-									</a>
-								</li>
-								<li class="pl-3 pr-3">
-									<a href="#">
-										<svg>
-											<use xlink:href="#help"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="pl-3 pr-3">
-									<a href="#" class="js-dropdown-link">
-										<svg>
-											<use xlink:href="#settings"></use>
-										</svg>
-									</a>
-									<div class="settings-dropdown js-dropdown">
-										<div class="user-dropdown-row">
-											<a href="#" class="user-dropdown__item">
-												<span class="user-logo">
-													<img src="img/user-logo.png" alt="">
-												</span>
-												<div class="user-title">
-													<span class="blue">Featured</span>
-													<span class="lg">Lisann personal</span>
-													<span class="grey">www.lissannpersonal.com</span>
-												</div>
-											</a>
-										</div>
-
-										<div class="settings-dropdown__content d-flex justify-content-between">
-											<div class="settings-dropdown__left">
-												<div class="settings-dropdown__item">
-													<ul class="settings-dropdown__menu">
-														<li><a href="#">Site settings</a></li>
-														<li><a href="#">My profile</a></li>
-														<li><a href="#">Mailbox</a></li>
-													</ul>
-												</div>
-												<div class="settings-dropdown__item">
-													<ul class="settings-dropdown__menu">
-														<li><a href="#">Domains</a></li>
-														<li><a href="#">Apps</a></li>
-														<li><a href="#">Lorem Ipsum</a></li>
-													</ul>
-												</div>
-												<div class="settings-dropdown__item">
-													<ul class="settings-dropdown__menu">
-														<li><a href="#">KnowlegeBase</a></li>
-														<li><a href="#">Live Chat</a></li>
-														<li><a href="#">Email Us</a></li>
-													</ul>
-												</div>
-
-												<div class="social-block d-flex align-items-center">
-													<span class="social-block__title">Follow us</span>
-													<ul class="social d-flex align-items-center">
-														<li>
-															<a href="#" class="fb">
-																<span class="ico">
-																	<svg>
-																		<use xlink:href="#fb"></use>
-																	</svg>			
-																</span>
-															</a>
-														</li>
-														<li>
-															<a href="#" class="tw">
-																<span class="ico">
-																	<svg>
-																		<use xlink:href="#tw"></use>
-																	</svg>			
-																</span>
-															</a>
-														</li>
-														<li>
-															<a href="#" class="inst">
-																<span class="ico">
-																	<svg>
-																		<use xlink:href="#inst"></use>
-																	</svg>			
-																</span>
-															</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<div class="settings-dropdown__right">
-												<img src="img/setting-preview.jpg" alt="">
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="logout-container pl-3 ">
-									<a href="#" class="logout">
-										<svg>
-											<use xlink:href="#dots"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</header>
+			</header>
 
 			<main class="main d-flex flex-column">
 				<div class="management-page container-fluid">
-					<div class="management-page__body row">
+					<div class="management-page__body row flex-xl-nowrap flex-md-wrap w-100">
 
-						<aside class="aside__left d-flex flex-column justify-content-between col">
+						<aside class="aside__left d-flex flex-column justify-content-xl-between col js--aside">
+
+							<!-- for mobile -->
+							<ul class="menu navbar-nav d-xl-none">
+								<li class="px-3 mb-4">
+									<a href="#" class="menu-item active d-flex align-items-center">
+										<span class="ico">
+											<img src="img/dashboard.svg" alt="">
+										</span>
+										<span class="text mt-0 pl-2 fz-12">
+											Dashboard
+										</span>
+									</a>
+								</li>
+								<li class="px-3 mb-4">
+									<a href="#" class="menu-item d-flex align-items-center">
+										<span class="ico">
+											<img src="img/my-site.svg" alt="">
+										</span>
+										<span class="text mt-0 pl-2 fz-12">
+											my site
+										</span>
+									</a>
+								</li>
+								<li class="px-3 mb-4">
+									<a href="#" class="menu-item d-flex align-items-center">
+										<span class="ico">
+											<img src="img/statistics.svg" alt="">
+										</span>
+										<span class="text mt-0 pl-2 fz-12">
+											statistics
+										</span>
+									</a>
+								</li>
+								<li class="px-3 mb-4">
+									<a href="#" class="menu-item d-flex align-items-center">
+										<span class="ico">
+											<img src="img/media.svg" alt="">
+										</span>
+										<span class="text mt-0 pl-2 fz-12">
+											media
+										</span>
+									</a>
+								</li>
+								<li class="px-3">
+									<a href="#" class="menu-item d-flex align-items-center">
+										<span class="ico">
+											<img src="img/marketing.svg" alt="">
+										</span>
+										<span class="text mt-0 pl-2 fz-12">
+											Marketing
+										</span>
+									</a>
+								</li>
+							</ul>
+
 							<div class="aside__menu nav-for-theme-slider">
 								<div class="aside__menu__item">
 									<div class="aside__menu__content">
@@ -655,7 +720,7 @@
 								</div>
 							</div>
 
-							<span class="burger burger-rotate js-toggle-aside">
+							<span class="burger burger-rotate js-toggle-aside d-none d-xl-block">
 								<span></span>
 								<span></span>
 								<span></span>
@@ -664,36 +729,36 @@
 						</aside>
 						<!-- /.aside__left -->
 
-						
-						<div class="dashboard__content p-4 mr-4 col">
-							<div class="dashboard__top row justify-content-between align-items-center mb-4">
-								<div class="col-auto">
-									<div class="h4 mb-0">Your Payment Plans</div> 
-								</div>
-								<div class="col-auto">
-									<div class="dashboard__filter d-flex  align-items-center">
+						<div class="col flex-fill pr-0">
+							<div class="dashboard__content p-4 mr-0">
+								<div class="dashboard__top row flex-sm-column flex-md-row justify-content-between align-items-center mb-4">
+									<div class="col-auto">
+										<div class="h4  mb-0">Your Payment Plans</div> 
+									</div>
+									<div class="col-auto">
+										<div class="dashboard__filter d-flex  align-items-center">
 
-										<div class="select-block select-block--lt select-block--status ml-3">
-											<span class="placeholder"><span class="status status--all">All</span></span>
-											<ul>
-												<li data-value=""><span class="status status--all">All</span></li>
-												<li data-value=""><span class="status status--green">Active</span></li>
-												<li data-value=""><span class="status status--red">Expired</span></li>
-											</ul>
-											<input type="hidden" name="changeme"/>
+											<div class="select-block select-block--lt select-block--status ml-sm-3">
+												<span class="placeholder"><span class="status status--all">All</span></span>
+												<ul>
+													<li data-value=""><span class="status status--all">All</span></li>
+													<li data-value=""><span class="status status--green">Active</span></li>
+													<li data-value=""><span class="status status--red">Expired</span></li>
+												</ul>
+												<input type="hidden" name="changeme"/>
+											</div>
+
+											<a href="#" class="btn btn--lt btn--blue btn--radius ml-2">New Payment Plan</a>
 										</div>
-
-										<a href="#" class="btn btn--lt btn--blue btn--radius ml-2">New Payment Plan</a>
 									</div>
 								</div>
-							</div>
 
 
-							<div class="row">
-								<div class="col">
-									<table class="dashboard-table w-100">
-										<thead class="dashboard-table__header">
-												<tr class="dashboard-table__row p-4">
+								<div class="row">
+									<div class="col">
+										<table class="dashboard-table" id="dashboard-table" style="width: 100%">
+											<thead class="dashboard-table__header">
+												<tr role="row" class="dashboard-table__row p-4">
 													<td class="dashboard-table__item">
 														<!-- Class sort-title for right angle. Meens sort status. Adding class="active" will turn rhe up angle -->
 														<div class="h5 sort-title">
@@ -727,10 +792,10 @@
 													</td>
 												</tr>
 												<!-- /.dashboard-table__row -->
-											<!-- /.dashboard-table__header -->
-										</thead>
-										<tbody class="dashboard-table__body">
-												<tr class="dashboard-table__row pt-4 pb-4 pl-5 pr-5 mb-1 bg-white">
+												<!-- /.dashboard-table__header -->
+											</thead>
+											<tbody class="dashboard-table__body">
+												<tr class="dashboard-table__row p-4 mb-1 bg-white">
 													<td class="dashboard-table__item">
 														<b>
 															30 Days Recurring
@@ -756,7 +821,7 @@
 														<div class="status status--green">Active</div>
 													</td>
 													<td class="dashboard-table__item dashboard-table__item--action">
-														<div class="btn-group align-items-center justify-content-end w-100">
+														<div class="btn-group align-items-center w-100">
 															<a href="#" class="action">
 																<span class="ico">
 																	<svg>
@@ -785,7 +850,7 @@
 												</tr>
 												<!-- /.dashboard-table__row -->
 
-												<tr class="dashboard-table__row pt-4 pb-4 pl-5 pr-5 mb-1 bg-white">
+												<tr class="dashboard-table__row pt-4 p-4 mb-1 bg-white">
 													<td class="dashboard-table__item">
 														<b>
 															30 Days
@@ -811,7 +876,7 @@
 														<div class="status status--red">Expired</div>
 													</td>
 													<td class="dashboard-table__item dashboard-table__item--action">
-														<div class="btn-group align-items-center justify-content-end w-100">
+														<div class="btn-group align-items-center w-100">
 															<a href="#" class="action">
 																<span class="ico">
 																	<svg>
@@ -840,9 +905,9 @@
 												</tr>
 												<!-- /.dashboard-table__row -->
 
-										</tbody>
-									</table>
-
+											</tbody>
+										</table>
+									</div>
 									<!-- <div class="dashboard-table__footer">
 										<a href="#" class="btn btn--grey btn--lt btn--radius">
 											Show More
@@ -856,11 +921,7 @@
 									<!-- /.dashboard-table__footer -->
 								</div>
 							</div>
-						<div class="dashboard__content">
-							<div class="white-box"></div>
-
 						</div>
-
 					</div>
 
 				</div>
@@ -870,7 +931,12 @@
 
 		</div><!-- end wrapper -->
 
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<script src='https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js'></script>
+		<script src='https://cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.js'></script>
+		<script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js'></script>
+
+
 		<script src="js/jquery.nicescroll.min.js"></script>
 
 		<script src="js/bootstrap/bootstrap.min.js"></script>
@@ -879,9 +945,6 @@
 		<script src="js/swiper.js"></script>
 		<script src="js/iro/iro.min.js"></script>
 		<script src="js/iro/iro-transparency-plugin.js"></script>
-
-		<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-		<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
 
 		<script src="js/common.js"></script>
@@ -905,7 +968,13 @@
 			});
 
 			// DataTable
-			$('.dashboard-table').DataTable();
+			$('#dashboard-table').DataTable({
+				// responsive: true
+			});
+
+	
+	
+		
 		
 		</script>
 
