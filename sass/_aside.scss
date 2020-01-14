@@ -154,7 +154,11 @@
 		left: 30px;
 	}
 }
-
+.management-page{
+	.aside__left{
+		box-shadow: none;
+	}
+}
 .aside__menu{
 	& > li,
 	.aside__menu__content{

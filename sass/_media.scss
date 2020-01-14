@@ -163,10 +163,6 @@
 			width: 60px;
 		}
 	}
-	.dashboard-table__item{
-		width: auto;
-		flex-grow: initial
-	}
 
 }
 @media(max-width: 1240px){
@@ -291,6 +287,14 @@
 		width: 60%;
 		padding-right: 10px;
 	}
+	.dashboard__top .h4{
+		margin-bottom: 20px;
+	}
+	.dashboard__body{
+		padding: 0;
+		border-radius: 5px;
+		background-color: transparent !important;
+	}
 }
 /*767*/ 
 @media(max-width: 480px){
@@ -330,8 +334,8 @@
 		}
 	}
 	.bell .count{
-		width: 15px;
-		height: 15px;
+		width: 20px;
+		height: 20px;
 		transform: translate(25%, -50%);
 	}
 

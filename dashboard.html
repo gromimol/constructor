@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
@@ -719,185 +719,282 @@
 						</aside>
 						<!-- /.aside__left -->
 					
-						<div class="col flex-fill pr-0">
+						<div class="col flex-grow-1 pr-0">
 							<div class="dashboard__content p-4 mr-0">
-								<div class="dashboard__top row flex-sm-column flex-md-row justify-content-between align-items-center mb-4">
-									<div class="col-auto">
-										<div class="h4  mb-0">Your Payment Plans</div> 
-									</div>
-									<div class="col-auto">
-										<div class="dashboard__filter d-flex  align-items-center">
+								<div class="dashboard__body bg-white">
+									<div class="dashboard__top row flex-sm-column flex-md-row justify-content-between align-items-center mb-4">
+										<div class="col-auto">
+											<div class="h4  mb-0">Your Payment Plans</div> 
+										</div>
+										<div class="col-auto">
+											<div class="dashboard__filter d-flex  align-items-center">
 
-											<div class="select-block select-block--lt select-block--status ml-sm-3">
-												<span class="placeholder"><span class="status status--all">All</span></span>
-												<ul>
-													<li data-value=""><span class="status status--all">All</span></li>
-													<li data-value=""><span class="status status--green">Active</span></li>
-													<li data-value=""><span class="status status--red">Expired</span></li>
-												</ul>
-												<input type="hidden" name="changeme"/>
+												<div class="select-block select-block--lt select-block--status ml-sm-3">
+													<span class="placeholder"><span class="status status--all">All</span></span>
+													<ul>
+														<li data-value=""><span class="status status--all">All</span></li>
+														<li data-value=""><span class="status status--green">Active</span></li>
+														<li data-value=""><span class="status status--red">Expired</span></li>
+													</ul>
+													<input type="hidden" name="changeme"/>
+												</div>
+
+												<a href="#" class="btn btn--lt btn--blue btn--radius ml-2">New Payment Plan</a>
 											</div>
-
-											<a href="#" class="btn btn--lt btn--blue btn--radius ml-2">New Payment Plan</a>
 										</div>
 									</div>
-								</div>
 
-
-								<div class="row">
-									<div class="col">
-										<table class="dashboard-table" id="dashboard-table" style="width: 100%">
-											<thead class="dashboard-table__header">
-												<tr role="row" class="dashboard-table__row p-4">
-													<td class="dashboard-table__item">
-														<!-- Class sort-title for right angle. Meens sort status. Adding class="active" will turn rhe up angle -->
-														<div class="h5 sort-title">
+									<div class="row">
+										<div class="col">
+											<table class="dashboard-table table table-striped dt-responsive" id="dashboard-table" style="width: 100%">
+												<thead class="dashboard-table__header">
+													<tr role="row" class="dashboard-table__row">
+														<td class="dashboard-table__item">
+															<!-- Class sort-title for right angle. Meens sort status. Adding class="active" will turn rhe up angle -->
 															Name
-														</div>
-													</td>
-													<td class="dashboard-table__item">
-														<div class="h5">
+														</td>
+														<td class="dashboard-table__item">
 															Price
-														</div>
-													</td>
-													<td class="dashboard-table__item">
-														<div class="h5">
+														</td>
+														<td class="dashboard-table__item">
 															Payment Plan
-														</div>
-													</td>
-													<td class="dashboard-table__item">
-														<div class="h5">
+														</td>
+														<td class="dashboard-table__item">
 															Expires
-														</div>
-													</td>
-													<td class="dashboard-table__item dashboard-table__item--status">
-														<div class="h5">
+														</td>
+														<td class="dashboard-table__item dashboard-table__item--status">
 															State
-														</div>
-													</td>
-													<td class="dashboard-table__item dashboard-table__item--action">
-														<div class="h5">
+														</td>
+														<td class="dashboard-table__item dashboard-table__item--action">
 															Actions
-														</div>
-													</td>
-												</tr>
-												<!-- /.dashboard-table__row -->
-												<!-- /.dashboard-table__header -->
-											</thead>
-											<tbody class="dashboard-table__body">
-												<tr class="dashboard-table__row p-4 mb-1 bg-white">
-													<td class="dashboard-table__item">
-														<b>
-															30 Days Recurring
-														</b>
-													</td>
-													<td class="dashboard-table__item">
-														$24.95 / $24.95
-													</td>
-													<td class="dashboard-table__item">
-														<div class="progress-bar-container">
-															<div class="text">
-																30 Days / 30 Days
+														</td>
+													</tr>
+													<!-- /.dashboard-table__row -->
+													<!-- /.dashboard-table__header -->
+												</thead>
+												<tbody class="dashboard-table__body">
+													<tr class="dashboard-table__row bg-white">
+														<td class="dashboard-table__item">
+															<b>
+																30 Days Recurring
+															</b>
+														</td>
+														<td class="dashboard-table__item">
+															$24.95 / $24.95
+														</td>
+														<td class="dashboard-table__item">
+															<div class="progress-bar-container">
+																<div class="text">
+																	30 Days / 30 Days
+																</div>
+																<div class="progress-bar">
+																	<div class="progress-bar__line" style="width: 20%"></div>
+																</div>
 															</div>
-															<div class="progress-bar">
-																<div class="progress-bar__line" style="width: 20%"></div>
-															</div>
-														</div>
-													</td>
-													<td class="dashboard-table__item">
-														2019-09-23
-													</td>
-													<td class="dashboard-table__item dashboard-table__item--status">
-														<div class="status status--green">Active</div>
-													</td>
-													<td class="dashboard-table__item dashboard-table__item--action">
-														<div class="btn-group align-items-center w-100">
-															<a href="#" class="action">
-																<span class="ico">
-																	<svg>
-																		<use xlink:href="#svg-edit"></use>
-																	</svg>
-																</span>
-															</a>
-
-															<div class="submenu-block">
-																<div class="submenu-dots">
+														</td>
+														<td class="dashboard-table__item">
+															2019-09-23
+														</td>
+														<td class="dashboard-table__item dashboard-table__item--status">
+															<div class="status status--green">Active</div>
+														</td>
+														<td class="dashboard-table__item dashboard-table__item--action">
+															<div class="btn-group align-items-center w-100">
+																<a href="#" class="action">
 																	<span class="ico">
 																		<svg>
-																			<use xlink:href="#dots"></use>
+																			<use xlink:href="#svg-edit"></use>
 																		</svg>
 																	</span>
+																</a>
+
+																<div class="submenu-block">
+																	<div class="submenu-dots">
+																		<span class="ico">
+																			<svg>
+																				<use xlink:href="#dots"></use>
+																			</svg>
+																		</span>
+																	</div>
+																	<ul class="submenu">
+																		<li><a href="#" tabindex="0">Rename</a></li>
+																		<li><a href="#" tabindex="0">Duplicate</a></li>
+																		<li><a href="#" tabindex="0">Remove</a></li>
+																	</ul>
+
 																</div>
-																<ul class="submenu">
-																	<li><a href="#" tabindex="0">Rename</a></li>
-																	<li><a href="#" tabindex="0">Duplicate</a></li>
-																	<li><a href="#" tabindex="0">Remove</a></li>
-																</ul>
-
 															</div>
-														</div>
-													</td>
-												</tr>
-												<!-- /.dashboard-table__row -->
+														</td>
+													</tr>
+													<!-- /.dashboard-table__row -->
 
-												<tr class="dashboard-table__row pt-4 p-4 mb-1 bg-white">
-													<td class="dashboard-table__item">
-														<b>
-															30 Days
-														</b>
-													</td>
-													<td class="dashboard-table__item">
-														$24
-													</td>
-													<td class="dashboard-table__item">
-														<div class="progress-bar-container">
-															<div class="text">
-																30 Days / <span class="grey">Not Recurring</span>
+													<tr class="dashboard-table__row bg-white">
+														<td class="dashboard-table__item">
+															<b>
+																30 Days
+															</b>
+														</td>
+														<td class="dashboard-table__item">
+															$24
+														</td>
+														<td class="dashboard-table__item">
+															<div class="progress-bar-container">
+																<div class="text">
+																	30 Days / <span class="grey">Not Recurring</span>
+																</div>
+																<div class="progress-bar">
+																	<div class="progress-bar__line red-bg" style="width: 100%"></div>
+																</div>
 															</div>
-															<div class="progress-bar">
-																<div class="progress-bar__line red-bg" style="width: 100%"></div>
-															</div>
-														</div>
-													</td>
-													<td class="dashboard-table__item">
-														2019-09-23
-													</td>
-													<td class="dashboard-table__item dashboard-table__item--status">
-														<div class="status status--red">Expired</div>
-													</td>
-													<td class="dashboard-table__item dashboard-table__item--action">
-														<div class="btn-group align-items-center w-100">
-															<a href="#" class="action">
-																<span class="ico">
-																	<svg>
-																		<use xlink:href="#svg-edit"></use>
-																	</svg>
-																</span>
-															</a>
-
-															<div class="submenu-block">
-																<div class="submenu-dots">
+														</td>
+														<td class="dashboard-table__item">
+															2019-09-23
+														</td>
+														<td class="dashboard-table__item dashboard-table__item--status">
+															<div class="status status--red">Expired</div>
+														</td>
+														<td class="dashboard-table__item dashboard-table__item--action">
+															<div class="btn-group align-items-center w-100">
+																<a href="#" class="action">
 																	<span class="ico">
 																		<svg>
-																			<use xlink:href="#dots"></use>
+																			<use xlink:href="#svg-edit"></use>
 																		</svg>
 																	</span>
+																</a>
+
+																<div class="submenu-block">
+																	<div class="submenu-dots">
+																		<span class="ico">
+																			<svg>
+																				<use xlink:href="#dots"></use>
+																			</svg>
+																		</span>
+																	</div>
+																	<ul class="submenu">
+																		<li><a href="#" tabindex="0">Rename</a></li>
+																		<li><a href="#" tabindex="0">Duplicate</a></li>
+																		<li><a href="#" tabindex="0">Remove</a></li>
+																	</ul>
+
 																</div>
-																<ul class="submenu">
-																	<li><a href="#" tabindex="0">Rename</a></li>
-																	<li><a href="#" tabindex="0">Duplicate</a></li>
-																	<li><a href="#" tabindex="0">Remove</a></li>
-																</ul>
-
 															</div>
-														</div>
-													</td>
-												</tr>
-												<!-- /.dashboard-table__row -->
+														</td>
+													</tr>
+													<!-- /.dashboard-table__row -->
+													<tr class="dashboard-table__row bg-white">
+														<td class="dashboard-table__item">
+															<b>
+																30 Days Recurring
+															</b>
+														</td>
+														<td class="dashboard-table__item">
+															$24.95 / $24.95
+														</td>
+														<td class="dashboard-table__item">
+															<div class="progress-bar-container">
+																<div class="text">
+																	30 Days / 30 Days
+																</div>
+																<div class="progress-bar">
+																	<div class="progress-bar__line" style="width: 20%"></div>
+																</div>
+															</div>
+														</td>
+														<td class="dashboard-table__item">
+															2019-09-23
+														</td>
+														<td class="dashboard-table__item dashboard-table__item--status">
+															<div class="status status--green">Active</div>
+														</td>
+														<td class="dashboard-table__item dashboard-table__item--action">
+															<div class="btn-group align-items-center w-100">
+																<a href="#" class="action">
+																	<span class="ico">
+																		<svg>
+																			<use xlink:href="#svg-edit"></use>
+																		</svg>
+																	</span>
+																</a>
 
-											</tbody>
-										</table>
-									</div>
+																<div class="submenu-block">
+																	<div class="submenu-dots">
+																		<span class="ico">
+																			<svg>
+																				<use xlink:href="#dots"></use>
+																			</svg>
+																		</span>
+																	</div>
+																	<ul class="submenu">
+																		<li><a href="#" tabindex="0">Rename</a></li>
+																		<li><a href="#" tabindex="0">Duplicate</a></li>
+																		<li><a href="#" tabindex="0">Remove</a></li>
+																	</ul>
+
+																</div>
+															</div>
+														</td>
+													</tr>
+													<!-- /.dashboard-table__row -->
+
+													<tr class="dashboard-table__row bg-white">
+														<td class="dashboard-table__item">
+															<b>
+																30 Days
+															</b>
+														</td>
+														<td class="dashboard-table__item">
+															$24
+														</td>
+														<td class="dashboard-table__item">
+															<div class="progress-bar-container">
+																<div class="text">
+																	30 Days / <span class="grey">Not Recurring</span>
+																</div>
+																<div class="progress-bar">
+																	<div class="progress-bar__line red-bg" style="width: 100%"></div>
+																</div>
+															</div>
+														</td>
+														<td class="dashboard-table__item">
+															2019-09-23
+														</td>
+														<td class="dashboard-table__item dashboard-table__item--status">
+															<div class="status status--red">Expired</div>
+														</td>
+														<td class="dashboard-table__item dashboard-table__item--action">
+															<div class="btn-group align-items-center w-100">
+																<a href="#" class="action">
+																	<span class="ico">
+																		<svg>
+																			<use xlink:href="#svg-edit"></use>
+																		</svg>
+																	</span>
+																</a>
+
+																<div class="submenu-block">
+																	<div class="submenu-dots">
+																		<span class="ico">
+																			<svg>
+																				<use xlink:href="#dots"></use>
+																			</svg>
+																		</span>
+																	</div>
+																	<ul class="submenu">
+																		<li><a href="#" tabindex="0">Rename</a></li>
+																		<li><a href="#" tabindex="0">Duplicate</a></li>
+																		<li><a href="#" tabindex="0">Remove</a></li>
+																	</ul>
+
+																</div>
+															</div>
+														</td>
+													</tr>
+													<!-- /.dashboard-table__row -->
+
+												</tbody>
+											</table>
+										</div>
 									<!-- <div class="dashboard-table__footer">
 										<a href="#" class="btn btn--grey btn--lt btn--radius">
 											Show More
@@ -910,6 +1007,7 @@
 									</div> -->
 									<!-- /.dashboard-table__footer -->
 								</div>
+							</div>
 							</div>
 						</div>
 
@@ -924,11 +1022,12 @@
 			
 		</div><!-- end wrapper -->
 		
-		<script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
-		<script src='https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js'></script>
-		<script src='https://cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.js'></script>
-		<script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js'></script>
-
+		<script src='https://code.jquery.com/jquery-3.3.1.js'></script>
+		<script src='https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js'></script>
+		<script src='https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap.min.js'></script>
+		<script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
+		<script src='https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js'></script>
+		
 
 		<script src="js/jquery.nicescroll.min.js"></script>
 
@@ -939,7 +1038,7 @@
 		<script src="js/iro/iro.min.js"></script>
 		<script src="js/iro/iro-transparency-plugin.js"></script>
 
-
+		
 		<script src="js/common.js"></script>
 
 		<script>
@@ -961,9 +1060,11 @@
 			});
 
 			// DataTable
-			$('#dashboard-table').DataTable({
-				// responsive: true
-			});
+			
+			$('#dashboard-table').DataTable( {
+				responsive: true
+
+			} );
 
 	
 	

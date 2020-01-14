@@ -389,26 +389,26 @@ $(document).ready(function () {
 
 
 	// Range slider
-	$( function() {
+	// $( function() {
 
-		$( "#slider-vertical" ).slider({
-			orientation: "vertical",
-			range: "min",
-			min: 0,
-			max: 50,
-			value: 16,
-			slide: function( event, ui ) {
-				$('#slider-vertical').attr('data-range', ui.value);
-				$('#slider-vertical .ui-slider-handle').attr('data-val', ui.value);
-			}
-		});
+	// 	$( "#slider-vertical" ).slider({
+	// 		orientation: "vertical",
+	// 		range: "min",
+	// 		min: 0,
+	// 		max: 50,
+	// 		value: 16,
+	// 		slide: function( event, ui ) {
+	// 			$('#slider-vertical').attr('data-range', ui.value);
+	// 			$('#slider-vertical .ui-slider-handle').attr('data-val', ui.value);
+	// 		}
+	// 	});
 
-		$('#slider-vertical .ui-slider-handle').attr('data-val', $( "#slider-vertical" ).slider( "value" ));
+	// 	$('#slider-vertical .ui-slider-handle').attr('data-val', $( "#slider-vertical" ).slider( "value" ));
 		
-		$('#slider-vertical').attr('data-range', $( "#slider-vertical" ).slider( "value" ));
+	// 	$('#slider-vertical').attr('data-range', $( "#slider-vertical" ).slider( "value" ));
 
 
-	} );
+	// } );
 
 	
 
