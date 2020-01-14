@@ -4,7 +4,16 @@ $(document).ready(function () {
 	$('.js--mobile-btn').on('click',function (e) {
 		e.preventDefault();
 
+		$('#overlay').toggle();
+		$(this).toggleClass('active');
 		$('.js--aside').toggleClass('active');
+	});
+
+	$('#overlay').on('click',function () {
+
+		$('#overlay').hide();
+		$('.js--mobile-btn').removeClass('active');
+		$('.js--aside').removeClass('active');
 	})
 
 	// height for main
