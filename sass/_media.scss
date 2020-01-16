@@ -234,6 +234,7 @@
 			transform: translateX(0);
 			border-right-color: transparent;
 			border-left: 7px solid #fff;
+			display: none;
 		}
 	}
 }
@@ -288,7 +289,7 @@
 		padding-right: 10px;
 	}
 	.dashboard__top .h4{
-		margin-bottom: 20px;
+		margin-bottom: 20px !important;
 	}
 	.dashboard__body{
 		padding: 0;
@@ -349,6 +350,9 @@
 	}
 	.header{
 		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+	.dashboard__content{
 		padding-right: 0 !important;
 	}
 }

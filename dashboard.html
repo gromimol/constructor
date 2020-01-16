@@ -3,8 +3,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
@@ -744,13 +745,13 @@
 										</div>
 									</div>
 
+
 									<div class="row">
 										<div class="col">
-											<table class="dashboard-table table table-striped dt-responsive" id="dashboard-table" style="width: 100%">
+											<table class="dashboard-table table table-striped dt-responsive nowrap" id="dashboard-table" style="width: 100%">
 												<thead class="dashboard-table__header">
 													<tr role="row" class="dashboard-table__row">
 														<td class="dashboard-table__item">
-															<!-- Class sort-title for right angle. Meens sort status. Adding class="active" will turn rhe up angle -->
 															Name
 														</td>
 														<td class="dashboard-table__item">
@@ -769,8 +770,6 @@
 															Actions
 														</td>
 													</tr>
-													<!-- /.dashboard-table__row -->
-													<!-- /.dashboard-table__header -->
 												</thead>
 												<tbody class="dashboard-table__body">
 													<tr class="dashboard-table__row bg-white">
@@ -826,7 +825,6 @@
 															</div>
 														</td>
 													</tr>
-													<!-- /.dashboard-table__row -->
 
 													<tr class="dashboard-table__row bg-white">
 														<td class="dashboard-table__item">
@@ -881,7 +879,6 @@
 															</div>
 														</td>
 													</tr>
-													<!-- /.dashboard-table__row -->
 													<tr class="dashboard-table__row bg-white">
 														<td class="dashboard-table__item">
 															<b>
@@ -935,7 +932,6 @@
 															</div>
 														</td>
 													</tr>
-													<!-- /.dashboard-table__row -->
 
 													<tr class="dashboard-table__row bg-white">
 														<td class="dashboard-table__item">
@@ -990,7 +986,6 @@
 															</div>
 														</td>
 													</tr>
-													<!-- /.dashboard-table__row -->
 
 												</tbody>
 											</table>
@@ -1024,9 +1019,9 @@
 		
 		<script src='https://code.jquery.com/jquery-3.3.1.js'></script>
 		<script src='https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js'></script>
-		<script src='https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap.min.js'></script>
+		<script src='https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js'></script>
 		<script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
-		<script src='https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js'></script>
+		<script src='https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js'></script>
 		
 
 		<script src="js/jquery.nicescroll.min.js"></script>
@@ -1062,10 +1057,10 @@
 			// DataTable
 			
 			$('#dashboard-table').DataTable( {
-				responsive: true
+				
 
 			} );
-
+			$('#example').DataTable();
 	
 	
 		
