@@ -69,6 +69,7 @@
 }
 .dashboard-table__row{
 	border-radius: 3px;
+	position: relative;
 }
 .dashboard-table__item{
 	&--action{
@@ -280,6 +281,30 @@ table.dataTable td.child{
 		padding: 10px;
 	}
 }
-
-
+#dashboard-table_wrapper > .row{
+	margin: 0;
+	.col-sm-12{
+		padding: 0;
+	}
+}
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child{
+	position: static;
+}
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before{
+	top: auto;
+	right: 25px;
+	left: auto;
+	width: 18px;
+	height: 18px;
+	border: none;
+	box-shadow: none;
+	line-height: 20px;
+	background-color: #80c0e7;
+}
+table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child:before{
+	background-color: #2ea0ff;
+}
+table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child){
+	padding: 25px 30px 25px 20px;
+}
 
