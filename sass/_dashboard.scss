@@ -296,9 +296,12 @@ table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before,
 	left: auto;
 	width: 18px;
 	height: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	border: none;
 	box-shadow: none;
-	line-height: 20px;
+	line-height: 1;
 	background-color: #80c0e7;
 }
 table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child:before{
