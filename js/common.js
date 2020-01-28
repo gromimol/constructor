@@ -70,7 +70,7 @@ $(document).ready(function () {
 	});
 
 	// NiceScroll
-	$(".gallery-block, .part-list, .edit-page__content, .project-slider__nav.slick-slider, .project-slider__nav .slick-list, .edit-page__aside__right .tab-content, .edit-page__aside__slider").niceScroll();
+	$(".gallery-block, .part-list, .edit-page__content, .project-slider__nav.slick-slider, .project-slider__nav .slick-list, .edit-page__aside__right .tab-content, .edit-page__aside__slider, .dashboard-wrapper").niceScroll();
 
 	// Decor
 	$('.decor-block').on('click', function () {
@@ -236,6 +236,25 @@ $(document).ready(function () {
 			$(this).slick('slickPrev');
 		}
 	}));
+
+	$('.alphabet').slick({
+		asNavFor: '.models-list',
+		arrows: false,
+		vertical: true,
+		focusOnSelect: true,
+		infinite: false
+	});
+
+	$('.models-list').slick({
+		asNavFor: '.alphabet',
+		arrows: false,
+		vertical: true,
+		verticalSwiping: true,
+		slidesToShow: 3,
+		centerMode: true,
+  		focusOnSelect: true,
+  		centerPadding: '0'
+	});
 
 
 	// models slider

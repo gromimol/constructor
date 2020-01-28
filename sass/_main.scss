@@ -5,6 +5,7 @@
 	--border-color: #ededed;
 	--dark-grey-bg: #e1e4eb;
 	--light-grey-bg: ##f5f6fa;
+	--green: #68f9b0;
 }
 html, body{
 	height: 100%;
@@ -21,7 +22,7 @@ body{
 
 .wrapper{
 	height: 100vh;
-	// overflow: hidden;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -120,10 +121,12 @@ p{
 }
 
 
-::-webkit-input-placeholder {font-size: 13px;text-transform: uppercase;font-family: "Futura", sans-serif;font-weight: 300;letter-spacing: 1.3px;  }
-::-moz-placeholder          {font-size: 13px;text-transform: uppercase;font-family: "Futura", sans-serif;font-weight: 300;letter-spacing: 1.3px;  } /* Firefox 19+ */
-:-moz-placeholder           {font-size: 13px;text-transform: uppercase;font-family: "Futura", sans-serif;font-weight: 300;letter-spacing: 1.3px;  } /* Firefox 18- */
-:-ms-input-placeholder      {font-size: 13px;text-transform: uppercase;font-family: "Futura", sans-serif;font-weight: 300;letter-spacing: 1.3px;  }
+::-webkit-input-placeholder {font-size: 12px;font-family: "Futura", sans-serif;font-weight: 500;letter-spacing: .11px;  }
+::-moz-placeholder          {font-size: 12px;font-family: "Futura", sans-serif;font-weight: 500;letter-spacing: .11px;  } /* Firefox 19+ */
+:-moz-placeholder           {font-size: 12px;font-family: "Futura", sans-serif;font-weight: 500;letter-spacing: .11px;  } /* Firefox 18- */
+:-ms-input-placeholder      {font-size: 12px;font-family: "Futura", sans-serif;font-weight: 500;letter-spacing: .11px;  }
+
+
 
 
 @keyframes moveDown{

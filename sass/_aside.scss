@@ -150,8 +150,14 @@
 	}
 	.burger-rotate{
 		position: absolute;
-		bottom: 8px;
-		left: 30px;
+		bottom: 9px;
+		left: 22px;
+	}
+}
+.aside__options{
+	.burger{
+		left: -8px;
+		top: -2px;
 	}
 }
 .management-page{

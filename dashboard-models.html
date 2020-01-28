@@ -9,7 +9,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
-	<title>Dashboard</title>
+	<title>Dash Models</title>
 </head>
 <!-- class management-body needed for this page -->
 <body class="management-body">
@@ -721,710 +721,1304 @@
 						<!-- /.aside__left -->
 					
 						<div class="col flex-grow-1 dashboard-wrapper">
-							<div class="dashboard__content p-4 mr-0">
-								<div class="dashboard__body bg-white">
-									<div class="dashboard__top row flex-sm-column flex-md-row justify-content-between align-items-center mb-4">
-										<div class="col-sm-auto col-xs-12">
-											<div class="h4  mb-0">Your Payment Plans</div> 
-										</div>
-										<div class="col-sm-auto col-xs-12">
-											<div class="dashboard__filter d-flex  align-items-center">
-
-												<div class="select-block select-block--lt select-block--status ml-sm-3">
-													<span class="placeholder"><span class="status status--all">All</span></span>
-													<ul>
-														<li data-value=""><span class="status status--all">All</span></li>
-														<li data-value=""><span class="status status--green">Active</span></li>
-														<li data-value=""><span class="status status--red">Expired</span></li>
-													</ul>
-													<input type="hidden" name="changeme"/>
+							<div class="dashboard__content p-4 mr-0 h-100">
+								<div class="row h-100">
+									<div class="col-md-7 h-100 overflow-hidden">
+										<div class="p-3 bg-white rounded-lg h-100 overflow-hidden">
+											<div class="row align-items-center models-filter mb-3 mb-md-5">
+												<div class="col-md-2">
+													<div class="fz-15 text-uppercase">Model List</div>
 												</div>
+												<div class="col-lg-9 flex-grow-1 d-flex justify-content-start justify-content-md-end align-items-start">
 
-												<a href="#" class="btn btn--lt btn--blue btn--radius ml-2">New Payment Plan</a>
+													<div class="form-group mb-3 mb-md-0 form-group-search position-relative flex-grow-1">
+														<input type="text" class="form-control" placeholder="Search">
+														<button type="submit" class="simple-btn w-15 h-15 position-absolute">
+															<svg>
+																<use xlink:href="#search"></use>
+															</svg>
+														</button>
+													</div>
+
+													<div class="select-block select-block--lt select-block--status ml-sm-3">
+														<span class="placeholder">Last Added</span>
+														<ul>
+															<li data-value="">Last Added</li>
+															<li data-value="">New Added</li>
+															<li data-value="">Old Added</li>
+														</ul>
+														<input type="hidden" name="changeme">
+													</div>
+
+													<a href="#" class="btn btn--lt btn--blue btn--radius ml-2">New Payment Plan</a>
+												</div>
 											</div>
+
+											<div class="row">
+												<div class="col-1 d-flex flex-column justify-content-center">
+													<div class="alphabet">
+														<div class="alphabet__item">
+															a
+														</div>
+														<div class="alphabet__item">
+															b
+														</div>
+														<div class="alphabet__item">
+															c
+														</div>
+														<div class="alphabet__item">
+															d
+														</div>
+														<div class="alphabet__item">
+															e
+														</div>
+														<div class="alphabet__item">
+															f
+														</div>
+														<div class="alphabet__item">
+															g
+														</div>
+														<div class="alphabet__item">
+															h
+														</div>
+														<div class="alphabet__item">
+															i
+														</div>
+														<div class="alphabet__item">
+															j
+														</div>
+														<div class="alphabet__item">
+															k
+														</div>
+														<div class="alphabet__item">
+															l
+														</div>
+														<div class="alphabet__item">
+															m
+														</div>
+														<div class="alphabet__item">
+															n
+														</div>
+														<div class="alphabet__item">
+															o
+														</div>
+														<div class="alphabet__item">
+															p
+														</div>
+														<div class="alphabet__item">
+															q
+														</div>
+														<div class="alphabet__item">
+															r
+														</div>
+														<div class="alphabet__item">
+															s
+														</div>
+														<div class="alphabet__item">
+															t
+														</div>
+														<div class="alphabet__item">
+															u
+														</div>
+														<div class="alphabet__item">
+															v
+														</div>
+														<div class="alphabet__item">
+															w
+														</div>
+														<div class="alphabet__item">
+															x
+														</div>
+														<div class="alphabet__item">
+															y
+														</div>
+														<div class="alphabet__item">
+															z
+														</div>
+													</div>
+												</div>
+												<div class="col-11">
+
+													<div class="models-list">
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Nicole Kidman</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Alex White</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Section</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="models-list__slide">
+															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
+																<div class="model__slide__icon">
+																	<svg>
+																		<use xlink:href="#svg-user"></use>
+																	</svg>
+																</div>
+																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
+																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																		<img src="img/avatar-lg.png" alt="">
+																	</div>
+																	<div class="model-data">
+																		<div class="badge badge-green">new</div>
+																		<div class="model-name">Anna Lee</div>
+																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="btn-group align-items-center">
+																			<a href="#" class="action d-flex">
+																				<span class="ico w-15 h-15 d-inline-block">
+																					<svg>
+																						<use xlink:href="#svg-edit"></use>
+																					</svg>
+																				</span>
+																			</a>
+
+																			<div class="submenu-block">
+																				<div class="submenu-dots">
+																					<span class="ico">
+																						<svg>
+																							<use xlink:href="#dots"></use>
+																						</svg>
+																					</span>
+																				</div>
+																				<ul class="submenu">
+																					<li><a href="#" tabindex="0">Rename</a></li>
+																					<li><a href="#" tabindex="0">Duplicate</a></li>
+																					<li><a href="#" tabindex="0">Remove</a></li>
+																				</ul>
+
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>									
 										</div>
 									</div>
-
-
-									<div class="row">
-										<div class="col">
-											<table class="dashboard-table table table-striped dt-responsive nowrap" id="dashboard-table" style="width: 100%">
-												<thead class="dashboard-table__header">
-													<tr role="row" class="dashboard-table__row">
-														<td class="dashboard-table__item">
-															Name
-														</td>
-														<td class="dashboard-table__item">
-															Price
-														</td>
-														<td class="dashboard-table__item">
-															Payment Plan
-														</td>
-														<td class="dashboard-table__item">
-															Expires
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--status">
-															State
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--action">
-															Actions
-														</td>
-													</tr>
-												</thead>
-												<tbody class="dashboard-table__body">
-													<tr class="dashboard-table__row bg-white">
-														<td class="dashboard-table__item">
-															<b>
-																30 Days
-															</b>
-														</td>
-														<td class="dashboard-table__item">
-															$24.95
-														</td>
-														<td class="dashboard-table__item">
-															<div class="progress-bar-container">
-																<div class="text">
-																	30 Days / 30 Days
-																</div>
-																<div class="progress-bar">
-																	<div class="progress-bar__line" style="width: 20%"></div>
-																</div>
-															</div>
-														</td>
-														<td class="dashboard-table__item">
-															2019-09-23
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--status">
-															<div class="status status--green">Active</div>
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--action">
-															<div class="btn-group align-items-center w-100">
-																<a href="#" class="action">
-																	<span class="ico">
-																		<svg>
-																			<use xlink:href="#svg-edit"></use>
-																		</svg>
-																	</span>
-																</a>
-
-																<div class="submenu-block">
-																	<div class="submenu-dots">
-																		<span class="ico">
-																			<svg>
-																				<use xlink:href="#dots"></use>
-																			</svg>
-																		</span>
-																	</div>
-																	<ul class="submenu">
-																		<li><a href="#" tabindex="0">Rename</a></li>
-																		<li><a href="#" tabindex="0">Duplicate</a></li>
-																		<li><a href="#" tabindex="0">Remove</a></li>
-																	</ul>
-
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr class="dashboard-table__row bg-white">
-														<td class="dashboard-table__item">
-															<b>
-																30 Days
-															</b>
-														</td>
-														<td class="dashboard-table__item">
-															$24
-														</td>
-														<td class="dashboard-table__item">
-															<div class="progress-bar-container">
-																<div class="text">
-																	30 Days / <span class="grey">Not Recurring</span>
-																</div>
-																<div class="progress-bar">
-																	<div class="progress-bar__line red-bg" style="width: 100%"></div>
-																</div>
-															</div>
-														</td>
-														<td class="dashboard-table__item">
-															2019-09-23
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--status">
-															<div class="status status--red">Expired</div>
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--action">
-															<div class="btn-group align-items-center w-100">
-																<a href="#" class="action">
-																	<span class="ico">
-																		<svg>
-																			<use xlink:href="#svg-edit"></use>
-																		</svg>
-																	</span>
-																</a>
-
-																<div class="submenu-block">
-																	<div class="submenu-dots">
-																		<span class="ico">
-																			<svg>
-																				<use xlink:href="#dots"></use>
-																			</svg>
-																		</span>
-																	</div>
-																	<ul class="submenu">
-																		<li><a href="#" tabindex="0">Rename</a></li>
-																		<li><a href="#" tabindex="0">Duplicate</a></li>
-																		<li><a href="#" tabindex="0">Remove</a></li>
-																	</ul>
-
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr class="dashboard-table__row bg-white">
-														<td class="dashboard-table__item">
-															<b>
-																30 Days
-															</b>
-														</td>
-														<td class="dashboard-table__item">
-															$24.95
-														</td>
-														<td class="dashboard-table__item">
-															<div class="progress-bar-container">
-																<div class="text">
-																	30 Days / 30 Days
-																</div>
-																<div class="progress-bar">
-																	<div class="progress-bar__line" style="width: 20%"></div>
-																</div>
-															</div>
-														</td>
-														<td class="dashboard-table__item">
-															2019-09-23
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--status">
-															<div class="status status--green">Active</div>
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--action">
-															<div class="btn-group align-items-center w-100">
-																<a href="#" class="action">
-																	<span class="ico">
-																		<svg>
-																			<use xlink:href="#svg-edit"></use>
-																		</svg>
-																	</span>
-																</a>
-
-																<div class="submenu-block">
-																	<div class="submenu-dots">
-																		<span class="ico">
-																			<svg>
-																				<use xlink:href="#dots"></use>
-																			</svg>
-																		</span>
-																	</div>
-																	<ul class="submenu">
-																		<li><a href="#" tabindex="0">Rename</a></li>
-																		<li><a href="#" tabindex="0">Duplicate</a></li>
-																		<li><a href="#" tabindex="0">Remove</a></li>
-																	</ul>
-
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr class="dashboard-table__row bg-white">
-														<td class="dashboard-table__item">
-															<b>
-																30 Days
-															</b>
-														</td>
-														<td class="dashboard-table__item">
-															$24
-														</td>
-														<td class="dashboard-table__item">
-															<div class="progress-bar-container">
-																<div class="text">
-																	30 Days / <span class="grey">Not Recurring</span>
-																</div>
-																<div class="progress-bar">
-																	<div class="progress-bar__line red-bg" style="width: 100%"></div>
-																</div>
-															</div>
-														</td>
-														<td class="dashboard-table__item">
-															2019-09-23
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--status">
-															<div class="status status--red">Expired</div>
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--action">
-															<div class="btn-group align-items-center w-100">
-																<a href="#" class="action">
-																	<span class="ico">
-																		<svg>
-																			<use xlink:href="#svg-edit"></use>
-																		</svg>
-																	</span>
-																</a>
-
-																<div class="submenu-block">
-																	<div class="submenu-dots">
-																		<span class="ico">
-																			<svg>
-																				<use xlink:href="#dots"></use>
-																			</svg>
-																		</span>
-																	</div>
-																	<ul class="submenu">
-																		<li><a href="#" tabindex="0">Rename</a></li>
-																		<li><a href="#" tabindex="0">Duplicate</a></li>
-																		<li><a href="#" tabindex="0">Remove</a></li>
-																	</ul>
-
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr class="dashboard-table__row bg-white">
-														<td class="dashboard-table__item">
-															<b>
-																30 Days
-															</b>
-														</td>
-														<td class="dashboard-table__item">
-															$24.95
-														</td>
-														<td class="dashboard-table__item">
-															<div class="progress-bar-container">
-																<div class="text">
-																	30 Days / 30 Days
-																</div>
-																<div class="progress-bar">
-																	<div class="progress-bar__line" style="width: 20%"></div>
-																</div>
-															</div>
-														</td>
-														<td class="dashboard-table__item">
-															2019-09-23
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--status">
-															<div class="status status--green">Active</div>
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--action">
-															<div class="btn-group align-items-center w-100">
-																<a href="#" class="action">
-																	<span class="ico">
-																		<svg>
-																			<use xlink:href="#svg-edit"></use>
-																		</svg>
-																	</span>
-																</a>
-
-																<div class="submenu-block">
-																	<div class="submenu-dots">
-																		<span class="ico">
-																			<svg>
-																				<use xlink:href="#dots"></use>
-																			</svg>
-																		</span>
-																	</div>
-																	<ul class="submenu">
-																		<li><a href="#" tabindex="0">Rename</a></li>
-																		<li><a href="#" tabindex="0">Duplicate</a></li>
-																		<li><a href="#" tabindex="0">Remove</a></li>
-																	</ul>
-
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr class="dashboard-table__row bg-white">
-														<td class="dashboard-table__item">
-															<b>
-																30 Days
-															</b>
-														</td>
-														<td class="dashboard-table__item">
-															$24
-														</td>
-														<td class="dashboard-table__item">
-															<div class="progress-bar-container">
-																<div class="text">
-																	30 Days / <span class="grey">Not Recurring</span>
-																</div>
-																<div class="progress-bar">
-																	<div class="progress-bar__line red-bg" style="width: 100%"></div>
-																</div>
-															</div>
-														</td>
-														<td class="dashboard-table__item">
-															2019-09-23
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--status">
-															<div class="status status--red">Expired</div>
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--action">
-															<div class="btn-group align-items-center w-100">
-																<a href="#" class="action">
-																	<span class="ico">
-																		<svg>
-																			<use xlink:href="#svg-edit"></use>
-																		</svg>
-																	</span>
-																</a>
-
-																<div class="submenu-block">
-																	<div class="submenu-dots">
-																		<span class="ico">
-																			<svg>
-																				<use xlink:href="#dots"></use>
-																			</svg>
-																		</span>
-																	</div>
-																	<ul class="submenu">
-																		<li><a href="#" tabindex="0">Rename</a></li>
-																		<li><a href="#" tabindex="0">Duplicate</a></li>
-																		<li><a href="#" tabindex="0">Remove</a></li>
-																	</ul>
-
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr class="dashboard-table__row bg-white">
-														<td class="dashboard-table__item">
-															<b>
-																30 Days
-															</b>
-														</td>
-														<td class="dashboard-table__item">
-															$24.95
-														</td>
-														<td class="dashboard-table__item">
-															<div class="progress-bar-container">
-																<div class="text">
-																	30 Days / 30 Days
-																</div>
-																<div class="progress-bar">
-																	<div class="progress-bar__line" style="width: 20%"></div>
-																</div>
-															</div>
-														</td>
-														<td class="dashboard-table__item">
-															2019-09-23
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--status">
-															<div class="status status--green">Active</div>
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--action">
-															<div class="btn-group align-items-center w-100">
-																<a href="#" class="action">
-																	<span class="ico">
-																		<svg>
-																			<use xlink:href="#svg-edit"></use>
-																		</svg>
-																	</span>
-																</a>
-
-																<div class="submenu-block">
-																	<div class="submenu-dots">
-																		<span class="ico">
-																			<svg>
-																				<use xlink:href="#dots"></use>
-																			</svg>
-																		</span>
-																	</div>
-																	<ul class="submenu">
-																		<li><a href="#" tabindex="0">Rename</a></li>
-																		<li><a href="#" tabindex="0">Duplicate</a></li>
-																		<li><a href="#" tabindex="0">Remove</a></li>
-																	</ul>
-
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr class="dashboard-table__row bg-white">
-														<td class="dashboard-table__item">
-															<b>
-																30 Days
-															</b>
-														</td>
-														<td class="dashboard-table__item">
-															$24
-														</td>
-														<td class="dashboard-table__item">
-															<div class="progress-bar-container">
-																<div class="text">
-																	30 Days / <span class="grey">Not Recurring</span>
-																</div>
-																<div class="progress-bar">
-																	<div class="progress-bar__line red-bg" style="width: 100%"></div>
-																</div>
-															</div>
-														</td>
-														<td class="dashboard-table__item">
-															2019-09-23
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--status">
-															<div class="status status--red">Expired</div>
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--action">
-															<div class="btn-group align-items-center w-100">
-																<a href="#" class="action">
-																	<span class="ico">
-																		<svg>
-																			<use xlink:href="#svg-edit"></use>
-																		</svg>
-																	</span>
-																</a>
-
-																<div class="submenu-block">
-																	<div class="submenu-dots">
-																		<span class="ico">
-																			<svg>
-																				<use xlink:href="#dots"></use>
-																			</svg>
-																		</span>
-																	</div>
-																	<ul class="submenu">
-																		<li><a href="#" tabindex="0">Rename</a></li>
-																		<li><a href="#" tabindex="0">Duplicate</a></li>
-																		<li><a href="#" tabindex="0">Remove</a></li>
-																	</ul>
-
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr class="dashboard-table__row bg-white">
-														<td class="dashboard-table__item">
-															<b>
-																30 Days
-															</b>
-														</td>
-														<td class="dashboard-table__item">
-															$24.95
-														</td>
-														<td class="dashboard-table__item">
-															<div class="progress-bar-container">
-																<div class="text">
-																	30 Days / 30 Days
-																</div>
-																<div class="progress-bar">
-																	<div class="progress-bar__line" style="width: 20%"></div>
-																</div>
-															</div>
-														</td>
-														<td class="dashboard-table__item">
-															2019-09-23
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--status">
-															<div class="status status--green">Active</div>
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--action">
-															<div class="btn-group align-items-center w-100">
-																<a href="#" class="action">
-																	<span class="ico">
-																		<svg>
-																			<use xlink:href="#svg-edit"></use>
-																		</svg>
-																	</span>
-																</a>
-
-																<div class="submenu-block">
-																	<div class="submenu-dots">
-																		<span class="ico">
-																			<svg>
-																				<use xlink:href="#dots"></use>
-																			</svg>
-																		</span>
-																	</div>
-																	<ul class="submenu">
-																		<li><a href="#" tabindex="0">Rename</a></li>
-																		<li><a href="#" tabindex="0">Duplicate</a></li>
-																		<li><a href="#" tabindex="0">Remove</a></li>
-																	</ul>
-
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr class="dashboard-table__row bg-white">
-														<td class="dashboard-table__item">
-															<b>
-																30 Days
-															</b>
-														</td>
-														<td class="dashboard-table__item">
-															$24
-														</td>
-														<td class="dashboard-table__item">
-															<div class="progress-bar-container">
-																<div class="text">
-																	30 Days / <span class="grey">Not Recurring</span>
-																</div>
-																<div class="progress-bar">
-																	<div class="progress-bar__line red-bg" style="width: 100%"></div>
-																</div>
-															</div>
-														</td>
-														<td class="dashboard-table__item">
-															2019-09-23
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--status">
-															<div class="status status--red">Expired</div>
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--action">
-															<div class="btn-group align-items-center w-100">
-																<a href="#" class="action">
-																	<span class="ico">
-																		<svg>
-																			<use xlink:href="#svg-edit"></use>
-																		</svg>
-																	</span>
-																</a>
-
-																<div class="submenu-block">
-																	<div class="submenu-dots">
-																		<span class="ico">
-																			<svg>
-																				<use xlink:href="#dots"></use>
-																			</svg>
-																		</span>
-																	</div>
-																	<ul class="submenu">
-																		<li><a href="#" tabindex="0">Rename</a></li>
-																		<li><a href="#" tabindex="0">Duplicate</a></li>
-																		<li><a href="#" tabindex="0">Remove</a></li>
-																	</ul>
-
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr class="dashboard-table__row bg-white">
-														<td class="dashboard-table__item">
-															<b>
-																30 Days
-															</b>
-														</td>
-														<td class="dashboard-table__item">
-															$24.95
-														</td>
-														<td class="dashboard-table__item">
-															<div class="progress-bar-container">
-																<div class="text">
-																	30 Days / 30 Days
-																</div>
-																<div class="progress-bar">
-																	<div class="progress-bar__line" style="width: 20%"></div>
-																</div>
-															</div>
-														</td>
-														<td class="dashboard-table__item">
-															2019-09-23
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--status">
-															<div class="status status--green">Active</div>
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--action">
-															<div class="btn-group align-items-center w-100">
-																<a href="#" class="action">
-																	<span class="ico">
-																		<svg>
-																			<use xlink:href="#svg-edit"></use>
-																		</svg>
-																	</span>
-																</a>
-
-																<div class="submenu-block">
-																	<div class="submenu-dots">
-																		<span class="ico">
-																			<svg>
-																				<use xlink:href="#dots"></use>
-																			</svg>
-																		</span>
-																	</div>
-																	<ul class="submenu">
-																		<li><a href="#" tabindex="0">Rename</a></li>
-																		<li><a href="#" tabindex="0">Duplicate</a></li>
-																		<li><a href="#" tabindex="0">Remove</a></li>
-																	</ul>
-
-																</div>
-															</div>
-														</td>
-													</tr>
-													<tr class="dashboard-table__row bg-white">
-														<td class="dashboard-table__item">
-															<b>
-																30 Days
-															</b>
-														</td>
-														<td class="dashboard-table__item">
-															$24
-														</td>
-														<td class="dashboard-table__item">
-															<div class="progress-bar-container">
-																<div class="text">
-																	30 Days / <span class="grey">Not Recurring</span>
-																</div>
-																<div class="progress-bar">
-																	<div class="progress-bar__line red-bg" style="width: 100%"></div>
-																</div>
-															</div>
-														</td>
-														<td class="dashboard-table__item">
-															2019-09-23
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--status">
-															<div class="status status--red">Expired</div>
-														</td>
-														<td class="dashboard-table__item dashboard-table__item--action">
-															<div class="btn-group align-items-center w-100">
-																<a href="#" class="action">
-																	<span class="ico">
-																		<svg>
-																			<use xlink:href="#svg-edit"></use>
-																		</svg>
-																	</span>
-																</a>
-
-																<div class="submenu-block">
-																	<div class="submenu-dots">
-																		<span class="ico">
-																			<svg>
-																				<use xlink:href="#dots"></use>
-																			</svg>
-																		</span>
-																	</div>
-																	<ul class="submenu">
-																		<li><a href="#" tabindex="0">Rename</a></li>
-																		<li><a href="#" tabindex="0">Duplicate</a></li>
-																		<li><a href="#" tabindex="0">Remove</a></li>
-																	</ul>
-
-																</div>
-															</div>
-														</td>
-													</tr>
-
-												</tbody>
-											</table>
+									<div class="col-md-5 h-100 overflow-hidden">
+										<div class="p-3 bg-white rounded-lg">
 										</div>
-									<!-- <div class="dashboard-table__footer">
-										<a href="#" class="btn btn--grey btn--lt btn--radius">
-											Show More
-										</a>
-
-										<div class="dashboard-table__paginator">
-											<span class="dashboard-table__paginator__title">Showing</span>
-											4 of 340
-										</div>
-									</div> -->
-									<!-- /.dashboard-table__footer -->
+									</div>
 								</div>
-							</div>
 							</div>
 						</div>
 

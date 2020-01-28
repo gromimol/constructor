@@ -1,7 +1,7 @@
 /*dashboard*/ 
 .dashboard__content{
 	flex-grow: 1;
-	height: 100%;
+	min-height: 100%;
 	margin-right: 30px;
 	background-color: #f5f6fa;
 	padding: 30px;
@@ -9,6 +9,11 @@
 	font-family: 'Futura', sans-serif;
 	font-weight: 500;
 }
+.dashboard-wrapper{
+	height: 100%;
+	overflow-y: auto;
+}
+
 .dashboard__body{
 	padding: 25px;
 	border-radius: 20px;
@@ -310,4 +315,152 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td:first-child:before, tabl
 table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child){
 	padding: 25px 30px 25px 20px;
 }
+
+
+
+/*models-list*/
+.alphabet{
+	.slick-list{
+		overflow: visible !important;
+	}
+	.slick-list,
+	.slick-track{
+		transform: translate3d(0, 0, 0) !important;
+	}
+}
+.alphabet__item{
+	display: block;
+	padding: 1px 0;
+	font-size: 13px;
+	text-transform: uppercase;
+	color: #bcbcbc;
+	text-align: center;
+	transition: all .3s;
+	cursor: pointer;
+	&:hover{
+		color: var(--text-color);
+	}
+	&.slick-current{
+		font-size: 17px;
+		color: var(--text-color);
+	}
+}
+.models-list{
+	.slick{
+
+	}
+}
+.models-list__slide{
+	.badge,
+	.model-option,
+	.btn-group{
+		opacity: 0;
+		visibility: hidden;
+		max-height: 0;
+		transition: all .3s;
+	}
+	.badge{
+		margin-bottom: .75rem;
+	}
+	.model-option{
+		font-size: .75rem;
+		color: #97a0a7;
+		margin-bottom: 1rem;
+	}
+	.submenu-block{
+		padding: 0 10px;
+	}
+	.submenu-dots .ico{
+		height: 15px;
+		color: var(--black);
+	}
+	.action{
+		color: #97a0a7;
+		&:hover{
+			color: var(--black);
+		}
+	}
+	&.slick-center{
+		.model-avatar{
+			img{
+				width: 100%;
+				height: 100%;
+				filter: grayscale(0);
+			}
+		}
+		.model-name{
+			font-size: 1.4375rem;
+			color: #10263c;
+		}
+		.badge,
+		.model-option,
+		.btn-group,
+		.submenu-dots .ico{
+			opacity: 1;
+			visibility: visible;
+			max-height: 100%;
+		}
+		.model__slide__icon{
+			width: 35px;
+			height: 35px;
+			color: var(--blue);
+		}
+	}
+}
+.model__slide__icon{
+	width: 20px;
+	height: 20px;
+	color: #a9b0bd;
+	transition: all .3s;
+	svg{
+		width: 100%;
+		height: 100%;
+	}
+}
+.model-avatar{
+	flex: none;
+	width: 15.875rem;
+	height: 15.875rem;
+	margin-right: 2.5rem;
+	img{
+		width: 9.375rem;
+		height: 9.375rem;
+		object-fit: cover;
+		border-radius: 50%;
+		filter: grayscale(100%);
+		transition: all .3s;
+	}
+}
+.model-name{
+	font-size: 1.125rem;
+	color: #a9b0bd;
+	transition: all .3s;
+}
+
+.models-filter{
+	.form-group-search{
+		
+	}
+	.form-control{
+		padding-right: 2.5rem;
+	}
+	.simple-btn{
+		right: .75rem;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+.models-list{
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
 
