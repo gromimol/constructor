@@ -6,6 +6,7 @@
 	--dark-grey-bg: #e1e4eb;
 	--light-grey-bg: ##f5f6fa;
 	--green: #68f9b0;
+	--grey-text: #8992ab;
 }
 html, body{
 	height: 100%;
@@ -100,17 +101,25 @@ body{
 .blue{
 	color: var(--blue);
 }
+.grey{
+	color: var(--grey-text);
+}
+.white{
+	color: #fff;
+}
 
 .nicescroll-cursors{
 	border: none !important;
 	background-color: #dadada !important;
 	border-radius: 4px !important;
 }
-.nicescroll-rails {
+.nicescroll-rails-vr {
 	z-index: 4 !important;
-	transform: translateX(-4px);
+	transform: translateX(0px);
 }
-
+.nicescroll-rails-hr{
+	opacity: 0 !important;
+}
 p{
 	font-size: .9375rem;
 	font-weight: 300;

@@ -17,6 +17,8 @@
 	<div class="svg-sprite">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
+			<symbol viewBox="0 0 30 30" id="svg-play"><g><g><path d="M20.25931,15.0194c0,0.23761 -0.11403,0.46133 -0.31091,0.6061l-6.23,4.52496c-0.13158,0.09686 -0.28704,0.14567 -0.44054,0.14567c-0.11793,0 -0.23489,-0.02687 -0.34162,-0.08074c-0.25292,-0.12791 -0.41082,-0.38641 -0.41082,-0.66998v-9.05485c0,-0.28059 0.15789,-0.54014 0.41082,-0.66789c0.25049,-0.1288 0.55409,-0.10388 0.78216,0.06179l6.23,4.52899c0.19444,0.14179 0.31238,0.36432 0.31091,0.60596zM30.00001,15.00254c0,8.28293 -6.71537,14.99739 -14.99946,14.99739c-8.28603,0 -15.00043,-6.71342 -15.00043,-14.99739c0,-8.28711 6.7144,-15.00246 15.00043,-15.00246c8.28408,0 15.00043,6.71536 14.99946,15.00246zM27.49418,15.00254c0,-6.90028 -5.59452,-12.4985 -12.49362,-12.4985c-6.90056,0 -12.49508,5.59926 -12.49508,12.4985c0,6.90207 5.59452,12.49432 12.49508,12.49432c6.8991,0 12.4941,-5.59225 12.49362,-12.49432z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
+
 			<symbol viewBox="0 0 18 18" id="svg-close"><g><g><path d="M-0.00124,16.87597l7.87615,-7.87583l-7.87615,-7.87632l1.12496,-1.12445l7.87616,7.87584l7.87616,-7.87584l1.12496,1.12445l-7.87615,7.87632l7.87615,7.87583l-1.12496,1.12549l-7.87616,-7.87633l-7.87616,7.87633z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
 
 			<symbol viewBox="0 0 12 12" id="svg-refresh"><g><g><path d="M11.50025,5.50062c-0.27649,0 -0.49942,0.22247 -0.49942,0.49986c0,2.75697 -2.24281,5.0005 -5.00118,5.0005c-2.757,0 -5.00072,-2.24353 -5.00072,-5.0005c0,-2.75819 2.24373,-5.00108 5.00072,-5.00108c1.50661,0 2.90234,0.6633 3.8475,1.80457h-1.72634c-0.2766,0 -0.50011,0.2228 -0.50011,0.49986c0,0.27661 0.2235,0.49908 0.50011,0.49908h2.80655c0.27706,0 0.49999,-0.22247 0.49999,-0.49908v-2.80428c0,-0.277 -0.22293,-0.4996 -0.49999,-0.4996c-0.27706,0 -0.49953,0.2226 -0.49953,0.4996v1.44479c-1.1285,-1.23184 -2.71843,-1.94439 -4.42818,-1.94439c-3.30791,0 -6.00014,2.6915 -6.00014,6.00053c0,3.30774 2.69222,5.99944 6.00014,5.99944c3.30826,0 6.00071,-2.69169 6.00071,-5.99944c0,-0.27738 -0.22293,-0.49986 -0.50011,-0.49986z" fill="currentColor" fill-opacity="1"></path></g></g></symbol>
@@ -721,17 +723,26 @@
 						<!-- /.aside__left -->
 					
 						<div class="col flex-grow-1 dashboard-wrapper">
-							<div class="dashboard__content p-4 mr-0 h-100">
+							<div class="dashboard__content dashboard__content__models p-4 mr-0 h-100">
 								<div class="row h-100">
-									<div class="col-md-7 h-100 overflow-hidden">
+									<div class="col-xl-7 col-lg-6 h-100 overflow-hidden">
 										<div class="p-3 bg-white rounded-lg h-100 overflow-hidden">
-											<div class="row align-items-center models-filter mb-3 mb-md-5">
-												<div class="col-md-2">
+											<div class="row align-items-center models-filter">
+												<div class="col-lg-3 d-flex justify-content-between align-items-center mb-3 mb-md-0">
 													<div class="fz-15 text-uppercase">Model List</div>
+
+													<div class="form-group d-block d-md-none ml-5 mb-0 form-group-search position-relative flex-grow-1">
+														<input type="text" class="form-control" placeholder="Search">
+														<button type="submit" class="simple-btn w-15 h-15 position-absolute">
+															<svg>
+																<use xlink:href="#search"></use>
+															</svg>
+														</button>
+													</div>
 												</div>
 												<div class="col-lg-9 flex-grow-1 d-flex justify-content-start justify-content-md-end align-items-start">
 
-													<div class="form-group mb-3 mb-md-0 form-group-search position-relative flex-grow-1">
+													<div class="form-group d-none d-md-block mb-3 mb-md-0 form-group-search position-relative flex-grow-1">
 														<input type="text" class="form-control" placeholder="Search">
 														<button type="submit" class="simple-btn w-15 h-15 position-absolute">
 															<svg>
@@ -750,11 +761,11 @@
 														<input type="hidden" name="changeme">
 													</div>
 
-													<a href="#" class="btn btn--lt btn--blue btn--radius ml-2">New Payment Plan</a>
+													<a href="#" class="btn btn--lt btn--blue btn--radius ml-2">Add New Model</a>
 												</div>
 											</div>
 
-											<div class="row">
+											<div class="row h-100">
 												<div class="col-1 d-flex flex-column justify-content-center">
 													<div class="alphabet">
 														<div class="alphabet__item">
@@ -839,7 +850,7 @@
 												</div>
 												<div class="col-11">
 
-													<div class="models-list">
+													<div class="models-list d-flex align-items-center">
 														<div class="models-list__slide">
 															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
 																<div class="model__slide__icon">
@@ -852,9 +863,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Nicole Kidman</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -883,6 +894,14 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
+
 														</div>
 
 														<div class="models-list__slide">
@@ -897,9 +916,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -928,6 +947,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -942,9 +968,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Alex White</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -973,6 +999,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -987,9 +1020,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Section</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1018,6 +1051,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1032,9 +1072,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1063,6 +1103,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1077,9 +1124,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1108,6 +1155,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1122,9 +1176,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1153,6 +1207,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1167,9 +1228,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1198,6 +1259,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1212,9 +1280,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1243,6 +1311,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1257,9 +1332,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1288,6 +1363,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1302,9 +1384,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1333,6 +1415,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1347,9 +1436,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1378,6 +1467,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1392,9 +1488,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1423,6 +1519,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1437,9 +1540,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1468,6 +1571,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1482,9 +1592,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1513,6 +1623,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1527,9 +1644,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1558,6 +1675,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1572,9 +1696,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1603,6 +1727,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1617,9 +1748,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1648,6 +1779,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1662,9 +1800,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1693,6 +1831,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1707,9 +1852,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1738,6 +1883,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1752,9 +1904,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1783,6 +1935,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1797,9 +1956,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1828,6 +1987,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1842,9 +2008,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1873,6 +2039,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1887,9 +2060,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1918,6 +2091,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1932,9 +2112,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -1963,6 +2143,13 @@
 																	</div>
 																</div>
 															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
 														</div>
 
 														<div class="models-list__slide">
@@ -1977,9 +2164,9 @@
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
-																		<div class="badge badge-green">new</div>
-																		<div class="model-name">Anna Lee</div>
-																		<div class="model-option">235 photos  | 23 videos</div>
+																		<div class="badge badge-green d-none d-md-inline-block">new</div>
+																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
+																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
 																		<div class="btn-group align-items-center">
 																			<a href="#" class="action d-flex">
 																				<span class="ico w-15 h-15 d-inline-block">
@@ -2003,6 +2190,985 @@
 																					<li><a href="#" tabindex="0">Remove</a></li>
 																				</ul>
 
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<!-- for mobile -->
+															<div class="text-center mt-3 b-block d-md-none">
+																<div class="badge badge-green d-inline-block d-md-none">new</div>
+																<div class="model-name d-block d-md-none">Nicole Kidman</div>
+																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>									
+										</div>
+									</div>
+									<div class="col-xl-5 col-lg-6 mt-4 mt-lg-0 h-100 overflow-hidden">
+										<div class="bg-white rounded-lg h-100 pt-2 d-flex flex-column">
+											<ul class="nav nav-tabs d-flex row mb-3 px-3">
+												<li class="nav-item col">
+													<a href="#personal-details" class="nav-link active pl-0 pb-3" data-toggle="tab">Personal Details</a>
+												</li>
+												<li class="nav-item col">
+													<a href="#linked-content" class="nav-link pl-0 pb-3" data-toggle="tab">Linked Content</a>
+												</li>
+											</ul>
+
+											<!-- Tab panes -->
+											<div class="tab-content active flex-grow-1 overflow-hidden">
+												<div class="tab-pane active h-100" id="personal-details">
+													<div class="tab-pane-content h-100 overflow-hidden d-flex flex-column ">
+														<div class="fz-15 text-uppercase mb-3 px-3">
+															<b>Add new model</b>
+														</div>
+														<div class="model-scroll-block px-3">
+															<form action="#">
+																<div class="form-row">
+																	<div class="form-group col-md-6">
+																		<label for="name">Name</label>
+																		<input type="text" class="form-control" id="name" value="Name">
+																	</div>
+																	<div class="form-group col-md-6">
+																		<label for="email">Website</label>
+																		<input type="email" class="form-control" id="name" value="www.razersection.com/anna-lee">
+																	</div>
+																</div>
+
+																<div class="form-group row">
+																	<label for="inp-1" class="col-4 col-form-label">About</label>
+																	<div class="col-8">
+																		<textarea  class="form-control" id="inp-1"></textarea>
+																	</div>
+																</div>
+
+																<div class="form-group row">
+																	<label for="inp-2" class="col-4 col-form-label">Email</label>
+																	<div class="col-8">
+																		<input class="form-control-plaintext" type="text" id="inp-2" value="razersection@gmail.com"></input>
+																	</div>
+																</div>
+
+																<div class="form-group row">
+																	<label for="inp-3" class="col-4 col-form-label">Eye Color</label>
+																	<div class="col-8">
+																		<input class="form-control-plaintext" type="text" id="inp-3" value="Brown"></input>
+																	</div>
+																</div>
+
+																<div class="form-group row">
+																	<label for="inp-4" class="col-4 col-form-label">Sex</label>
+																	<div class="col-8">
+																		<select class=" select" type="text" id="inp-4">
+																			<option value="">Female</option>
+																			<option value="">Male</option>
+																		</select>
+																	</div>
+																</div>
+
+																<div class="form-group row">
+																	<label for="inp-4" class="col-4 col-form-label">Height</label>
+																	<div class="col-8">
+																		<input class="form-control-plaintext" type="text" id="inp-4" value="170-190 Cm"></input>
+																	</div>
+																</div>
+
+																<div class="form-group row">
+																	<label for="inp-5" class="col-4 col-form-label">Shoes Size</label>
+																	<div class="col-8">
+																		<input class="form-control-plaintext" type="text" id="inp-5" value="34-38 Cm"></input>
+																	</div>
+																</div>
+
+																<div class="form-group row">
+																	<label for="inp-6" class="col-4 col-form-label">Twitter Username</label>
+																	<div class="col-8">
+																		<input class="form-control-plaintext" type="text" id="inp-6" value="@BillGates"></input>
+																	</div>
+																</div>
+
+																<div class="form-group row">
+																	<label for="inp-7" class="col-4 col-form-label">Hair Color</label>
+																	<div class="col-8">
+																		<input class="form-control-plaintext" type="text" id="inp-7" value="Brown"></input>
+																	</div>
+																</div>
+
+																<div class="form-group row">
+																	<label for="inp-9" class="col-4 col-form-label">Weight</label>
+																	<div class="col-8">
+																		<input class="form-control-plaintext" type="text" id="inp-9" value="45-60 Kg"></input>
+																	</div>
+																</div>
+
+																<div class="form-group row">
+																	<label for="inp-10" class="col-4 col-form-label">Breast Size</label>
+																	<div class="col-8">
+																		<input class="form-control-plaintext" type="text" id="inp-10" value="56"></input>
+																	</div>
+																</div>
+
+																<div class="form-group row">
+																	<label for="inp-11" class="col-4 col-form-label">Nationality</label>
+																	<div class="col-8">
+																		<input class="form-control-plaintext" type="text" id="inp-11" value="European"></input>
+																	</div>
+																</div>
+
+																<div class="form-group row">
+																	<label for="inp-12" class="col-4 col-form-label">Something Else</label>
+																	<div class="col-8">
+																		<input class="form-control-plaintext" type="text" id="inp-12" value="European"></input>
+																	</div>
+																</div>
+
+																<div class="form-group row">
+																	<label for="inp-13" class="col-4 col-form-label">Something Else</label>
+																	<div class="col-8">
+																		<input class="form-control-plaintext" type="text" id="inp-13" value="European"></input>
+																	</div>
+																</div>
+															</form>
+														</div>
+
+														<div class="row align-items-center justify-content-between border-top p-3">
+															<div class="col-md-6 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
+																<div class="fz-11">
+																	<span class="grey">Some system info </span> Some Value
+																</div>
+															</div>
+															<div class="col-md-6 d-flex justify-content-center justify-content-md-end">
+																<input type="submit" class="btn btn--blue btn--lt" value="Save">
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="tab-pane p-3 h-100 overflow-hidden bottom-white-gradient rounded-lg" id="linked-content">
+													<div class="tab-pane-content h-100 overflow-hidden d-flex flex-column ">
+														<div class="row">
+															<div class="col-auto d-none d-md-block">
+																<div class="form-group">
+																	<label for="inp-321" class="text-uppercase fz-11 d-none d-mb-inline-block">Type</label>
+																	<select class="select select--sm">
+																		<option value="">Photo Sets</option>
+																		<option value="">Video Sets</option>
+																		<option value="">Multi Sets</option>
+																	</select>
+																</div>
+															</div>
+															<div class="col-auto flex-fill d-flex flex-wrap justify-content-start justify-content-xl-end">
+																<div class="form-group d-flex d-md-none mr-3">
+																	<label for="inp-321" class="text-uppercase fz-11 d-none d-mb-inline-block">Type</label>
+																	<select class="select select--sm">
+																		<option value="">Photo Sets</option>
+																		<option value="">Video Sets</option>
+																		<option value="">Multi Sets</option>
+																	</select>
+																</div>
+																<div class="form-group mr-3">
+																	<label for="inp-321" class="text-uppercase fz-11 d-none d-mb-inline-block">FIlter</label>
+																	<select class="select select--sm">
+																		<option value="">Something</option>
+																		<option value="">Video Sets</option>
+																		<option value="">Multi Sets</option>
+																	</select>
+																</div>
+																<div class="form-group">
+																	<label for="inp-321" class="text-uppercase fz-11 d-none d-mb-inline-block">SOrt</label>
+																	<select class="select select--sm">
+																		<option value="">Featured In</option>
+																		<option value="">Video Sets</option>
+																		<option value="">Multi Sets</option>
+																	</select>
+																</div>
+															</div>
+														</div>
+														<div class="model-scroll-block">
+															<div class="row">
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-1.jpg" alt="">
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Anna Lee</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-2.jpg" alt="">
+																			<span class="play-ico white">
+																				<svg>
+																					<use xlink:href="#svg-play"></use>
+																				</svg>
+																			</span>
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Eva Mendez</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-3.jpg" alt="">
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Kora Peters</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-1.jpg" alt="">
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Anna Lee</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-2.jpg" alt="">
+																			<span class="play-ico white">
+																				<svg>
+																					<use xlink:href="#svg-play"></use>
+																				</svg>
+																			</span>
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Eva Mendez</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-3.jpg" alt="">
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Kora Peters</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-h-1.jpg" alt="">
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Anna Lee</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-h-3.jpg" alt="">
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Kora Peters</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-h-2.jpg" alt="">
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Kora Peters</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-1.jpg" alt="">
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Anna Lee</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-2.jpg" alt="">
+																			<span class="play-ico white">
+																				<svg>
+																					<use xlink:href="#svg-play"></use>
+																				</svg>
+																			</span>
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Eva Mendez</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-3.jpg" alt="">
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Kora Peters</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-1.jpg" alt="">
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Anna Lee</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-2.jpg" alt="">
+																			<span class="play-ico white">
+																				<svg>
+																					<use xlink:href="#svg-play"></use>
+																				</svg>
+																			</span>
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Eva Mendez</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-3.jpg" alt="">
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Kora Peters</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-1.jpg" alt="">
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Anna Lee</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-3.jpg" alt="">
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Kora Peters</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-xl-4 col-lg-6 col-md-3 col-sm-6">
+																	<div class="card card-model mb-4">
+																		<a href="#" class="card-img">
+																			<img src="img/girls/girl-3.jpg" alt="">
+																		</a>
+																		<div class="card-body p-0">
+																			<div class="card-data d-flex justify-content-between">
+																				<div class="model-data">
+																					<div class="fz-13">
+																						<b>Kora Peters</b>
+																					</div>
+																					<div class="fz-11 grey">Added: 23/09/2019</div>
+																				</div>
+
+																				<div class="btn-group align-items-center">
+																					<a href="#" class="action d-flex" tabindex="0">
+																						<span class="ico w-15 h-15 d-inline-block grey">
+																							<svg>
+																								<use xlink:href="#svg-edit"></use>
+																							</svg>
+																						</span>
+																					</a>
+
+
+																					<div class="submenu-block pl-2 pr-0 dropright">
+																						<a class="dotts-btn dropdown-toggle" href="#" role="button" id="menu-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																							<div class="ico w-10 h-15">
+																								<svg>
+																									<use xlink:href="#dots"></use>
+																								</svg>
+																							</div>
+																						</a>
+																						<div class="dropdown-menu dropdown-menu-lt rounded">
+																							<a class="dropdown-item border-bottom" href="#">Rename</a>
+																							<a class="dropdown-item border-bottom" href="#">Duplicate</a>
+																							<a class="dropdown-item border-bottom" href="#">Action 3</a>
+																						</div>
+																					</div>
+																				</div>
 																			</div>
 																		</div>
 																	</div>
@@ -2011,11 +3177,7 @@
 														</div>
 													</div>
 												</div>
-											</div>									
-										</div>
-									</div>
-									<div class="col-md-5 h-100 overflow-hidden">
-										<div class="p-3 bg-white rounded-lg">
+											</div>
 										</div>
 									</div>
 								</div>
@@ -2042,6 +3204,7 @@
 
 		<script src="js/jquery.nicescroll.min.js"></script>
 
+		<script src="js/bootstrap/popper.min.js"></script>
 		<script src="js/bootstrap/bootstrap.min.js"></script>
 
 		<script src="js/slick.min.js"></script>

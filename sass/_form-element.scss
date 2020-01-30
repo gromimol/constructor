@@ -33,15 +33,22 @@
 	width: 173px;
 	height: 40px;
 	font-family: "Futura", sans-serif;
-	font-size: 12px;
-	font-weight: 300;
+	font-size: 13px;
+	font-weight: 400;
 	padding-left: 10px;
-	letter-spacing: 1.3px;
-	text-transform: uppercase;
-	background:#fff url('../img/select-arrow.svg') calc(100% - 10px) center no-repeat;
-	border-radius: 0;
+	letter-spacing: .3px;
+	background:#f8f9fb url('../img/select-arrow.svg') calc(100% - 10px) center no-repeat;
+	border-color: var(--border-color);
+	border-radius: 5px;
 	appearance: none;
+	&:focus{
+		outline: none;
+	}
 }
+ .select--sm{
+ 	flex: 0 0 115px;
+ 	max-width: 115px;
+ }
 
 .select--type2{
 	height: 35px;
@@ -208,5 +215,71 @@
 	&:hover{
 		background-color: var(--blue);
 		color: #fff;
+	}
+}
+
+.form-control{
+	background-color: var(--light-grey-bg);
+	border-radius: 5px;
+	border-color: var(--border-color);
+	font-size: 14px;
+	resize: none;
+	&:focus{
+		box-shadow: none;
+		outline: none;
+		border-color: var(--blue);
+	}
+	
+}
+textarea.form-control{
+	height: 70px;
+	padding-top: 10px;
+}
+.form-control-plaintext{
+	border-radius: 5px;
+	padding-left: 15px;
+	&:focus{
+		box-shadow: none;
+		outline: none;
+		border-color: var(--blue);
+		border-width: 1px;
+	}
+}
+.form-group {
+	label{
+		font-size: 13px;
+		font-weight: 800;
+	}
+}
+.nav-tabs{
+	border-color: #f5f6fa;
+	.nav-item{
+		margin-bottom: 0;
+	}
+}
+.nav-tabs .nav-link{
+	display: inline-block;
+	border: none;
+	border-radius: 0;
+	font-size: 13px;
+	color: #afb5b9;
+	letter-spacing: 0.12px;
+	position: relative;
+	&::after{
+		content: '';
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+	&:hover{
+		color: var(--blue);
+	}
+	&.active{
+		color: var(--blue);
+		&::after{
+			background: linear-gradient(to right, #019efd 0%, #ffffff 100%);
+		}
 	}
 }

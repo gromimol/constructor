@@ -1,0 +1,23 @@
+/*card*/ 
+.card{
+	border: none;
+	.submenu-dots .ico{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.card-img{
+	position: relative;
+	margin-bottom: .75rem;
+	img{
+		width: 100%;
+		border-radius: 5px;
+	}
+	.play-ico{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+	}
+}

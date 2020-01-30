@@ -319,6 +319,9 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child){
 
 
 /*models-list*/
+.tab-content-models{
+	overflow: hidden;
+}
 .alphabet{
 	.slick-list{
 		overflow: visible !important;
@@ -407,6 +410,11 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child){
 		}
 	}
 }
+.models-list__slide__content{
+	max-width: 770px;
+	margin-left: auto;
+	margin-right: auto;
+}
 .model__slide__icon{
 	width: 20px;
 	height: 20px;
@@ -419,8 +427,8 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child){
 }
 .model-avatar{
 	flex: none;
-	width: 15.875rem;
-	height: 15.875rem;
+	width: 14rem;
+	height: 14rem;
 	margin-right: 2.5rem;
 	img{
 		width: 9.375rem;
@@ -428,7 +436,7 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child){
 		object-fit: cover;
 		border-radius: 50%;
 		filter: grayscale(100%);
-		transition: all .3s;
+		transition: width .3s, height .3s;
 	}
 }
 .model-name{
@@ -454,6 +462,14 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child){
 	height: 100%;
 }
 
+.model-scroll-block{
+	overflow-y: auto;
+	overflow-x: hidden !important;
+	height: 100%;
+}
+.model-scroll-block::-webkit-scrollbar { width: 0; }
+
+.model-scroll-block { -ms-overflow-style: none; }
 
 
 
