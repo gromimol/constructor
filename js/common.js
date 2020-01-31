@@ -14,7 +14,9 @@ $(document).ready(function () {
 		$('#overlay').hide();
 		$('.js--mobile-btn').removeClass('active');
 		$('.js--aside').removeClass('active');
-	})
+	});
+
+
 
 	// height for main
 	function pageHeight() {
@@ -238,28 +240,14 @@ $(document).ready(function () {
 		}
 	}));
 
-	$('.alphabet').slick({
-		asNavFor: '.models-list',
-		arrows: false,
-		vertical: true,
-		focusOnSelect: true,
-		infinite: false,
-		responsive:[
-  			{
-  				breakpoint: 767,
-  				settings: {
-  					initialSlide: 3
-  				}
-  			}
-  		]
-	});
+	
 
 	$('.models-list').slick({
-		asNavFor: '.alphabet',
 		arrows: false,
 		vertical: true,
 		verticalSwiping: true,
 		slidesToShow: 3,
+		initialSlide: 3,
 		centerMode: true,
   		focusOnSelect: true,
   		centerPadding: '0',
@@ -273,6 +261,19 @@ $(document).ready(function () {
   			}
   		]
 	});
+	$(".models-list").on('wheel', (function(e) {
+
+		clearTimeout(scroll);
+		scroll = setTimeout(function(){scrollCount=0;}, 200);
+		if(scrollCount) return 0;
+		scrollCount=1;
+
+		if (e.originalEvent.deltaY > 0) {
+			$(this).slick('slickNext');
+		} else {
+			$(this).slick('slickPrev');
+		}
+	}));
 
 
 	// models slider
@@ -422,6 +423,12 @@ $(document).ready(function () {
 
 		$(this).hide();
 		$('.color-picker-wrapper').show();	
+	});
+
+	// dashboard models sidebar
+	$('.model-avatar').on('click',function () {
+		
+		$('#model-data').addClass('active');
 	});
 
 

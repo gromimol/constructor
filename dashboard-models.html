@@ -725,7 +725,7 @@
 						<div class="col flex-grow-1 dashboard-wrapper">
 							<div class="dashboard__content dashboard__content__models p-4 mr-0 h-100">
 								<div class="row h-100">
-									<div class="col-xl-7 col-lg-6 h-100 overflow-hidden">
+									<div class="col flex-grow-1 h-100 overflow-hidden">
 										<div class="p-3 bg-white rounded-lg h-100 overflow-hidden">
 											<div class="row align-items-center models-filter">
 												<div class="col-lg-3 d-flex justify-content-between align-items-center mb-3 mb-md-0">
@@ -849,7 +849,6 @@
 													</div>
 												</div>
 												<div class="col-11">
-
 													<div class="models-list d-flex align-items-center">
 														<div class="models-list__slide">
 															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
@@ -859,7 +858,7 @@
 																	</svg>
 																</div>
 																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
-																	<div class="model-avatar rounded-circle d-flex align-items-center justify-content-center">
+																	<div data-model="model-data" class="js--model-data model-avatar rounded-circle d-flex align-items-center justify-content-center">
 																		<img src="img/avatar-lg.png" alt="">
 																	</div>
 																	<div class="model-data">
@@ -895,12 +894,9 @@
 																</div>
 															</div>
 
+
 															<!-- for mobile -->
-															<div class="text-center mt-3 b-block d-md-none">
-																<div class="badge badge-green d-inline-block d-md-none">new</div>
-																<div class="model-name d-block d-md-none">Nicole Kidman</div>
-																<div class="model-option d-block d-md-none">235 photos  | 23 videos</div>
-															</div>
+															
 
 														</div>
 
@@ -2208,7 +2204,7 @@
 											</div>									
 										</div>
 									</div>
-									<div class="col-xl-5 col-lg-6 mt-4 mt-lg-0 h-100 overflow-hidden">
+									<div class="col-xl-5 col-lg-6 mt-4 mt-lg-0 h-100 overflow-hidden" id="model-data">
 										<div class="bg-white rounded-lg h-100 pt-2 d-flex flex-column">
 											<ul class="nav nav-tabs d-flex row mb-3 px-3">
 												<li class="nav-item col">
