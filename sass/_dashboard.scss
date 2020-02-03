@@ -322,6 +322,7 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child){
 .tab-content-models{
 	overflow: hidden;
 }
+
 .alphabet{
 	.slick-list{
 		overflow: visible !important;
@@ -492,7 +493,11 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child){
 	}
 }
 
-
+#model-data{
+	.tab-content{
+		height: 100%;
+	}
+}
 
 
 

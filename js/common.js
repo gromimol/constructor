@@ -256,7 +256,6 @@ $(document).ready(function () {
   				breakpoint: 767,
   				settings: {
   					centerPadding: '50px',
-  					initialSlide: 3
   				}
   			}
   		]

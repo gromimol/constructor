@@ -13499,6 +13499,9 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child) {
             transform: translateX(0);
     padding: 0 15px; }
 
+#model-data .tab-content {
+  height: 100%; }
+
 /*form element*/
 .select-wrapper {
   display: -webkit-box;
@@ -14138,18 +14141,9 @@ textarea.form-control {
       border-left: 7px solid #fff;
       display: none; }
 
-  .model-scroll-block,
-  .dashboard__content__models .overflow-hidden {
-    height: auto !important;
-    overflow: visible !important; }
-
   .btn--lt {
     padding-top: 11px;
-    padding-bottom: 9px; }
-
-  .dashboard__content__models .h-100,
-  .models-list {
-    height: auto !important; } }
+    padding-bottom: 9px; } }
 /*1240*/
 /*992*/
 @media (max-width: 767px) {
