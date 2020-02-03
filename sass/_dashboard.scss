@@ -389,7 +389,7 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child){
 			}
 		}
 		.model-name{
-			font-size: 1.4375rem;
+			transform: scale(1);
 			color: #10263c;
 		}
 		.badge,
@@ -401,8 +401,7 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child){
 			max-height: 100%;
 		}
 		.model__slide__icon{
-			width: 35px;
-			height: 35px;
+			transform: scale(1);
 			color: var(--blue);
 		}
 	}
@@ -414,8 +413,9 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child){
 	padding: 10px 0;
 }
 .model__slide__icon{
-	width: 20px;
-	height: 20px;
+	width: 35px;
+	height: 35px;
+	transform: scale(.6);
 	color: #a9b0bd;
 	transition: all .3s;
 	svg{
@@ -438,7 +438,8 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child){
 	}
 }
 .model-name{
-	font-size: 1.125rem;
+	font-size: 1.4375rem;
+	transform: scale(.75);
 	color: #a9b0bd;
 	transition: all .3s;
 }
@@ -459,14 +460,17 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child){
 .models-list{
 	width: 100%;
 	height: 100%;
-	padding: 4vh 0;
+	padding: 4% 0;
 	.slick-track{
 		width: 100% !important;
 	}
 }
-.models-list__slide{
-	width: 100% !important;
+@media(min-width: 992px){
+	.models-list__slide{
+		width: 100% !important;
+	}
 }
+
 
 .model-scroll-block{
 	overflow-y: auto;
@@ -499,7 +503,9 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child){
 		height: 100%;
 	}
 }
-
+.mobile-switcher{
+	display: none;
+}
 
 
 

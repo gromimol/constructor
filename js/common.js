@@ -246,31 +246,38 @@ $(document).ready(function () {
 		arrows: false,
 		vertical: true,
 		verticalSwiping: true,
+		swipeToSlide: true,
 		slidesToShow: 3,
 		initialSlide: 3,
+		touchMove: true,
+		draggable: true,
 		centerMode: true,
   		focusOnSelect: true,
   		centerPadding: '0',
   		responsive:[
   			{
-  				breakpoint: 767
+  				breakpoint: 991,
+  				settings: {
+  					
+  				}
   				
   			}
   		]
 	});
+
 	$(".models-list").on('wheel', (function(e) {
 
-		clearTimeout(scroll);
-		scroll = setTimeout(function(){scrollCount=0;}, 200);
-		if(scrollCount) return 0;
-		scrollCount=1;
+			clearTimeout(scroll);
+			scroll = setTimeout(function(){scrollCount=0;}, 200);
+			if(scrollCount) return 0;
+			scrollCount=1;
 
-		if (e.originalEvent.deltaY > 0) {
-			$(this).slick('slickNext');
-		} else {
-			$(this).slick('slickPrev');
-		}
-	}));
+			if (e.originalEvent.deltaY > 0) {
+				$(this).slick('slickNext');
+			} else {
+				$(this).slick('slickPrev');
+			}
+		}));
 
 
 	// models slider
@@ -428,6 +435,18 @@ $(document).ready(function () {
 		$('#model-data').addClass('active');
 	});
 
+	$('.close-model-data').on('click',function (e) {
+		e.preventDefault();
+		$('#model-data').removeClass('active');
+	});
+
+	$('.mobile-switcher').on('click',function (e) {
+		e.preventDefault();
+
+		$(this).toggleClass('active');
+		$('.model-preview-block').find('.model-preview').toggleClass('full-width');
+
+	})
 
 	// Range slider
 	// $( function() {
