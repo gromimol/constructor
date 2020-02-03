@@ -726,10 +726,10 @@
 							<div class="dashboard__content dashboard__content__models p-4 mr-0 h-100">
 								<div class="row h-100">
 									<div class="col flex-grow-1 h-100 overflow-hidden">
-										<div class="p-3 bg-white rounded-lg h-100 overflow-hidden">
+										<div class="p-3 bg-white rounded-lg h-auto h-md-100 overflow-hidden">
 											<div class="row align-items-center models-filter">
 												<div class="col-lg-3 d-flex justify-content-between align-items-center mb-3 mb-md-0">
-													<div class="fz-15 text-uppercase">Model List</div>
+													<div class="fz-15 text-uppercase"><b>Model List</b></div>
 
 													<div class="form-group d-block d-md-none ml-5 mb-0 form-group-search position-relative flex-grow-1">
 														<input type="text" class="form-control" placeholder="Search">
@@ -742,7 +742,7 @@
 												</div>
 												<div class="col-lg-9 flex-grow-1 d-flex justify-content-start justify-content-md-end align-items-start">
 
-													<div class="form-group d-none d-md-block mb-3 mb-md-0 form-group-search position-relative flex-grow-1">
+													<div class="form-group d-none d-md-block mb-3 mb-md-0 form-group-search position-relative flex-grow-1" style="max-width: 250px;">
 														<input type="text" class="form-control" placeholder="Search">
 														<button type="submit" class="simple-btn w-15 h-15 position-absolute">
 															<svg>
@@ -761,14 +761,14 @@
 														<input type="hidden" name="changeme">
 													</div>
 
-													<a href="#" class="btn btn--lt btn--blue btn--radius ml-2">Add New Model</a>
+													<a href="#" class="btn btn--lt btn--blue btn--radius ml-3">Add New Model</a>
 												</div>
 											</div>
 
-											<div class="row h-100">
+											<div class="row  h-auto h-md-100 flex-grow-1">
 												<div class="col-1 d-flex flex-column justify-content-center">
 													<div class="alphabet">
-														<div class="alphabet__item">
+														<div class="alphabet__item active">
 															a
 														</div>
 														<div class="alphabet__item">
@@ -850,55 +850,6 @@
 												</div>
 												<div class="col-11">
 													<div class="models-list d-flex align-items-center">
-														<div class="models-list__slide">
-															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
-																<div class="model__slide__icon">
-																	<svg>
-																		<use xlink:href="#svg-user"></use>
-																	</svg>
-																</div>
-																<div class="model-avatar__content d-flex align-items-center justify-content-center flex-grow-1">
-																	<div data-model="model-data" class="js--model-data model-avatar rounded-circle d-flex align-items-center justify-content-center">
-																		<img src="img/avatar-lg.png" alt="">
-																	</div>
-																	<div class="model-data">
-																		<div class="badge badge-green d-none d-md-inline-block">new</div>
-																		<div class="model-name d-none d-md-block">Nicole Kidman</div>
-																		<div class="model-option d-none d-md-block">235 photos  | 23 videos</div>
-																		<div class="btn-group align-items-center">
-																			<a href="#" class="action d-flex">
-																				<span class="ico w-15 h-15 d-inline-block">
-																					<svg>
-																						<use xlink:href="#svg-edit"></use>
-																					</svg>
-																				</span>
-																			</a>
-
-																			<div class="submenu-block">
-																				<div class="submenu-dots">
-																					<span class="ico">
-																						<svg>
-																							<use xlink:href="#dots"></use>
-																						</svg>
-																					</span>
-																				</div>
-																				<ul class="submenu">
-																					<li><a href="#" tabindex="0">Rename</a></li>
-																					<li><a href="#" tabindex="0">Duplicate</a></li>
-																					<li><a href="#" tabindex="0">Remove</a></li>
-																				</ul>
-
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-
-
-															<!-- for mobile -->
-															
-
-														</div>
 
 														<div class="models-list__slide">
 															<div class="models-list__slide__content d-flex align-items-center justify-content-between">
@@ -2218,12 +2169,12 @@
 											<!-- Tab panes -->
 											<div class="tab-content active overflow-hidden">
 												<div class="tab-pane active h-100" id="personal-details">
-													<div class="tab-pane-content h-100 overflow-hidden d-flex flex-column ">
-														<div class="fz-15 text-uppercase mb-3 px-3">
+													<div class="tab-pane-content overflow-hidden d-flex flex-column ">
+														<div class="fz-15 text-uppercase mb-4 px-3">
 															<b>Add new model</b>
 														</div>
 														<div class="model-scroll-block px-3">
-															<form action="#">
+															<form action="#" class="h-100">
 																<div class="form-row">
 																	<div class="form-group col-md-6">
 																		<label for="name">Name</label>

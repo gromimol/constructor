@@ -253,10 +253,8 @@ $(document).ready(function () {
   		centerPadding: '0',
   		responsive:[
   			{
-  				breakpoint: 767,
-  				settings: {
-  					centerPadding: '50px',
-  				}
+  				breakpoint: 767
+  				
   			}
   		]
 	});

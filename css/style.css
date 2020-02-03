@@ -10363,6 +10363,9 @@ button.swiper-pagination-bullet {
 .fz-14 {
   font-size: 14px; }
 
+.fz-15 {
+  font-size: 15px; }
+
 .fz-16 {
   font-size: 16px; }
 
@@ -13371,7 +13374,7 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child) {
   cursor: pointer; }
   .alphabet__item:hover {
     color: var(--text-color); }
-  .alphabet__item.slick-current {
+  .alphabet__item.active {
     font-size: 17px;
     color: var(--text-color); }
 
@@ -13421,7 +13424,8 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child) {
 .models-list__slide__content {
   max-width: 770px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding: 10px 0; }
 
 .model__slide__icon {
   width: 20px;
@@ -13437,8 +13441,8 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child) {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
-  width: 24vh;
-  height: 24vh;
+  width: 22vh;
+  height: 22vh;
   margin-right: 2.5rem; }
   .model-avatar img {
     width: 75%;
@@ -13467,7 +13471,8 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child) {
 
 .models-list {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  padding: 4vh 0; }
   .models-list .slick-track {
     width: 100% !important; }
 
@@ -13498,8 +13503,10 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child) {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     padding: 0 15px; }
+  #model-data .tab-content {
+    height: 100%; }
 
-#model-data .tab-content {
+#personal-details .tab-pane-content {
   height: 100%; }
 
 /*form element*/
@@ -14145,7 +14152,30 @@ textarea.form-control {
     padding-top: 11px;
     padding-bottom: 9px; } }
 /*1240*/
-/*992*/
+@media (max-width: 991px) {
+  .dashboard__content__models {
+    position: relative; }
+
+  #model-data {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; }
+
+  .models-list {
+    padding: 0; }
+    .models-list .slick-list {
+      height: 100% !important; }
+
+  .model-avatar {
+    width: 15vh;
+    height: 15vh; }
+
+  .models-list__slide__content {
+    padding: 0; } }
+/*991*/
 @media (max-width: 767px) {
   .body {
     height: auto; }

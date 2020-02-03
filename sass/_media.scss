@@ -249,10 +249,34 @@
 	
 }
 /*1240*/ 
-@media(max-width: 992px){
+@media(max-width: 991px){
+	.dashboard__content__models{
+		position: relative;
+	}
+	#model-data{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
 
+	}
+	.models-list{
+		padding: 0;
+		.slick-list{
+			height: 100% !important;
+		}
+	}
+	.model-avatar{
+		width: 15vh;
+		height: 15vh;
+	}
+	.models-list__slide__content{
+		padding: 0;
+	}
 }
-/*992*/ 
+/*991*/ 
 
 @media(max-width: 767px){
 	.body{
