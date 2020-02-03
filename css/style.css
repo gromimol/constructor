@@ -13326,7 +13326,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child, 
 
 table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before, table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before {
   top: auto;
-  right: 25px;
+  right: 10px;
   left: auto;
   width: 18px;
   height: 18px;
@@ -14511,7 +14511,14 @@ textarea.form-control {
   .model-avatar {
     -webkit-box-align: end !important;
         -ms-flex-align: end !important;
-            align-items: flex-end !important; } }
+            align-items: flex-end !important; }
+
+  .dashboard__filter .btn--lt {
+    display: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px; } }
+/*480*/
 @media (max-width: 400px) {
   .alphabet__item {
     font-size: 6px;

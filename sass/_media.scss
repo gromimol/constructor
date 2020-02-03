@@ -613,8 +613,17 @@
 	.model-avatar{
 		align-items: flex-end !important;
 	}
+	.dashboard__filter{
+		.btn--lt{
+			display: 12px;
+			padding-left: 10px;
+			padding-right: 10px;
+			font-size: 12px;
+		}
+	}
 
 }
+/*480*/ 
 @media(max-width: 400px){
 	.alphabet__item{
 		font-size: 6px;
