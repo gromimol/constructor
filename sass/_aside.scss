@@ -488,6 +488,18 @@
 		overflow: hidden;
 	}
 }
+.aside-menu-container{
+	height: 100%;
+}
+@media(min-width: 1241px){
+	
+	.aside__left .aside-menu-container .aside__menu .slick-list{
+		height: 100% !important;
+	}
+	.aside__left .aside__menu{
+		height: 100%;
+	}
+}
 
 //.edit-page__aside__right{
 // 	border-top: 1px solid var(--border-color);
