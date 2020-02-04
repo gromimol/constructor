@@ -1,8 +1,5 @@
 $(document).ready(function () {
 
-	$(window).resize(function () {
-		location.reload();
-	})
 
 	// toggle aside on mobile
 	$('.js--mobile-btn').on('click',function (e) {
