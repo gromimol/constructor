@@ -14080,6 +14080,7 @@ textarea.form-control {
 
   .header .logo {
     margin-right: 0;
+    margin-left: 20px;
     width: 60px; } }
 @media (max-width: 1240px) {
   .header__left .burger {
