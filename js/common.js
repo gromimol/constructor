@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
-	if($(window).width() < 992){
-		$(window).resize(function () {
-			location.reload();
-		});
-	};
+	// if($(window).width() < 992){
+	// 	$(window).resize(function () {
+	// 		location.reload();
+	// 	});
+	// };
 
 	// toggle aside on mobile
 	$('.js--mobile-btn').on('click',function (e) {

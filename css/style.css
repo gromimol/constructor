@@ -13152,8 +13152,7 @@ button {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-  min-width: 150px; }
+          flex-direction: column; }
   .progress-bar-container .text {
     white-space: nowrap; }
   .progress-bar-container .progress-bar {
@@ -13483,10 +13482,16 @@ table.dataTable tbody th:not(.child), table.dataTable tbody td:not(.child) {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
 
+.models-row {
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -8px; }
+
 .models-list {
   width: 100%;
-  height: 100%;
-  padding: 4% 0; }
+  height: 100%; }
   .models-list .slick-track {
     width: 100% !important; }
 
@@ -14357,7 +14362,8 @@ textarea.form-control {
     max-height: auto; }
 
   .models-row {
-    height: calc(100% - 80px); }
+    height: calc(100% - 80px);
+    margin-top: 0; }
 
   .alphabet {
     width: 14px;
