@@ -14190,10 +14190,7 @@ textarea.form-control {
     z-index: 10; }
 
   .models-list {
-    padding: 0; }
-
-  .models-row {
-    height: calc(100% - 55px); } }
+    padding: 0; } }
 /*991*/
 @media (max-width: 767px) {
   .body {
