@@ -176,6 +176,7 @@
 		.burger{
 			display: block !important;
 			position: relative;
+			min-width: 40px;
 			z-index: 30;
 		}
 	}

@@ -14085,6 +14085,7 @@ textarea.form-control {
   .header__left .burger {
     display: block !important;
     position: relative;
+    min-width: 40px;
     z-index: 30; }
 
   .aside__left {
