@@ -14057,6 +14057,9 @@ textarea.form-control {
   .aside__menu > li {
     margin-bottom: 10px; } }
 /*1600*/
+@media (max-width: 1440px) {
+  html {
+    font-size: 14px; } }
 @media (max-width: 1366px) {
   .models-row {
     height: 100%; } }
