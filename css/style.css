@@ -14357,9 +14357,6 @@ textarea.form-control {
   .models-row {
     height: calc(100% - 80px); }
 
-  .alphabet-col {
-    padding: 0; }
-
   .alphabet {
     width: 14px;
     overflow-y: auto; }
@@ -14556,7 +14553,10 @@ textarea.form-control {
     max-width: none; }
 
   .bottom-white-gradient::after {
-    height: 30px; } }
+    height: 30px; }
+
+  .alphabet-col {
+    padding: 0; } }
 /*480*/
 @media (max-width: 400px) {
   .alphabet__item {

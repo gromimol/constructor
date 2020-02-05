@@ -444,9 +444,7 @@
 	.models-row{
 		height: calc(100% - 80px);
 	}
-	.alphabet-col{
-		padding: 0 ;
-	}
+	
 	.alphabet{
 		width: 14px;
 		overflow-y: auto;
@@ -658,6 +656,9 @@
 	}
 	.bottom-white-gradient::after{
 		height: 30px;
+	}
+	.alphabet-col{
+		padding: 0 ;
 	}
 }
 /*480*/ 
