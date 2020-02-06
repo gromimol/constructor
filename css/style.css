@@ -8759,6 +8759,12 @@ ul {
 .h-15 {
   height: 15px !important; }
 
+.pr-15 {
+  padding-right: 15px !important; }
+
+.pl-15 {
+  padding-left: 15px !important; }
+
 .font-300 {
   font-weight: 300; }
 
@@ -14076,23 +14082,19 @@ textarea.form-control {
     height: 100%;
     overflow-x: hidden; }
 
-  .header .navbar {
-    margin-left: 0 !important;
-    padding-left: 0 !important; }
-
   .user__text {
-    display: none; }
-
-  .header .logo {
-    margin-right: 0;
-    margin-left: 20px;
-    width: 60px; } }
+    display: none; } }
 @media (max-width: 1240px) {
   .header__left .burger {
     display: block !important;
     position: relative;
     min-width: 40px;
     z-index: 30; }
+
+  .header .logo {
+    margin-left: 20px;
+    width: 40px;
+    margin-right: 0; }
 
   .aside__left {
     width: 95%;

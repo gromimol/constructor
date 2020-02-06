@@ -155,21 +155,12 @@
 		overflow-x: hidden;
 	}
 	.header{
-		.navbar{
-			margin-left: 0 !important;
-			padding-left: 0 !important;
-		}
+		
 	}
 	.user__text{
 		display: none;
 	}
-	.header{
-		.logo{
-			margin-right: 0;
-			margin-left: 20px;
-			width: 60px;
-		}
-	}
+	
 
 }
 @media(max-width: 1240px){
@@ -180,6 +171,11 @@
 			min-width: 40px;
 			z-index: 30;
 		}
+	}
+	.header .logo{
+		margin-left: 20px;
+		width: 40px;
+		margin-right: 0;
 	}
 	.aside__left{
 		width: 95%;
