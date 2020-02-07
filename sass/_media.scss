@@ -172,10 +172,17 @@
 			z-index: 30;
 		}
 	}
+	.aside__left .burger-rotate{
+		display: none !important;
+	}
 	.header .logo{
 		margin-left: 20px;
 		width: 40px;
 		margin-right: 0;
+	}
+	.header .burger.active{
+		min-width: auto;
+		left: -5px;
 	}
 	.aside__left{
 		width: 95%;
@@ -536,6 +543,9 @@
 	.header{
 		padding-left: 0 !important;
 		padding-right: 0 !important;
+	}
+	.header .burger.active{
+		left: 9px;
 	}
 	
 }
